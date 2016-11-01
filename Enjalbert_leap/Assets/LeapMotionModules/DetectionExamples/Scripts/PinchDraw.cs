@@ -61,6 +61,7 @@ namespace Leap.Unity.DetectionExamples {
 
     void Start() {
       _drawStates = new DrawState[_pinchDetectors.Length];
+      Debug.LogWarning("pinch detectors length: " + _pinchDetectors.Length.ToString());
       for (int i = 0; i < _pinchDetectors.Length; i++) {
         _drawStates[i] = new DrawState(this);
       }
