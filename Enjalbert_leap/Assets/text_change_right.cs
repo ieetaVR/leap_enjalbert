@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class text_change : MonoBehaviour
-{
-
+public class text_change_right : MonoBehaviour {
     public static string currentText = "text";
     public static float playerThirst = 100;
     public int workFlag = 1;

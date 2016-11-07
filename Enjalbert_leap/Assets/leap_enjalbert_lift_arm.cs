@@ -16,6 +16,7 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
     int secsPassed;
     bool firstCol = true, taskComplete = false;
     string currentCollider = "";
+    public int workFlag = 0;
 
     // Use this for initialization
     void Start()
@@ -23,35 +24,47 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
         GameObject text3d = GameObject.Find("info_text");
         text_changeReference = text3d.GetComponent<text_change>();
         GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1);
+        workFlag = 0;
 
 
     }
 
 
-
+    public void setWorkFlag(int new_val)
+    {
+        workFlag = new_val;
+    }
 
 
     void OnCollisionStay(Collision collision)
     {
-        if(taskComplete == false)
+        if(workFlag == 1)
         {
-            newT = Time.time;
-            int secsPassed_now = (int)(newT - t);
-            if (secsPassed_now > secsPassed)
+            if (taskComplete == false)
             {
-                secsPassed = secsPassed_now;
-                text_changeReference.setCurrentText("secs left: " + (secondsToCount - secsPassed).ToString());
-                green += 0.1f;
-                GetComponent<Renderer>().material.color = new Color(0, green, 0, 1);
-
-                if (secsPassed == secondsToCount)
+                newT = Time.time;
+                int secsPassed_now = (int)(newT - t);
+                if (secsPassed_now > secsPassed)
                 {
-                    text_changeReference.setCurrentText("task completed");
-                    Debug.Log("Task Complete!");
-                    taskComplete = true;
+                    secsPassed = secsPassed_now;
+                    text_changeReference.setCurrentText("secs left: " + (secondsToCount - secsPassed).ToString());
+
+
+                    green += 0.1f;
+                    GetComponent<Renderer>().material.color = new Color(0, green, 0, 1);
+
+                    if (secsPassed == secondsToCount)
+                    {
+                        text_changeReference.setCurrentText("task completed");
+                        Debug.Log("Task Complete!");
+                        taskComplete = true;
+                        workFlag = 0;
+                        green = 0.1f;
+                    }
                 }
             }
         }
+        
         
 
        
@@ -60,23 +73,11 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        
-        
-        if(!(col.gameObject.transform.parent.transform.parent.name.Equals(currentCollider) || col.gameObject.transform.parent.name.Equals(currentCollider)))
+
+        if (workFlag == 1)
         {
-            Debug.Log("new col");
-            lastCollisionEnter = Time.time;
-            currentCollider = col.gameObject.transform.parent.transform.parent.name;
-            t = Time.time;
-            newT = 0;
-            secsPassed = 0;
-            GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1);
-            taskComplete = false;
-        }
-        else
-        {
-            float extra_T = Time.time;
-            if(extra_T-newT > 1 && taskComplete==false)
+
+            if (!(col.gameObject.transform.parent.transform.parent.name.Equals(currentCollider) || col.gameObject.transform.parent.name.Equals(currentCollider)))
             {
                 Debug.Log("new col");
                 lastCollisionEnter = Time.time;
@@ -85,8 +86,24 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
                 newT = 0;
                 secsPassed = 0;
                 GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1);
-
+                taskComplete = false;
             }
+            else
+            {
+                float extra_T = Time.time;
+                if (extra_T - newT > 1 && taskComplete == false)
+                {
+                    Debug.Log("new col");
+                    lastCollisionEnter = Time.time;
+                    currentCollider = col.gameObject.transform.parent.transform.parent.name;
+                    t = Time.time;
+                    newT = 0;
+                    secsPassed = 0;
+                    GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1);
+
+                }
+            }
+
         }
 
 
