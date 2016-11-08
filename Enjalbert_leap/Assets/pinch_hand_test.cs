@@ -8,7 +8,7 @@ public class pinch_hand_test : MonoBehaviour {
 
     public Controller controller;
     public text_change info_text;
-    public int min_dist = 5;
+    public int min_dist = 20;
 
     // Use this for initialization
     void Start () {
@@ -49,39 +49,65 @@ public class pinch_hand_test : MonoBehaviour {
             if (!thumb.IsExtended)
             {
                 //index pinch
-                if(!index.IsExtended && pinky.IsExtended && ring.IsExtended && middle.IsExtended && index_distance< min_dist)
+                if(!index.IsExtended && pinky.IsExtended && ring.IsExtended && middle.IsExtended)
                 {
-                    Debug.Log("index pinch");
-                    info_text.setCurrentText("index pinch");
+                    Debug.Log("index dist: " + index_distance);
+
+                    if(index_distance < min_dist)
+                    {
+                        //Debug.Log("index pinch");
+                        info_text.setCurrentText("index pinch");
+                    }
                 }
                 //middle pinch
-                if (index.IsExtended && pinky.IsExtended && ring.IsExtended && !middle.IsExtended && middle_distance < min_dist)
+                else if(index.IsExtended && pinky.IsExtended && ring.IsExtended && !middle.IsExtended)
                 {
-                    Debug.Log("middle pinch");
-                    info_text.setCurrentText("middle pinch");
+                    Debug.Log("middle dist: " + middle_distance);
+
+                    if (middle_distance < min_dist)
+                    {
+                        //Debug.Log("middle pinch");
+                        info_text.setCurrentText("middle pinch");
+                    }
                 }
                 //ring pinch
-                if (index.IsExtended && pinky.IsExtended && !ring.IsExtended && middle.IsExtended && ring_distance < min_dist)
+                else if(index.IsExtended && pinky.IsExtended && !ring.IsExtended && middle.IsExtended)
                 {
-                    Debug.Log("ring pinch");
-                    info_text.setCurrentText("ring pinch");
+                    Debug.Log("ring dist: " + ring_distance);
+
+                    if (ring_distance < min_dist)
+                    {
+                        //Debug.Log("ring pinch");
+                        info_text.setCurrentText("ring pinch");
+                    }
                 }
                 //pinky pinch
-                if (index.IsExtended && !pinky.IsExtended && ring.IsExtended && middle.IsExtended && pinky_distance < min_dist)
+                else if(index.IsExtended && !pinky.IsExtended && ring.IsExtended && middle.IsExtended)
                 {
-                    Debug.Log("pinky pinch");
-                    info_text.setCurrentText("pinky pinch");
+                    Debug.Log("pinky dist: " + pinky_distance);
+
+                    if (pinky_distance < min_dist)
+                    {
+                        //Debug.Log("pinky pinch");
+                        info_text.setCurrentText("pinky pinch");
+                    }
                 }
+                else
+                {
+                    //no pinch
+                    //Debug.Log("no pinch");
+                    info_text.setCurrentText("no pinch");
+
+
+                }
+
             }
             else
             {
-                //no pinch
+                //can't be pinch (thumb is extended)
                 //Debug.Log("no pinch");
                 info_text.setCurrentText("no pinch");
-
-
             }
-
         }
     }
 }

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/grab.unity
+- path: Assets/hand_to_mouth.unity
   isLoaded: 1
   isActive: 1
