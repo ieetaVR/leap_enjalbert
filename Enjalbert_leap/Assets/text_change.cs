@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Text;
 
 public class text_change : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class text_change : MonoBehaviour
     {
         GetComponent<TextMesh>().text = text;
     }
-
+    
     // Update is called once per frame
     void Update()
     {

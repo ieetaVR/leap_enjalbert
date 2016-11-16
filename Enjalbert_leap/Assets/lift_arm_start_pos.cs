@@ -4,21 +4,36 @@ using System.Collections;
 public class lift_arm_start_pos : MonoBehaviour {
 
     public leap_enjalbert_lift_arm top_bar_ref;
-    public text_change info_text_ref;
+    //public text_change info_text_ref;
+    public phantom_hand phantomHand;
+    //public TypeOutScript bestText;
+    public lift_arm_side_wall sideWall_left;
+    public lift_arm_side_wall sideWall_right;
 
-	// Use this for initialization
-	void Start () {
+    public text_master bestText;
+
+    // Use this for initialization
+    void Start () {
         top_bar_ref.setWorkFlag(0);
-        info_text_ref.setCurrentText("place arm on start");
+        //info_text_ref.setCurrentText("place arm on start");
 
     }
 
 
     void OnCollisionStay(Collision collision)
     {
-        Debug.Log("col on start");
+        //Debug.Log("col on start");
         top_bar_ref.setWorkFlag(1);
-        info_text_ref.setCurrentText("lift arm to top bar");
+        phantomHand.moveToStart();
+        phantomHand.mustMove = true;
+
+
+        //bestText.reset = true;
+        bestText.clearText();
+
+        sideWall_left.workFlag = 1;
+        sideWall_right.workFlag = 1;
+        //info_text_ref.setCurrentText("lift arm to top bar");
     }
 
 

@@ -1,0 +1,161 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+
+public class Level_master : MonoBehaviour {
+
+    public int currentLevel = 0;
+    public int totalLevels = 5;
+
+    //public TypeOutScript TypeOutScript;
+    public text_master TypeOutScript;
+    public TypeOutScript typeOutScript_numbers;
+    public phantom_hand phantomHand;
+    //public text_change textChange;
+    bool finalStage = false;
+
+	// Use this for initialization
+	void Start () {
+        
+        switch (currentLevel)
+        {
+            case 0:
+                //textChange.setCurrentText("Welcome!");
+                //TypeOutScript.TotalTypeTime = 2f;
+                typeOutScript_numbers.TotalTypeTime = 4f;
+
+                TypeOutScript.setCurrentText("Welcome to Enjalbert!\nPlease select a level.", 2f);
+
+                //TypeOutScript.FinalText = "Welcome to Enjalbert!\nPlease select a level.";
+                //TypeOutScript.On = true;
+                
+                //typeOutScript_numbers.On = true;
+                break;
+
+            case 1:
+                //textChange.setCurrentText("Welcome!");
+                /*TypeOutScript.TotalTypeTime = 2f;
+                TypeOutScript.FinalText = "Level 1: follow the hand.";
+                TypeOutScript.On = true;*/
+                TypeOutScript.setCurrentText("Level 1: follow the hand.", 2f);
+
+                break;
+
+            case 2:
+                //textChange.setCurrentText("Welcome!");
+                /*TypeOutScript.TotalTypeTime = 2f;
+                TypeOutScript.FinalText = "Level 2: follow the hand.";
+                TypeOutScript.On = true;*/
+                TypeOutScript.setCurrentText("Level 2: follow the hand.", 2f);
+                break;
+
+            case 3:
+                //textChange.setCurrentText("Welcome!");
+                /*TypeOutScript.TotalTypeTime = 2f;
+                TypeOutScript.FinalText = "Level 3: Open & Close.";
+                TypeOutScript.On = true;*/
+                TypeOutScript.setCurrentText("Level 3: Open & Close.", 2f);
+                break;
+
+            case 4:
+                //textChange.setCurrentText("Welcome!");
+                /*TypeOutScript.TotalTypeTime = 2f;
+                TypeOutScript.FinalText = "Level 3: Open & Close.";
+                TypeOutScript.On = true;*/
+                TypeOutScript.setCurrentText("Level 4: Pinch Index & Middle.", 2f);
+                break;
+
+            case 5:
+                //textChange.setCurrentText("Welcome!");
+                /*TypeOutScript.TotalTypeTime = 2f;
+                TypeOutScript.FinalText = "Level 3: Open & Close.";
+                TypeOutScript.On = true;*/
+                TypeOutScript.setCurrentText("Level 5: Pinch Ring & Pinky.", 2f);
+                break;
+
+            default:
+                break;
+        }
+        	
+	}
+
+
+
+    float t;
+    int secsPassed, stage=0;
+
+    public void taskFinalStage()
+    {
+
+        t = Time.time;
+        secsPassed = 0;
+        finalStage = true;
+        /*
+        while(secsPassed < 3)
+        {
+            newT = Time.time;
+            secsPassed = (int)(newT - t);
+        }
+
+
+        TypeOutScript.reset = true;
+        TypeOutScript.FinalText = "Moving to level 2.";
+        TypeOutScript.On = true;
+
+        secsPassed = 0;
+        t = Time.time;
+
+        while (secsPassed < 3)
+        {
+            newT = Time.time;
+            secsPassed = (int)(newT - t);
+        }
+
+        Debug.Log("next scene: " + "Test_lvl" + (currentLevel + 1).ToString());
+        //SceneManager.LoadScene("Test_lvl" + (currentLevel + 1).ToString());*/
+
+    }
+
+
+    // Update is called once per frame
+    void Update () {
+	
+        if(finalStage == true)
+        {
+            float newT;
+            if(secsPassed < 3)
+            {
+                newT = Time.time;
+                secsPassed = (int)(newT - t);
+            }
+            else
+            {
+                if(currentLevel < totalLevels)
+                {
+                    if (stage == 0)
+                    {
+                        /*TypeOutScript.reset = true;
+                        TypeOutScript.FinalText = "Moving to level " + (currentLevel+1).ToString() + ".";
+                        TypeOutScript.On = true;*/
+                        TypeOutScript.setCurrentText("Moving to level " + (currentLevel + 1).ToString() + ".", 2f);
+
+                        secsPassed = 0;
+                        t = Time.time;
+                        stage = 1;
+                    }
+                    else
+                    {
+                        //Debug.Log("next scene: " + "Test_lvl" + (currentLevel + 1).ToString());
+                        SceneManager.LoadScene("Test_lvl" + (currentLevel + 1).ToString());
+                    }
+                }
+                else
+                {
+                    TypeOutScript.setCurrentText("Well Done!\n The test is finished!");
+                }
+                
+            }
+        }
+	}
+}
