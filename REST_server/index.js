@@ -30,7 +30,7 @@ var min_total_finger_counts = 1;
 var max_time_per_test = 60;
 var min_time_per_test = 10;
 
-var enjalbert_test_template = JSON.parse('{"id": 0,"time_per_test":30,"hand": "left","lvl1":{"vertical_distance":1,"hold_time":4,"tunnel_space":1},"lvl2":{"vertical_distance":1,"horizontal_distance":1,"hold_time":4,"tunnel_space":1},"lvl3":{"margin":0.1,"hold_time":4,"iterations":2},"lvl4":{"total_index_counts":2,"total_middle_counts":2},"lvl5":{"total_ring_counts":2,"total_pinky_counts":2}}');
+//var enjalbert_test_template = JSON.parse('{"id": 0,"time_per_test":30,"hand": "left","lvl1":{"vertical_distance":1,"hold_time":4,"tunnel_space":1},"lvl2":{"vertical_distance":1,"horizontal_distance":1,"hold_time":4,"tunnel_space":1},"lvl3":{"margin":0.1,"hold_time":4,"iterations":2},"lvl4":{"total_index_counts":2,"total_middle_counts":2},"lvl5":{"total_ring_counts":2,"total_pinky_counts":2}}');
 
 /**** Initial Things *****/
 
@@ -112,12 +112,22 @@ function testIsRight(test, editing) {
 
     //global
     var len = Object.keys(test).length;
-    if(editing == false && len != 7)
+    if(editing == false && len != 8)
     {
         console.log("fail on 0");
         result = false;
     }
-    else if (len !=8 || test.time_per_test == null || test.time_per_test < min_time_per_test || test.time_per_test > max_time_per_test) {
+    else if(editing == true && len !=9)
+    {
+        console.log("fail on 0");
+        result = false;
+    }
+    else if(test.custom_name == null)
+    {
+        console.log("fail on 0.5");
+        result = false;
+    }
+    else if (test.time_per_test == null || test.time_per_test < min_time_per_test || test.time_per_test > max_time_per_test) {
         console.log("fail on 1");
         result = false;
     }
@@ -227,6 +237,34 @@ app.get('/getLastTest', function (req, res) {
     });
 });
 
+app.get('/getTestToDo', function (req, res) {
+
+    console.log('getTestToDo: entered');
+    var filesPath = [local_variables_path, enjalbert_tests_path];
+
+    async.map(filesPath, function (filePath, cb) { //reading files or dir
+        fs.readFile(filePath, 'utf8', cb);
+    }, function (err, results) {
+        var local_variables = JSON.parse(results[0]);
+        var enjalbert_tests = JSON.parse(results[1]);
+
+        console.log("local variables: " + local_variables);
+        var testToDo = local_variables['test_to_do'];
+        console.log("getTestToDo: test to do id = " + testToDo);
+        var lastTest = getTestById(enjalbert_tests, testToDo);
+        //console.log(token)
+
+        if (lastTest != null) {
+            res.status(200).json(lastTest);
+        }
+        else {
+            res.status(200).json({
+                result: 'fail'
+            });
+        }
+    });
+});
+
 app.get('/getTestById', function (req, res) {
 
     console.log('getTestById: entered');
@@ -316,6 +354,8 @@ app.post('/editTest', function (req, res) {
     console.log('editTest: entered function');
     var newTest = req.body;
     var filesPath = [local_variables_path, enjalbert_tests_path];
+
+    console.log(JSON.stringify(req.body));
 
     if(testIsRight(newTest, true))
     {
@@ -425,4 +465,45 @@ var server = app.listen(8080, function () {
 
     console.log("REST app listening at http://%s:%s", host, port);
 
+});
+
+
+
+
+
+
+/********************* Break! beyond this point only web page stuff! ***********************/
+
+
+var wepPage_express = require("express");
+var wepPage_app2 = wepPage_express();
+var wepPage_router = wepPage_express.Router();
+var wepPage_path = __dirname + '/html/';
+wepPage_app2.use(wepPage_express.static(__dirname + '/html/'));
+
+wepPage_router.use(function (req, res, next) {
+    console.log("/" + req.method);
+    next();
+});
+
+wepPage_router.get("/", function (req, res) {
+    res.sendFile(wepPage_path + "index.html");
+});
+
+
+wepPage_app2.use("/", wepPage_router);
+
+wepPage_app2.use(wepPage_express.static(__dirname));
+
+wepPage_app2.use("*", function (req, res) {
+    res.sendFile(wepPage_path + "404.html");
+});
+
+
+var webPage_server2 = wepPage_app2.listen(process.env.PORT || 5000, function () {
+
+    var host = webPage_server2.address().address;
+    var port = webPage_server2.address().port;
+
+    console.log("Web page Live at http://%s:%s", host, port);
 });
