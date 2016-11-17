@@ -1,0 +1,37 @@
+{
+  "name": "enjalbert_rest",
+  "version": "0.0.0",
+  "description": "rest server used for enjalbert leap test configuration and result checking",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ieetaVR/leap_enjalbert.git"
+  },
+  "keywords": [
+    "leap",
+    "motion",
+    "enjalbert",
+    "rehab",
+    "node",
+    "rest",
+    "rehabilitaion"
+  ],
+  "author": "Ricardo Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ieetaVR/leap_enjalbert/issues"
+  },
+  "homepage": "https://github.com/ieetaVR/leap_enjalbert#readme",
+  "dependencies": {
+    "async": "^2.1.2",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "jsonfile": "^2.4.0"
+  }
+}

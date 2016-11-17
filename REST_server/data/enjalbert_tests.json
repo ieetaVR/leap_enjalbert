@@ -1,0 +1,89 @@
+[
+  {
+    "id": 0,
+    "time_per_test": 30,
+    "hand": "left",
+    "lvl1": {
+      "vertical_distance": 1,
+      "hold_time": 4,
+      "tunnel_space": 1
+    },
+    "lvl2": {
+      "vertical_distance": 1,
+      "horizontal_distance": 1,
+      "hold_time": 4,
+      "tunnel_space": 1
+    },
+    "lvl3": {
+      "margin": 0.1,
+      "hold_time": 4,
+      "iterations": 2
+    },
+    "lvl4": {
+      "total_index_counts": 2,
+      "total_middle_counts": 2
+    },
+    "lvl5": {
+      "total_ring_counts": 2,
+      "total_pinky_counts": 2
+    }
+  },
+  {
+    "id": 1,
+    "time_per_test": 40,
+    "hand": "right",
+    "lvl1": {
+      "vertical_distance": 1,
+      "hold_time": 4,
+      "tunnel_space": 1
+    },
+    "lvl2": {
+      "vertical_distance": 1,
+      "horizontal_distance": 1,
+      "hold_time": 4,
+      "tunnel_space": 1
+    },
+    "lvl3": {
+      "margin": 0.1,
+      "hold_time": 4,
+      "iterations": 2
+    },
+    "lvl4": {
+      "total_index_counts": 2,
+      "total_middle_counts": 2
+    },
+    "lvl5": {
+      "total_ring_counts": 2,
+      "total_pinky_counts": 2
+    }
+  },
+  {
+    "time_per_test": 30,
+    "hand": "left",
+    "lvl1": {
+      "vertical_distance": 1,
+      "hold_time": 4,
+      "tunnel_space": 1
+    },
+    "lvl2": {
+      "vertical_distance": 1,
+      "horizontal_distance": 1,
+      "hold_time": 4,
+      "tunnel_space": 1
+    },
+    "lvl3": {
+      "margin": 0.1,
+      "hold_time": 4,
+      "iterations": 2
+    },
+    "lvl4": {
+      "total_index_counts": 2,
+      "total_middle_counts": 2
+    },
+    "lvl5": {
+      "total_ring_counts": 2,
+      "total_pinky_counts": 2
+    },
+    "id": 2
+  }
+]
