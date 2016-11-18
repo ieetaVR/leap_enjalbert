@@ -14,6 +14,7 @@ public class Level_master : MonoBehaviour {
     public phantom_hand phantomHand;
     //public text_change textChange;
     bool finalStage = false;
+    bool gameOver = false;
 
 	// Use this for initialization
 	void Start () {
@@ -85,6 +86,19 @@ public class Level_master : MonoBehaviour {
     float t;
     int secsPassed, stage=0;
 
+
+    public bool getFinalStage()
+    {
+        return finalStage;
+    }
+
+
+    public void gameOverCall()
+    {
+        t = Time.time;
+        secsPassed = 0;
+        gameOver = true;
+    }
     public void taskFinalStage()
     {
 
@@ -155,6 +169,47 @@ public class Level_master : MonoBehaviour {
                     TypeOutScript.setCurrentText("Well Done!\n The test is finished!");
                 }
                 
+            }
+        }
+        else if(gameOver == true)
+        {
+            float newT;
+            if (secsPassed < 3)
+            {
+                newT = Time.time;
+                secsPassed = (int)(newT - t);
+            }
+            else
+            {
+                if (stage == 0)
+                {
+                    /*TypeOutScript.reset = true;
+                    TypeOutScript.FinalText = "Moving to level " + (currentLevel+1).ToString() + ".";
+                    TypeOutScript.On = true;*/
+                    TypeOutScript.setCurrentText("Game Over!", 2f);
+
+                    secsPassed = 0;
+                    t = Time.time;
+                    stage = 1;
+                }
+                else if (stage == 1)
+                {
+                    /*TypeOutScript.reset = true;
+                    TypeOutScript.FinalText = "Moving to level " + (currentLevel+1).ToString() + ".";
+                    TypeOutScript.On = true;*/
+                    TypeOutScript.setCurrentText("Returning to Start.", 2f);
+
+                        secsPassed = 0;
+                        t = Time.time;
+                        stage = 2;
+                    }
+                    else if(stage==2)
+                    {
+                        //Debug.Log("next scene: " + "Test_lvl" + (currentLevel + 1).ToString());
+                        SceneManager.LoadScene("Full_test");
+                    }
+                
+
             }
         }
 	}

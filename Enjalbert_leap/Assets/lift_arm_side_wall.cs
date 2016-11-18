@@ -19,7 +19,7 @@ public class lift_arm_side_wall : MonoBehaviour {
 
     void OnCollisionStay(Collision collision)
     {
-        if(workFlag == 1)
+        if(workFlag == 1 && top_bar_ref.workFlag == 1 && (collision.gameObject.transform.parent.transform.parent.name.Equals(top_bar_ref.hand) || collision.gameObject.transform.parent.name.Equals(top_bar_ref.hand)))
         {
             Debug.Log("col on wall");
             top_bar_ref.setWorkFlag(0);

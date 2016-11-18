@@ -6,41 +6,77 @@ public class pinch_counter : MonoBehaviour {
 
     public Level_master masterLVL;
     public text_master bestText;
+    public enjalbert_rest_client rest_client;
+
+    public text_master scoreText;
     //index, middle, ring, pinky
     public int[] totalCounts = { 0, 0, 0, 0 };
     public int[] currentCounts = { 0, 0, 0, 0 };
-    public int workFlag = 1;
+    public int workFlag = 0;
     public bool done = false;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    // Use this for initialization
+
+    void Start () {
+
+        printCurrentScore();
+
+    }
+
+    public void setRESTParameters()
+    {
+        switch (masterLVL.currentLevel)
+        {
+            case 4:
+                totalCounts[0] = int.Parse(rest_client.testToDo.GetField("lvl4").GetField("total_index_counts").str);
+                totalCounts[1] = int.Parse(rest_client.testToDo.GetField("lvl4").GetField("total_middle_counts").str);
+                break;
+            case 5:
+                totalCounts[2] = int.Parse(rest_client.testToDo.GetField("lvl5").GetField("total_ring_counts").str);
+                totalCounts[3] = int.Parse(rest_client.testToDo.GetField("lvl5").GetField("total_pinky_counts").str);
+                break;
+        }
+        workFlag = 1;
+    }
+
+
+    void printCurrentScore()
+    {
+        scoreText.setCurrentText("index: " + currentCounts[0] + "/" + totalCounts[0] + "\n" +
+                                 "middle: " + currentCounts[1] + "/" + totalCounts[1] + "\n" +
+                                 "ring: " + currentCounts[2] + "/" + totalCounts[2] + "\n" +
+                                 "pinky: " + currentCounts[3] + "/" + totalCounts[3] + "\n");
+    }
 
     public void indexCount()
     {
         currentCounts[0]++;
+        printCurrentScore();
     }
 
     public void middleCount()
     {
         currentCounts[1]++;
+        printCurrentScore();
     }
 
     public void ringCount()
     {
         currentCounts[2]++;
+        printCurrentScore();
     }
 
     public void pinkyCount()
     {
         currentCounts[3]++;
+        printCurrentScore();
     }
 
     // Update is called once per frame
     void Update () {
 
-        if(workFlag == 1)
+        printCurrentScore();
+        if (workFlag == 1)
         {
             bool taskComplete = true;
 

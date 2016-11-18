@@ -4,6 +4,7 @@ using System.Collections;
 public class lift_arm_start_pos : MonoBehaviour {
 
     public leap_enjalbert_lift_arm top_bar_ref;
+    public Level_master masterLVL;
     //public text_change info_text_ref;
     public phantom_hand phantomHand;
     //public TypeOutScript bestText;
@@ -11,6 +12,8 @@ public class lift_arm_start_pos : MonoBehaviour {
     public lift_arm_side_wall sideWall_right;
 
     public text_master bestText;
+
+    public int workFlag = 1;
 
     // Use this for initialization
     void Start () {
@@ -22,18 +25,22 @@ public class lift_arm_start_pos : MonoBehaviour {
 
     void OnCollisionStay(Collision collision)
     {
-        //Debug.Log("col on start");
-        top_bar_ref.setWorkFlag(1);
-        phantomHand.moveToStart();
-        phantomHand.mustMove = true;
+        if(masterLVL.getFinalStage()==false && (collision.gameObject.transform.parent.transform.parent.name.Equals(top_bar_ref.hand) || collision.gameObject.transform.parent.name.Equals(top_bar_ref.hand)))
+        {
+            //Debug.Log("col on start");
+            top_bar_ref.setWorkFlag(1);
+            phantomHand.moveToStart();
+            phantomHand.mustMove = true;
 
 
-        //bestText.reset = true;
-        bestText.clearText();
+            //bestText.reset = true;
+            bestText.clearText();
 
-        sideWall_left.workFlag = 1;
-        sideWall_right.workFlag = 1;
-        //info_text_ref.setCurrentText("lift arm to top bar");
+            sideWall_left.workFlag = 1;
+            sideWall_right.workFlag = 1;
+            //info_text_ref.setCurrentText("lift arm to top bar");
+
+        }
     }
 
 

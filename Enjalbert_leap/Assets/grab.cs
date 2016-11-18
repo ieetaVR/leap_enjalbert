@@ -12,14 +12,19 @@ public class grab : MonoBehaviour {
     public text_master bestText;
     public change_color change_color_reference;
     public Level_master masterLVL;
+    public enjalbert_rest_client restClient;
+
+    public text_master scoreText;
 
     public bool opening_hand;
     public bool holding_hand;
 
     float t;
+    float margin;
     int secsPassed;
     public int secsToWait;
     public int TotalIterations;
+    public int workflag = 0;
     int iterations;
 
     // Use this for initialization
@@ -34,181 +39,216 @@ public class grab : MonoBehaviour {
         byte[] frameData = System.IO.File.ReadAllBytes("frame.data");
         Frame reconstructedFrame = new Frame();
         reconstructedFrame.Deserialize(frameData);
+
+        //secsToWait = int.Parse(restClient.testToDo.GetField("lvl3").GetField("hold_time").ToString());
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+    public void setRESTParameters()
+    {
+        secsToWait = int.Parse(restClient.testToDo.GetField("lvl3").GetField("hold_time").str);
+        TotalIterations = int.Parse(restClient.testToDo.GetField("lvl3").GetField("iterations").str);
+        margin = float.Parse(restClient.testToDo.GetField("lvl3").GetField("margin").str);
         
-
-        if(iterations == TotalIterations)
+        if(this.name.Equals("RigidRoundHand_L") && restClient.testToDo.GetField("hand").str.Equals("left") || this.name.Equals("RigidRoundHand_R") && restClient.testToDo.GetField("hand").str.Equals("right"))
         {
-            masterLVL.taskFinalStage();
+            workflag = 1;
         }
-
         else
         {
-            Frame frame = controller.Frame();
-            if (frame.Hands.Count > 0)
+            workflag = 0;
+        }
+
+    }
+
+    void printScore()
+    {
+        scoreText.setCurrentText("iterations: " + iterations + "/" + TotalIterations);
+    }
+
+    // Update is called once per frame
+    void Update () {
+        
+        if(workflag==1)
+        {
+            if (iterations == TotalIterations)
             {
+                masterLVL.taskFinalStage();
+            }
 
-                //Debug.Log("num of hands: " + frame.Hands.Count);
-                List<Hand> hands = frame.Hands;
-                Hand firstHand = hands[0];
-                //Debug.Log("Grab Angle: " + firstHand.GrabAngle);
-
-                if (opening_hand)
+            else
+            {
+                Frame frame = controller.Frame();
+                if (frame.Hands.Count > 0)
                 {
-                    if (holding_hand == false)
+
+                    //Debug.Log("num of hands: " + frame.Hands.Count);
+                    List<Hand> hands = frame.Hands;
+                    Hand firstHand = hands[0];
+                    //Debug.Log("Grab Angle: " + firstHand.GrabAngle);
+
+                    if (opening_hand)
                     {
-                        //text_changeReference.setCurrentText("open your hand");
-                        //bestText.FinalText = "open your hand";
-                        //bestText.On = true;
-
-                        change_color_reference.setColor(1 - firstHand.GrabAngle);
-
-                        if (firstHand.GrabAngle == 0)
+                        if (holding_hand == false)
                         {
+                            //text_changeReference.setCurrentText("open your hand");
+                            //bestText.FinalText = "open your hand";
+                            //bestText.On = true;
 
-                            //text_changeReference.setCurrentText("Well done! Now hold.");
-                            /*bestText.reset = true;
-                            bestText.FinalText = "Well done! Now hold.";
-                            bestText.On = true;*/
-                            bestText.setCurrentText("Well done! Now hold.");
-                            bestText.setCurrentText(" ");
+                            change_color_reference.setColor(1 - firstHand.GrabAngle);
 
-                            holding_hand = true;
-
-                            t = Time.time;
-                            secsPassed = 0;
-                            //StartCoroutine(TestCoroutine());
-
-                        }
-                    }
-                    else
-                    {
-                        if (firstHand.GrabAngle > 0)
-                        {
-
-                            /*bestText.reset = true;
-                            bestText.FinalText = "Please hold a little longer.\n Open your hand.";
-                            bestText.On = true;*/
-                            bestText.setCurrentText("Please hold a little longer.\n Open your hand.");
-                            //opening_hand = false;
-                            holding_hand = false;
-                        }
-                        else
-                        {
-                            float newT = Time.time;
-                            secsPassed = (int)(newT - t);
-                            bestText.setCurrentText("Well done! Now hold.");
-
-                            //Debug.Log("secs passed: " + secsPassed.ToString());
-                            if (secsPassed >= secsToWait)
+                            if (firstHand.GrabAngle <= 0 + margin)
                             {
 
+                                //text_changeReference.setCurrentText("Well done! Now hold.");
+                                /*bestText.reset = true;
+                                bestText.FinalText = "Well done! Now hold.";
+                                bestText.On = true;*/
+                                bestText.setCurrentText("Well done! Now hold.");
+                                //bestText.setCurrentText(" ");
 
-                                opening_hand = false;
-                                holding_hand = false;
-                                iterations++;
+                                holding_hand = true;
 
-                                if(iterations < TotalIterations)
-                                {
-                                    /*bestText.reset = true;
-                                    bestText.FinalText = "Well done!\n Now close your hand";
-                                    bestText.On = true;*/
-                                    bestText.setCurrentText("Well done!\n Now close your hand");
-                                }
-                                else
-                                {
-                                    bestText.setCurrentText("Task Completed.");
-                                    bestText.setCurrentText("Task Completed!");
-                                }
+                                t = Time.time;
+                                secsPassed = 0;
+                                //StartCoroutine(TestCoroutine());
 
                             }
                         }
-                    }
+                        else
+                        {
+                            if (firstHand.GrabAngle > 0 + margin)
+                            {
 
+                                /*bestText.reset = true;
+                                bestText.FinalText = "Please hold a little longer.\n Open your hand.";
+                                bestText.On = true;*/
+                                bestText.setCurrentText("Please hold a little longer.\n Open your hand.");
+                                //opening_hand = false;
+                                holding_hand = false;
+                            }
+                            else
+                            {
+                                float newT = Time.time;
+                                secsPassed = (int)(newT - t);
+                                //bestText.setCurrentText("Well done! Now hold.");
+                                if (secsPassed > 1)
+                                {
+                                    bestText.setCurrentText("secs left: " + (secsToWait - secsPassed).ToString(), 0f);
+                                }
+
+
+                                //Debug.Log("secs passed: " + secsPassed.ToString());
+                                if (secsPassed >= secsToWait)
+                                {
+
+
+                                    opening_hand = false;
+                                    holding_hand = false;
+                                    iterations++;
+                                    printScore();
+
+                                    if (iterations < TotalIterations)
+                                    {
+                                        /*bestText.reset = true;
+                                        bestText.FinalText = "Well done!\n Now close your hand";
+                                        bestText.On = true;*/
+                                        bestText.setCurrentText("Well done!\n Now close your hand");
+                                    }
+                                    else
+                                    {
+                                        bestText.setCurrentText("Task Completed.");
+                                        //bestText.setCurrentText("Task Completed!");
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        if (holding_hand == false)
+                        {
+                            //text_changeReference.setCurrentText("close your hand");
+
+                            change_color_reference.setColor(firstHand.GrabAngle / 3.14f);
+
+                            if (firstHand.GrabAngle > 3.14 - margin)
+                            {
+                                //text_changeReference.setCurrentText("Well done! now hold");
+                                /*bestText.FinalText = "Well done! Now hold.";
+                                bestText.On = true;*/
+                                bestText.setCurrentText("Well done! Now hold.");
+                                //bestText.setCurrentText(" ");
+
+
+                                //StartCoroutine(TestCoroutine());
+                                //opening_hand = true;
+                                holding_hand = true;
+
+
+                                t = Time.time;
+                                secsPassed = 0;
+
+
+                            }
+                        }
+                        else
+                        {
+                            if (firstHand.GrabAngle <= 3.14 - margin)
+                            {
+                                //opening_hand = true;
+                                /*bestText.reset = true;
+                                bestText.FinalText = "Please hold a little longer.\n Close your hand.";
+                                bestText.On = true;*/
+                                bestText.setCurrentText("Please hold a little longer.\n Close your hand.");
+
+                                holding_hand = false;
+                            }
+                            else
+                            {
+                                float newT = Time.time;
+                                secsPassed = (int)(newT - t);
+                                if (secsPassed > 1)
+                                {
+                                    bestText.setCurrentText("secs left: " + (secsToWait - secsPassed).ToString(), 0f);
+                                }
+
+                                //Debug.Log("secs passed: " + secsPassed.ToString());
+                                if (secsPassed >= secsToWait)
+                                {
+
+                                    opening_hand = true;
+                                    holding_hand = false;
+                                    iterations++;
+                                    printScore();
+
+                                    if (iterations < TotalIterations)
+                                    {
+                                        /*bestText.reset = true;
+                                        bestText.FinalText = "Well done!\n Now open your hand";
+                                        bestText.On = true;*/
+                                        bestText.setCurrentText("Well done!\n Now open your hand");
+                                    }
+                                    else
+                                    {
+                                        bestText.setCurrentText("Task Completed.");
+                                        //bestText.setCurrentText("Task Completed!");
+                                    }
+
+                                }
+                            }
+                        }
+                    }
                 }
                 else
                 {
-                    if (holding_hand == false)
-                    {
-                        //text_changeReference.setCurrentText("close your hand");
-
-                        change_color_reference.setColor(firstHand.GrabAngle / 3.14f);
-
-                        if (firstHand.GrabAngle > 3.14)
-                        {
-                            //text_changeReference.setCurrentText("Well done! now hold");
-                            /*bestText.FinalText = "Well done! Now hold.";
-                            bestText.On = true;*/
-                            bestText.setCurrentText("Well done! Now hold.");
-                            bestText.setCurrentText(" ");
-
-
-                            //StartCoroutine(TestCoroutine());
-                            //opening_hand = true;
-                            holding_hand = true;
-
-
-                            t = Time.time;
-                            secsPassed = 0;
-
-
-                        }
-                    }
-                    else
-                    {
-                        if (firstHand.GrabAngle < 3.14)
-                        {
-                            //opening_hand = true;
-                            /*bestText.reset = true;
-                            bestText.FinalText = "Please hold a little longer.\n Close your hand.";
-                            bestText.On = true;*/
-                            bestText.setCurrentText("Please hold a little longer.\n Close your hand.");
-
-                            holding_hand = false;
-                        }
-                        else
-                        {
-                            float newT = Time.time;
-                            secsPassed = (int)(newT - t);
-                            bestText.setCurrentText("Well done! Now hold.");
-
-                            //Debug.Log("secs passed: " + secsPassed.ToString());
-                            if (secsPassed >= secsToWait)
-                            {
-
-                                opening_hand = true;
-                                holding_hand = false;
-                                iterations++;
-
-                                if (iterations < TotalIterations)
-                                {
-                                    /*bestText.reset = true;
-                                    bestText.FinalText = "Well done!\n Now open your hand";
-                                    bestText.On = true;*/
-                                    bestText.setCurrentText("Well done!\n Now open your hand");
-                                }
-                                else
-                                {
-                                    bestText.setCurrentText("Task Completed.");
-                                    bestText.setCurrentText("Task Completed!");
-                                }
-
-                            }
-                        }
-                    }
+                    Debug.Log("no hands!");
                 }
             }
-            else
-            {
-                Debug.Log("no hands!");
-            }
         }
-
         
-    
     }
 
     public bool running;

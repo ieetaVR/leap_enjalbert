@@ -1,0 +1,188 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 860M (ID=0x119a)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\LeapCSharp.NET3.5.dll (this message is harmless)
+Loading D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\LeapCSharp.NET3.5.dll into Unity Child Domain
+- Completed reload, in  0.066 seconds
+Platform assembly: D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\ua local\ZZZ_TESE\leap_enjalbert\Release\Enj_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.180735 ms
+text Change. last:     new: Welcome to Enjalbert!
+Please select a level.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3bd8 -> priority: 1 
+  Thread -> id: 3858 -> priority: 1 
+REST testToDo: {"id":"1","time_per_test":"13","hand":"right","custom_name":"Teste 2","lvl1":{"vertical_distance":"2.7","hold_time":"4","tunnel_space":"2"},"lvl2":{"vertical_distance":"3.2","horizontal_distance":"2.9","hold_time":"3","tunnel_space":"3"},"lvl3":{"margin":"0.1","hold_time":"4","iterations":"3"},"lvl4":{"total_index_counts":"2","total_middle_counts":"2"},"lvl5":{"total_ring_counts":"2","total_pinky_counts":"2"}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.247939 ms
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 581.
+Total: 0.412600 ms (FindLiveObjects: 0.050086 ms CreateObjectMapping: 0.027506 ms MarkObjects: 0.301752 ms  DeleteObjects: 0.032843 ms)
+
+text Change. last:     new: Level 3: Open & Close.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+phantom hand start pos: (-0.1, -0.4, 0.6)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+REST testToDo: {"id":"1","time_per_test":"13","hand":"right","custom_name":"Teste 2","lvl1":{"vertical_distance":"2.7","hold_time":"4","tunnel_space":"2"},"lvl2":{"vertical_distance":"3.2","horizontal_distance":"2.9","hold_time":"3","tunnel_space":"3"},"lvl3":{"margin":"0.1","hold_time":"4","iterations":"3"},"lvl4":{"total_index_counts":"2","total_middle_counts":"2"},"lvl5":{"total_ring_counts":"2","total_pinky_counts":"2"}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last:     new: time left: 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 13    new: time left: 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+IsolatedStorageException: Could not find file "D:\ua local\ZZZ_TESE\leap_enjalbert\Release\frame.data".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllBytes (System.String path) [0x00000] in <filename unknown>:0 
+  at grab.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+text Change. last: time left: 12    new: time left: 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 11    new: time left: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: Level 3: Open & Close.    new: Well done! Now hold.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 10    new: time left: 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: Well done! Now hold.    new: Please hold a little longer.
+ Open your hand.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 9    new: time left: 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 8    new: time left: 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 7    new: time left: 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 6    new: time left: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: Please hold a little longer.
+ Open your hand.    new: Well done! Now hold.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 5    new: time left: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 4    new: time left: 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: Well done! Now hold.    new: secs left: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 3    new: time left: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: secs left: 2    new: secs left: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: secs left: 1    new: Please hold a little longer.
+ Open your hand.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 2    new: time left: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 1    new: time left: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: time left: 0    new: Game Over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: Please hold a little longer.
+ Open your hand.    new: Well done! Now hold.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: Well done! Now hold.    new: Please hold a little longer.
+ Open your hand.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: Please hold a little longer.
+ Open your hand.    new: Game Over!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+text Change. last: Game Over!    new: Returning to Start.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.503932 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 389.
+Total: 0.467614 ms (FindLiveObjects: 0.041054 ms CreateObjectMapping: 0.027096 ms MarkObjects: 0.342807 ms  DeleteObjects: 0.055834 ms)
+
+text Change. last:     new: Welcome to Enjalbert!
+Please select a level.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+REST testToDo: {"id":"1","time_per_test":"13","hand":"right","custom_name":"Teste 2","lvl1":{"vertical_distance":"2.7","hold_time":"4","tunnel_space":"2"},"lvl2":{"vertical_distance":"3.2","horizontal_distance":"2.9","hold_time":"3","tunnel_space":"3"},"lvl3":{"margin":"0.1","hold_time":"4","iterations":"3"},"lvl4":{"total_index_counts":"2","total_middle_counts":"2"},"lvl5":{"total_ring_counts":"2","total_pinky_counts":"2"}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
