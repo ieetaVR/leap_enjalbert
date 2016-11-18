@@ -45,7 +45,7 @@ public class pinch_counter : MonoBehaviour {
         scoreText.setCurrentText("index: " + currentCounts[0] + "/" + totalCounts[0] + "\n" +
                                  "middle: " + currentCounts[1] + "/" + totalCounts[1] + "\n" +
                                  "ring: " + currentCounts[2] + "/" + totalCounts[2] + "\n" +
-                                 "pinky: " + currentCounts[3] + "/" + totalCounts[3] + "\n");
+                                 "pinky: " + currentCounts[3] + "/" + totalCounts[3] + "\n", 0f);
     }
 
     public void indexCount()
