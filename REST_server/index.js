@@ -10,6 +10,7 @@ var jsonfile = require('jsonfile');
 /****Final Variables & Templates****/
 var enjalbert_tests_path = __dirname + '/data/enjalbert_tests.json';
 var local_variables_path = __dirname + '/data/local_variables.json';
+var test_results_path = __dirname + "/data/test_results.json";
 
 var max_vertical_distance = 10;
 var min_vertical_distance = 0.1;
@@ -112,18 +113,15 @@ function testIsRight(test, editing) {
 
     //global
     var len = Object.keys(test).length;
-    if(editing == false && len != 8)
-    {
+    if (editing == false && len != 8) {
         console.log("fail on 0");
         result = false;
     }
-    else if(editing == true && len !=9)
-    {
+    else if (editing == true && len != 9) {
         console.log("fail on 0");
         result = false;
     }
-    else if(test.custom_name == null)
-    {
+    else if (test.custom_name == null) {
         console.log("fail on 0.5");
         result = false;
     }
@@ -299,6 +297,24 @@ app.get('/getTestById', function (req, res) {
 
 });
 
+
+app.get('/getAllTestResults', function (req, res) {
+
+    console.log('getAllTestResults: entered function');
+    var filesPath = [test_results_path];
+
+        async.map(filesPath, function (filePath, cb) { //reading files or dir
+            fs.readFile(filePath, 'utf8', cb);
+        }, function (err, results) {
+            var testResultsList = JSON.parse(results[0]);
+
+            res.status(200).json(testResultsList);
+
+
+        });
+
+});
+
 /**** POST methods ****/
 
 app.post('/addTest', function (req, res) {
@@ -307,8 +323,7 @@ app.post('/addTest', function (req, res) {
     var newTest = req.body;
     var filesPath = [local_variables_path, enjalbert_tests_path];
 
-    if(testIsRight(newTest, false))
-    {
+    if (testIsRight(newTest, false)) {
         async.map(filesPath, function (filePath, cb) { //reading files or dir
             fs.readFile(filePath, 'utf8', cb);
         }, function (err, results) {
@@ -316,7 +331,7 @@ app.post('/addTest', function (req, res) {
             var enjalbert_tests = JSON.parse(results[1]);
 
             console.log('addTest: input test passed.')
-            var newTestId = local_variables['last_test_id']+1;
+            var newTestId = local_variables['last_test_id'] + 1;
             local_variables['last_test_id'] = newTestId;
             newTest['id'] = newTestId;
 
@@ -339,8 +354,7 @@ app.post('/addTest', function (req, res) {
 
         });
     }
-    else
-    {
+    else {
         res.status(400).json({
             result: 'fail',
             message: 'test parameters don\'t fit.'
@@ -357,8 +371,7 @@ app.post('/editTest', function (req, res) {
 
     console.log(JSON.stringify(req.body));
 
-    if(testIsRight(newTest, true))
-    {
+    if (testIsRight(newTest, true)) {
         async.map(filesPath, function (filePath, cb) { //reading files or dir
             fs.readFile(filePath, 'utf8', cb);
         }, function (err, results) {
@@ -366,8 +379,7 @@ app.post('/editTest', function (req, res) {
             var enjalbert_tests = JSON.parse(results[1]);
 
             var testPos = getTestPosById(enjalbert_tests, newTest['id']);
-            if(testPos != null)
-            {
+            if (testPos != null) {
                 console.log('editTest: input test passed.')
 
                 //write the test
@@ -383,8 +395,7 @@ app.post('/editTest', function (req, res) {
                     result: 'success'
                 });
             }
-            else
-            {
+            else {
                 res.status(400).json({
                     result: 'fail',
                     message: 'test id doesn\'t exist.'
@@ -394,8 +405,7 @@ app.post('/editTest', function (req, res) {
 
         });
     }
-    else
-    {
+    else {
         res.status(400).json({
             result: 'fail',
             message: 'test parameters don\'t fit.'
@@ -418,8 +428,7 @@ app.post('/setTestToDo', function (req, res) {
             var enjalbert_tests = JSON.parse(results[1]);
 
             var testPos = getTestPosById(enjalbert_tests, testId);
-            if(testPos != null)
-            {
+            if (testPos != null) {
                 console.log('setTestToDo: input testId passed.')
 
                 //write the change
@@ -435,8 +444,7 @@ app.post('/setTestToDo', function (req, res) {
                     result: 'success'
                 });
             }
-            else
-            {
+            else {
                 res.status(400).json({
                     result: 'fail',
                     message: 'test id doesn\'t exist.'
@@ -455,10 +463,50 @@ app.post('/setTestToDo', function (req, res) {
 
 });
 
+app.post('/sendTestResults', function (req, res) {
+
+    console.log('sendTestResults: entered function');
+    var testResults = req.body;
+    var filesPath = [test_results_path];
+
+    if (testResults != null) {
+        async.map(filesPath, function (filePath, cb) { //reading files or dir
+            fs.readFile(filePath, 'utf8', cb);
+        }, function (err, results) {
+            var testResultsList = JSON.parse(results[0]);
+
+            console.error(JSON.stringify(testResults))
+
+            testResults = JSON.parse(JSON.stringify(testResults).replace(/\"/g,'"'));
+            console.error(JSON.stringify(testResults))
+
+            testResultsList[testResultsList.length] = testResults;
+
+            //write the change
+            fs.writeFile(test_results_path, JSON.stringify(testResultsList), function (err) {
+                console.error(err)
+            });
+
+
+            res.status(200).json({
+                result: 'success'
+            });
+
+
+        });
+    }
+    else {
+        res.status(400).json({
+            result: 'fail',
+            message: 'testId parameter missing.'
+        });
+    }
+
+});
 
 /**** Put server running ****/
 
-var server = app.listen(8080, function () {
+var server = app.listen(8090, function () {
 
     var host = server.address().address;
     var port = server.address().port;
@@ -466,10 +514,6 @@ var server = app.listen(8080, function () {
     console.log("REST app listening at http://%s:%s", host, port);
 
 });
-
-
-
-
 
 
 /********************* Break! beyond this point only web page stuff! ***********************/

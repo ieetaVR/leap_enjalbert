@@ -29,7 +29,7 @@ public class enjalbert_time_keeper : MonoBehaviour {
         if(workFlag == 1 && masterLVL.getFinalStage() == false)
         {
             float newT = Time.time;
-            int secsPassed = (int)(newT - startTime);
+            secsPassed = (int)(newT - startTime);
             
             if (secsPassed > secsToWait)
             {

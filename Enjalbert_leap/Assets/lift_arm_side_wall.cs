@@ -28,6 +28,7 @@ public class lift_arm_side_wall : MonoBehaviour {
             bestText.FinalText = "Wall bump - back to the start";
             bestText.On = true;*/
             bestText.setCurrentText("Wall bump - back to the start", 2f);
+            phantomHand.mustMove = false;
             phantomHand.moveToStart();
             workFlag = 0;
         }

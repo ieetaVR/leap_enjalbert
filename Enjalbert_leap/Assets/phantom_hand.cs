@@ -7,12 +7,13 @@ public class phantom_hand : MonoBehaviour {
     public int currentLevel;
     public Vector3 startingPos = new Vector3(0.021f, 0.037f, 0.029f);
     Vector3 myStartingPos = new Vector3(0.3f, -0.5f, 0.6f);
+    Quaternion myStartingDirection;// = new Vector3(2.957f, 96.885f, 86.58701f);
     public Vector3 endPos = new Vector3(0.021f, 0.111f, 0.029f);
     public float movementSpeed;
     public bool mustMove;
     public bool mustGrab;
     public bool mustRotate = false;
-
+    public int direction = 0;// 0 -> left; 1 -> right
 
     public Leap.Unity.RigidHand phantomHand;
 
@@ -31,15 +32,21 @@ public class phantom_hand : MonoBehaviour {
             default:
                 break;
         }
+
+        myStartingDirection = transform.rotation;
 	
 	}
 
     public void moveToStart()
     {
         transform.position = myStartingPos;
+        transform.rotation = myStartingDirection;
+        currentRotation = 0;
     }
-    
-    
+
+
+    int totalRotation = 0;
+    int currentRotation = 0;
 
 	// Update is called once per frame
 	void Update () {
@@ -51,9 +58,16 @@ public class phantom_hand : MonoBehaviour {
 
             float step = movementSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, topBar.position, step);
-            if(mustRotate)
+            if(mustRotate && currentRotation<90)
             {
-                transform.Rotate(new Vector3(0, -1, 0), 1f);
+                currentRotation++;
+                if (direction == 0) {
+                    transform.Rotate(new Vector3(0, -1, 0), 1f);
+                }
+                else
+                {
+                    transform.Rotate(new Vector3(0, 1, 0), 1f);
+                }
             }
 
             if (this.gameObject.transform.position.y >= topBar.position.y)

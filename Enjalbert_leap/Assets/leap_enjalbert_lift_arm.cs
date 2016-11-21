@@ -85,7 +85,7 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
 
                     green += 0.1f;
                     GetComponent<Renderer>().material.color = new Color(0, green, 0, 1);
-                    Debug.Log((float)secsPassed / secondsToCount);
+                    //Debug.Log((float)secsPassed / secondsToCount);
                     phantomHandColor.setColor((float)secsPassed /secondsToCount);
 
                     if (secsPassed == secondsToCount)

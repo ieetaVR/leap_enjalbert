@@ -20,7 +20,7 @@ public class text_master : MonoBehaviour {
             bestText.reset = true;
             bestText.FinalText = newText;
             bestText.On = true;
-            Debug.Log("text Change. last: " + currentText + "    new: " + newText);
+            //Debug.Log("text Change. last: " + currentText + "    new: " + newText);
             currentText = newText;
 
         }

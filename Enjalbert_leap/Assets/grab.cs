@@ -20,12 +20,12 @@ public class grab : MonoBehaviour {
     public bool holding_hand;
 
     float t;
-    float margin;
+    public float margin;
     int secsPassed;
     public int secsToWait;
     public int TotalIterations;
     public int workflag = 0;
-    int iterations;
+    public int iterations;
 
     // Use this for initialization
     void Start () {

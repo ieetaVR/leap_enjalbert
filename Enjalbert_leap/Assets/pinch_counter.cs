@@ -20,6 +20,16 @@ public class pinch_counter : MonoBehaviour {
     void Start () {
 
         printCurrentScore();
+        if(masterLVL.currentLevel==4)
+        {
+            totalCounts[0] = 2;
+            totalCounts[1] = 2;
+        }
+        else
+        {
+            totalCounts[2] = 2;
+            totalCounts[3] = 2;
+        }
 
     }
 

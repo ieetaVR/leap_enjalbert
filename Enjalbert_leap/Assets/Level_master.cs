@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
-public class Level_master : MonoBehaviour {
+public class Level_master : MonoBehaviour
+{
 
     public int currentLevel = 0;
     public int totalLevels = 5;
@@ -12,13 +13,19 @@ public class Level_master : MonoBehaviour {
     public text_master TypeOutScript;
     public TypeOutScript typeOutScript_numbers;
     public phantom_hand phantomHand;
-    //public text_change textChange;
-    bool finalStage = false;
-    bool gameOver = false;
+    public leap_enjalbert_score_keeper scoreKeeper;
 
-	// Use this for initialization
-	void Start () {
-        
+    //public text_change textChange;
+    public bool finalStage = false;
+    public bool gameOver = false;
+
+    bool scoreCollected = false;
+    bool scoreSent = false;
+
+    // Use this for initialization
+    void Start()
+    {
+
         switch (currentLevel)
         {
             case 0:
@@ -30,7 +37,7 @@ public class Level_master : MonoBehaviour {
 
                 //TypeOutScript.FinalText = "Welcome to Enjalbert!\nPlease select a level.";
                 //TypeOutScript.On = true;
-                
+
                 //typeOutScript_numbers.On = true;
                 break;
 
@@ -78,13 +85,13 @@ public class Level_master : MonoBehaviour {
             default:
                 break;
         }
-        	
-	}
+
+    }
 
 
 
     float t;
-    int secsPassed, stage=0;
+    int secsPassed, stage = 0;
 
 
     public bool getFinalStage()
@@ -133,19 +140,29 @@ public class Level_master : MonoBehaviour {
 
 
     // Update is called once per frame
-    void Update () {
-	
-        if(finalStage == true)
+    void Update()
+    {
+
+
+
+        if (finalStage == true)
         {
+            if (!scoreCollected)
+            {
+                //Debug.Log("collecting data");
+                scoreCollected = true;
+                scoreKeeper.collectLevelInfo();
+            }
+
             float newT;
-            if(secsPassed < 3)
+            if (secsPassed < 3)
             {
                 newT = Time.time;
                 secsPassed = (int)(newT - t);
             }
             else
             {
-                if(currentLevel < totalLevels)
+                if (currentLevel < totalLevels)
                 {
                     if (stage == 0)
                     {
@@ -167,12 +184,23 @@ public class Level_master : MonoBehaviour {
                 else
                 {
                     TypeOutScript.setCurrentText("Well Done!\n The test is finished!");
+                    if (!scoreSent)
+                    {
+                        scoreKeeper.sendToServer(true);
+                        scoreSent = true;
+                    }
                 }
-                
+
             }
         }
-        else if(gameOver == true)
+        else if (gameOver == true)
         {
+            if (!scoreCollected)
+            {
+                scoreCollected = true;
+                scoreKeeper.collectLevelInfo();
+            }
+
             float newT;
             if (secsPassed < 3)
             {
@@ -199,18 +227,24 @@ public class Level_master : MonoBehaviour {
                     TypeOutScript.On = true;*/
                     TypeOutScript.setCurrentText("Returning to Start.", 2f);
 
-                        secsPassed = 0;
-                        t = Time.time;
-                        stage = 2;
-                    }
-                    else if(stage==2)
+                    secsPassed = 0;
+                    t = Time.time;
+                    stage = 2;
+                }
+                else if (stage == 2)
+                {
+                    //Debug.Log("next scene: " + "Test_lvl" + (currentLevel + 1).ToString());
+                    if (!scoreSent)
                     {
-                        //Debug.Log("next scene: " + "Test_lvl" + (currentLevel + 1).ToString());
+                        scoreKeeper.sendToServer(true);
+                        scoreSent = true;
+                    }
+                    if (scoreKeeper.canGotoNextScene)
+                    {
                         SceneManager.LoadScene("Full_test");
                     }
-                
-
+                }
             }
         }
-	}
+    }
 }
