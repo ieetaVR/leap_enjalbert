@@ -25,6 +25,10 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
     string currentCollider = "";
     public string hand = "RigidRoundHand_L";
     public int workFlag = 0;
+    public float vertical_distance_variable = 0f;
+
+    public Vector3 startPosition;
+    public Vector3 updatedPosition;
 
     // Use this for initialization
     void Start()
@@ -32,6 +36,8 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
         //GameObject text3d = GameObject.Find("info_text");
         //text_changeReference = text3d.GetComponent<text_change>();
         GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1);
+        startPosition = this.transform.position;
+        updatedPosition = startPosition;
         workFlag = 0;
 
         
@@ -39,20 +45,37 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
 
     public void setRESTParameters()
     {
-        switch(masterLVL.currentLevel)
+        Debug.Log("setting test params");
+        Debug.Log("restClient hand: " + restClient.testToDo.GetField("hand").str);
+
+        if (restClient.testToDo.GetField("hand").str.Equals("right"))
+        {
+            Debug.Log("changing to right hand");
+            hand = "RigidRoundHand_R";
+        }
+
+        switch (masterLVL.currentLevel)
         {
             case 1:
                 //transform.position = new Vector3(transform.position.y, 0.113f, transform.position.z);
                 secondsToCount = int.Parse(restClient.testToDo.GetField("lvl1").GetField("hold_time").str);
+                vertical_distance_variable = float.Parse(restClient.testToDo.GetField("lvl1").GetField("vertical_distance").str);
+                
+                //updatedPosition.y = updatedPosition.y + (vertical_distance_variable / 10);
+                Debug.Log("prev y: " + updatedPosition.y);
+                Debug.Log("calc : " + updatedPosition.y + " + " + ((float)vertical_distance_variable / 10));
+                updatedPosition = new Vector3(updatedPosition.x, updatedPosition.y + ((float)vertical_distance_variable / 10), updatedPosition.z);
+                
+                Debug.Log("topBar new pos: " + updatedPosition.ToString());
+                
+                this.transform.position = updatedPosition;
                 break;
             case 2:
                 secondsToCount = int.Parse(restClient.testToDo.GetField("lvl2").GetField("hold_time").str);
                 break;
         }
-        if (restClient.testToDo.GetField("hand").str.Equals("right"))
-        {
-            hand = "RigidRoundHand_R";
-        }
+
+        
 
     }
 
@@ -67,7 +90,7 @@ public class leap_enjalbert_lift_arm : MonoBehaviour {
 
     void OnCollisionStay(Collision collision)
     {
-        if(workFlag == 1)
+        if(workFlag == 1 && (collision.gameObject.transform.parent.transform.parent.name.Equals(hand) || collision.gameObject.transform.parent.name.Equals(hand)))
         {
             if (taskComplete == false)
             {

@@ -12,7 +12,7 @@ public class text_master : MonoBehaviour {
 	
 	}
 	
-    public void setCurrentText(string newText, float typeTime=2f)
+    public void setCurrentText(string newText, float typeTime=0f)
     {
         if(!newText.Equals(currentText))
         {

@@ -28,7 +28,7 @@ public class lift_arm_start_pos : MonoBehaviour {
     {
         if(masterLVL.getFinalStage()==false && (collision.gameObject.transform.parent.transform.parent.name.Equals(top_bar_ref.hand) || collision.gameObject.transform.parent.name.Equals(top_bar_ref.hand)) && (sideWall_left.workFlag == 0 || sideWall_right.workFlag==0))
         {
-            //Debug.Log("col on start");
+            Debug.Log("col on start");
             top_bar_ref.setWorkFlag(1);
             phantomHand.moveToStart();
             phantomHand.mustMove = true;

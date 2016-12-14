@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rehab DashBoard</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/isotope.css" rel="stylesheet">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">EDB</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="AllEnjalbertTests.html">All Enjalbert Tests<span class="sr-only">(current)</span></a></li>
+                <li><a href="allGames.html">See All Games</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="EnjalbertTestToDo.html">Test To Do</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="404.html">Games To Do</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section>
+    <h1>All Games</h1>
+    <h2>Filter</h2>
+    <div id="filters" class="button-group">
+        <button class="button is-checked" data-filter="*">show all</button>
+        <button class="button" data-filter=".game0">Lift</button>
+        <button class="button" data-filter=".game1">Apple Eater</button>
+        <button class="button" data-filter=".game2">Dish Washer</button>
+        <button class="button" data-filter=".game3">Pinch Picker</button>
+        <button class="button" data-filter=".game4">Pinch Choice</button>
+        <!--<button class="button" data-filter=".transition">Apple</button>
+        <button class="button" data-filter=".alkali, .alkaline-earth">Dish Washer</button>
+        <button class="button" data-filter=":not(.transition)">Pinch Picker</button>
+        <button class="button" data-filter=".metal:not(.transition)">Pinch Choice</button>
+        <button class="button" data-filter="numberGreaterThan50">number > 50</button>
+        <button class="button" data-filter="ium">name ends with &ndash;ium</button>-->
+    </div>
+
+    <h2>Sort</h2>
+    <div id="sorts" class="button-group">
+        <button class="button is-checked" data-sort-by="original-order">original order</button>
+        <button class="button" data-sort-by="name">Patient Name</button>
+        <button class="button" data-sort-by="symbol">Game name</button>
+        <!--<button class="button" data-sort-by="number">number</button>
+        <button class="button" data-sort-by="weight">weight</button>
+        <button class="button" data-sort-by="category">category</button>-->
+    </div>
+
+    <div class="grid">
+
+    </div>
+
+
+</section>
+
+<div id="modals">
+
+    <div class="modal fade" id="modalGame0" role="dialog">
+        <div class="modal-dialog modal-m">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#2649ff;" id="modalTitle0"></h4>
+                    <h5 class="modal-patient" style="color:#2649ff;"></h5>
+                </div>
+                <form id="editTest_form0" class="form-horizontal">
+                    <div class="modal-body">
+                        <fieldset>
+                            <legend>Game Settings</legend>
+                            <div class="form-group" id="inputHands0">
+                                <label class="col-lg-2 control-label">Hand</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandLeft0"
+                                                   value="left" checked="">
+                                            Left
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandRight0"
+                                                   value="right">
+                                            Right
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputDistance0" class="control-label">Distance (m)</label>
+                                <input type="range" min="0.1" max="1.5" value="0.6" id="inputDistance0"
+                                       step="0.1" oninput="outputUpdate(value, 'distance0')">
+                                <output for="inputTimePerTest" id="distance0">0.5</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTimeToHold0" class="control-label">Time to Hold (seconds)</label>
+                                <input type="range" min="0" max="10" value="3" id="inputTimeToHold0"
+                                       step="1" oninput="outputUpdate(value, 'TimeToHold0')">
+                                <output for="inputTimePerTest" id="TimeToHold0">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalIterations0" class="control-label">Number of
+                                    Iterations/Repetitions</label>
+                                <input type="range" min="1" max="10" value="3" id="inputTotalIterations0"
+                                       step="1" oninput="outputUpdate(value, 'TotalIterations0')">
+                                <output for="inputTimePerTest" id="TotalIterations0">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTimeBetweenIterations0" class="control-label">Time between Iterations
+                                    (seconds)</label>
+                                <input type="range" min="0" max="10" value="3" id="inputTimeBetweenIterations0"
+                                       step="1" oninput="outputUpdate(value, 'TimeBetweenIterations0')">
+                                <output for="inputTimePerTest" id="TimeBetweenIterations0">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalTime0" class="control-label">Total Time (seconds)</label>
+                                <input type="range" min="0" max="60" value="3" id="inputTotalTime0"
+                                       step="1" oninput="outputUpdate(value, 'TotalTime0')">
+                                <output for="inputTimePerTest" id="TotalTime0">3</output>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="submit" value="setToDo" class="btn btn-primary">Set As Current Game
+                            </button>
+                            <button type="submit" value="edit" class="btn btn-primary">Apply Changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modalGame1" role="dialog">
+        <div class="modal-dialog modal-m">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#2649ff;" id="modalTitle1"></h4>
+                    <h5 class="modal-patient" style="color:#2649ff;"></h5>
+                </div>
+                <form id="editTest_form1" class="form-horizontal">
+                    <div class="modal-body">
+                        <fieldset>
+                            <legend>Game Settings</legend>
+                            <div class="form-group" id="inputHands1">
+                                <label class="col-lg-2 control-label">Hand</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandLeft1"
+                                                   value="left" checked="">
+                                            Left
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandRight1"
+                                                   value="right">
+                                            Right
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputGreenApple1" class="control-label">Green Apple Quantity</label>
+                                <input type="range" min="1" max="10" value="3" id="inputGreenApple1"
+                                       step="1" oninput="outputUpdate(value, 'GreenApple1')">
+                                <output for="inputTimePerTest" id="GreenApple1">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputRedApple1" class="control-label">Red Apple Quantity</label>
+                                <input type="range" min="1" max="10" value="3" id="inputRedApple1"
+                                       step="1" oninput="outputUpdate(value, 'RedApple1')">
+                                <output for="inputTimePerTest" id="RedApple1">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAppleMargin1" class="control-label">Proximity Margin (~dm)</label>
+                                <input type="range" min="0" max="1" value="0.25" id="inputAppleMargin1"
+                                       step="0.05" oninput="outputUpdate(value, 'AppleMargin1')">
+                                <output for="inputTimePerTest" id="AppleMargin1">0</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTimeBetweenIterations1" class="control-label">Time between Iterations
+                                    (seconds)</label>
+                                <input type="range" min="0" max="10" value="3" id="inputTimeBetweenIterations1"
+                                       step="1" oninput="outputUpdate(value, 'TimeBetweenIterations1')">
+                                <output for="inputTimePerTest" id="TimeBetweenIterations1">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalTime1" class="control-label">Total Time (seconds)</label>
+                                <input type="range" min="0" max="60" value="3" id="inputTotalTime1"
+                                       step="1" oninput="outputUpdate(value, 'TotalTime1')">
+                                <output for="inputTimePerTest" id="TotalTime1">3</output>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="submit" value="setToDo" class="btn btn-primary">Set As Current Game
+                            </button>
+                            <button type="submit" value="edit" class="btn btn-primary">Apply Changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modalGame2" role="dialog">
+        <div class="modal-dialog modal-m">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#2649ff;" id="modalTitle2"></h4>
+                    <h5 class="modal-patient" style="color:#2649ff;"></h5>
+                </div>
+                <form id="editTest_form2" class="form-horizontal">
+                    <div class="modal-body">
+                        <fieldset>
+                            <legend>Game Settings</legend>
+                            <div class="form-group" id="inputHands2">
+                                <label class="col-lg-2 control-label">Hand</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandLeft2"
+                                                   value="left" checked="">
+                                            Left
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandRight2"
+                                                   value="right">
+                                            Right
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputGrabMargin2" class="control-label">Grab Margin (rad)</label>
+                                <input type="range" min="0" max="1.5" value="0.6" id="inputGrabMargin2"
+                                       step="0.01" oninput="outputUpdate(value, 'GrabMargin2')">
+                                <output for="inputTimePerTest" id="GrabMargin2">0.5</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTimeToHold2" class="control-label">Time to Hold (seconds)</label>
+                                <input type="range" min="0" max="10" value="3" id="inputTimeToHold2"
+                                       step="1" oninput="outputUpdate(value, 'TimeToHold2')">
+                                <output for="inputTimePerTest" id="TimeToHold2">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalIterations2" class="control-label">Number of
+                                    Iterations/Repetitions</label>
+                                <input type="range" min="1" max="10" value="3" id="inputTotalIterations2"
+                                       step="1" oninput="outputUpdate(value, 'TotalIterations2')">
+                                <output for="inputTimePerTest" id="TotalIterations2">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTimeBetweenIterations2" class="control-label">Time between Iterations
+                                    (seconds)</label>
+                                <input type="range" min="0" max="10" value="3" id="inputTimeBetweenIterations2"
+                                       step="1" oninput="outputUpdate(value, 'TimeBetweenIterations2')">
+                                <output for="inputTimePerTest" id="TimeBetweenIterations2">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalTime2" class="control-label">Total Time (seconds)</label>
+                                <input type="range" min="0" max="60" value="3" id="inputTotalTime2"
+                                       step="1" oninput="outputUpdate(value, 'TotalTime2')">
+                                <output for="inputTimePerTest" id="TotalTime2">3</output>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="submit" value="setToDo" class="btn btn-primary">Set As Current Game
+                            </button>
+                            <button type="submit" value="edit" class="btn btn-primary">Apply Changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modalGame3" role="dialog">
+        <div class="modal-dialog modal-m">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#2649ff;" id="modalTitle3"></h4>
+                    <h5 class="modal-patient" style="color:#2649ff;"></h5>
+                </div>
+                <form id="editTest_form3" class="form-horizontal">
+                    <div class="modal-body">
+                        <fieldset>
+                            <legend>Game Settings</legend>
+                            <div class="form-group" id="inputHands3">
+                                <label class="col-lg-2 control-label">Hand</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandLeft3"
+                                                   value="left" checked="">
+                                            Left
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandRight3"
+                                                   value="right">
+                                            Right
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputItemMargin3" class="control-label">Item Margin (~dm)</label>
+                                <input type="range" min="0.1" max="1.5" value="0.6" id="inputItemMargin3"
+                                       step="0.01" oninput="outputUpdate(value, 'ItemMargin3')">
+                                <output for="inputTimePerTest" id="ItemMargin3">0.5</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPinchMargin3" class="control-label">Pinch Margin (mm)</label>
+                                <input type="range" min="0" max="50" value="3" id="inputPinchMargin3"
+                                       step="1" oninput="outputUpdate(value, 'PinchMargin3')">
+                                <output for="inputTimePerTest" id="PinchMargin3">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalIterations3" class="control-label">Number of
+                                    Iterations/Repetitions (per finger)</label>
+                                <input type="range" min="1" max="10" value="3" id="inputTotalIterations3"
+                                       step="1" oninput="outputUpdate(value, 'TotalIterations3')">
+                                <output for="inputTimePerTest" id="TotalIterations3">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalTime3" class="control-label">Total Time (seconds)</label>
+                                <input type="range" min="0" max="60" value="3" id="inputTotalTime3"
+                                       step="1" oninput="outputUpdate(value, 'TotalTime3')">
+                                <output for="inputTimePerTest" id="TotalTime3">3</output>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="submit" value="setToDo" class="btn btn-primary">Set As Current Game
+                            </button>
+                            <button type="submit" value="edit" class="btn btn-primary">Apply Changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modalGame4" role="dialog">
+        <div class="modal-dialog modal-m">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#2649ff;" id="modalTitle4"></h4>
+                    <h5 class="modal-patient" style="color:#2649ff;"></h5>
+                </div>
+                <form id="editTest_form4" class="form-horizontal">
+                    <div class="modal-body">
+                        <fieldset>
+                            <legend>Game Settings</legend>
+                            <div class="form-group" id="inputHands4">
+                                <label class="col-lg-2 control-label">Hand</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandLeft4"
+                                                   value="left" checked="">
+                                            Left
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadios"
+                                                   id="inputHandRight4"
+                                                   value="right">
+                                            Right
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPinchMargin4" class="control-label">Pinch Margin (mm)</label>
+                                <input type="range" min="0" max="50" value="3" id="inputPinchMargin4"
+                                       step="1" oninput="outputUpdate(value, 'PinchMargin4')">
+                                <output for="inputTimePerTest" id="PinchMargin4">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalIterations4" class="control-label">Number of
+                                    Iterations/Repetitions</label>
+                                <input type="range" min="1" max="10" value="3" id="inputTotalIterations4"
+                                       step="1" oninput="outputUpdate(value, 'TotalIterations4')">
+                                <output for="inputTimePerTest" id="TotalIterations4">3</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTotalTime4" class="control-label">Total Time (seconds)</label>
+                                <input type="range" min="0" max="60" value="3" id="inputTotalTime4"
+                                       step="1" oninput="outputUpdate(value, 'TotalTime4')">
+                                <output for="inputTimePerTest" id="TotalTime4">3</output>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="submit" value="setToDo" class="btn btn-primary">Set As Current Game
+                            </button>
+                            <button type="submit" value="edit" class="btn btn-primary">Apply Changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+
+<script src="js/isotope-docs.min.js?3"></script>
+
+<script src="js/variables.js"></script>
+<script src="js/rest_client.js"></script>
+<script src="js/allGames.js"></script>
+
+</body>
+
+</html>

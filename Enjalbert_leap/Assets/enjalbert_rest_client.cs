@@ -106,6 +106,9 @@ public class enjalbert_rest_client : MonoBehaviour
     {
         //Debug.Log("sendTestResults: " + System.Text.Encoding.UTF8.GetBytes(scores.ToString()).ToString());
 
+        scores.SetField("test_id", testToDo.GetField("id"));
+        scores.SetField("timestamp", System.DateTime.Now.ToString());
+
         string url = server_url + "sendTestResults";
 
         HttpWebRequest http =(HttpWebRequest) WebRequest.Create(url);

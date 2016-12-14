@@ -1,0 +1,89 @@
+[
+  {
+    "type": 0,
+    "name": "Lift",
+    "instances": [
+      {
+        "id": 0,
+        "custom_name": "Ricardo",
+        "distance": 0.5,
+        "time_to_hold": 3,
+        "total_interactions": 3,
+        "time_between_interactions": 3,
+        "left_hand": true,
+        "total_time": 60
+      },
+      {
+        "id": 1,
+        "custom_name": "Ana",
+        "distance": 1,
+        "time_to_hold": 2,
+        "total_interactions": 4,
+        "time_between_interactions": 5,
+        "left_hand": false,
+        "total_time": 39
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "name": "Apple Eater",
+    "instances": [
+      {
+        "id": 0,
+        "custom_name": "Ricardo",
+        "green_apple_quantity": 5,
+        "red_apple_quantity": 1,
+        "apple_margin": 0.25,
+        "time_between_interactions": 3,
+        "left_hand": true,
+        "total_time": 60
+      }
+    ]
+  },
+  {
+    "type": 2,
+    "name": "Dish Washer",
+    "instances": [
+      {
+        "id": 0,
+        "custom_name": "Ricardo",
+        "grab_margin": 0.1,
+        "time_to_hold": 3,
+        "total_interactions": 5,
+        "time_between_interactions": 1,
+        "left_hand": true,
+        "total_time": 60
+      }
+    ]
+  },
+  {
+    "type": 3,
+    "name": "Pinch Picker",
+    "instances": [
+      {
+        "id": 0,
+        "custom_name": "Ricardo",
+        "item_margin": 0.5,
+        "pinch_margin": 20,
+        "iterations_per_finger": 2,
+        "left_hand": true,
+        "total_time": 60
+      }
+    ]
+  },
+  {
+    "type": 4,
+    "name": "Pinch Choice",
+    "instances": [
+      {
+        "id": 0,
+        "custom_name": "Ricardo",
+        "pinch_margin": 20,
+        "total_interactions": 6,
+        "left_hand": true,
+        "total_time": 60
+      }
+    ]
+  }
+]

@@ -17,7 +17,7 @@ $("#editTest_form").on('submit', function (e) {
     var newTest = testToDo;
 
     newTest.id = $('#inputID')[0].value;
-    newTest.custom_name= $('#inputTestName')[0].value;
+    newTest.custom_name = $('#inputTestName')[0].value;
     newTest.time_per_test = $('#inputTimePerTest')[0].value;
 
     var hands = document.getElementById('inputHands').getElementsByClassName('optionsRadios');
