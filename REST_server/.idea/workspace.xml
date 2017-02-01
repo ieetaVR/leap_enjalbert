@@ -23,98 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="allGames.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/allGames.html">
+      <file leaf-file-name="allPatients.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/allPatients.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="463" column="64" lean-forward="false" selection-start-line="463" selection-start-column="57" selection-end-line="463" selection-end-column="64" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allGames.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/js/allGames.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="227" column="45" lean-forward="false" selection-start-line="227" selection-start-column="45" selection-end-line="227" selection-end-column="45" />
-              <folding>
-                <element signature="n#!!doc;n#outputUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#outputUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#init_isotope#0" expanded="false" />
-                <element signature="n#!!block;n#populateIsotope#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="791" column="37" lean-forward="false" selection-start-line="791" selection-start-column="37" selection-end-line="791" selection-end-column="37" />
-              <folding>
-                <element signature="e#1496#2103#0" expanded="false" />
-                <element signature="e#2166#2189#0" expanded="false" />
-                <element signature="n#!!block;n#getTestById#0" expanded="false" />
-                <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
-                <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
-                <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
-                <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-                <element signature="e#8399#9265#0" expanded="false" />
-                <element signature="e#9315#10137#0" expanded="false" />
-                <element signature="e#10185#11044#0" expanded="false" />
-                <element signature="e#11092#11946#0" expanded="false" />
-                <element signature="e#12001#12901#0" expanded="false" />
-                <element signature="e#12955#13320#0" expanded="false" />
-                <element signature="e#13391#14807#0" expanded="false" />
-                <element signature="e#14853#16306#0" expanded="false" />
-                <element signature="e#16355#17768#0" expanded="false" />
-                <element signature="e#17821#18893#0" expanded="false" />
-                <element signature="e#19030#20606#0" expanded="false" />
-                <element signature="e#20656#22105#0" expanded="false" />
-                <element signature="e#22158#23305#0" expanded="false" />
-                <element signature="e#24311#25333#0" expanded="false" />
-                <element signature="e#25408#26919#0" expanded="false" />
-                <element signature="e#26997#27149#0" expanded="false" />
-                <element signature="e#27528#27578#0" expanded="false" />
-                <element signature="e#27626#27676#0" expanded="false" />
-                <element signature="e#27817#27865#0" expanded="false" />
-                <element signature="e#27950#28114#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="local_variables.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/local_variables.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state relative-caret-position="102">
+              <caret line="196" column="48" lean-forward="true" selection-start-line="196" selection-start-column="48" selection-end-line="196" selection-end-column="48" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rest_client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/js/rest_client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="155" column="20" lean-forward="false" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -141,8 +55,11 @@
       <find>isotop</find>
       <find>symbol</find>
       <find>alka</find>
-      <find>button</find>
       <find>left</find>
+      <find>wrong or</find>
+      <find>button</find>
+      <find>data-ta</find>
+      <find>0</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -165,14 +82,17 @@
         <option value="$PROJECT_DIR$/html/js/add_test.js" />
         <option value="$PROJECT_DIR$/html/enjalbertTestResults.html" />
         <option value="$PROJECT_DIR$/html/js/testResults.js" />
-        <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/html/css/isotope.css" />
-        <option value="$PROJECT_DIR$/data/5_games.json" />
         <option value="$PROJECT_DIR$/html/allGames.html" />
-        <option value="$PROJECT_DIR$/html/js/rest_client.js" />
-        <option value="$PROJECT_DIR$/data/local_variables.json" />
         <option value="$PROJECT_DIR$/html/js/allGames.js" />
+        <option value="$PROJECT_DIR$/data/local_variables.json" />
+        <option value="$PROJECT_DIR$/data/5_games.json" />
+        <option value="$PROJECT_DIR$/html/index.html" />
+        <option value="$PROJECT_DIR$/html/js/rest_client.js" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/html/js/patients.js" />
+        <option value="$PROJECT_DIR$/data/patients.json" />
+        <option value="$PROJECT_DIR$/html/allPatients.html" />
       </list>
     </option>
   </component>
@@ -190,7 +110,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="974" />
-    <option name="height" value="1077" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -207,7 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -235,44 +154,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="REST_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="REST_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="REST_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="REST_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GitHub/mdb_for_release_rest/musicDB_backend" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
@@ -282,12 +170,12 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ua local\ZZZ_TESE\leap_enjalbert\REST_server\html" />
       <recent name="D:\ua local\ZZZ_TESE\leap_enjalbert\REST_server\html\js" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ua local\ZZZ_TESE\leap_enjalbert\REST_server\html\js" />
-      <recent name="D:\ua local\ZZZ_TESE\leap_enjalbert\REST_server\html" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.index.js">
@@ -419,34 +307,51 @@
       <workItem from="1479666997457" duration="26000" />
       <workItem from="1481031507926" duration="21061000" />
       <workItem from="1481636443518" duration="19474000" />
-      <workItem from="1481666939160" duration="7473000" />
+      <workItem from="1481666939160" duration="8054000" />
+      <workItem from="1481734110076" duration="4022000" />
+      <workItem from="1481745483518" duration="5646000" />
+      <workItem from="1481816722273" duration="652000" />
+      <workItem from="1481822231464" duration="606000" />
+      <workItem from="1482085647422" duration="4612000" />
+      <workItem from="1483214465584" duration="599000" />
+      <workItem from="1483542239729" duration="4984000" />
+      <workItem from="1483808293110" duration="13000" />
+      <workItem from="1485181444369" duration="354000" />
+      <workItem from="1485185809770" duration="7330000" />
+      <workItem from="1485304571017" duration="14000" />
+      <workItem from="1485355417642" duration="2962000" />
+      <workItem from="1485384522620" duration="2302000" />
+      <workItem from="1485432691683" duration="5267000" />
+      <workItem from="1485441084811" duration="7622000" />
+      <workItem from="1485464132479" duration="52000" />
+      <workItem from="1485988729683" duration="241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69494000" />
+    <option name="totallyTimeSpent" value="117353000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1077" extended-state="1" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="974" height="1087" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23695198" sideWeight="0.62808645" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2361111" sideWeight="0.548218" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23695198" sideWeight="0.37191358" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2361111" sideWeight="0.45178196" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32521185" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,44 +370,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/js/rest_client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="141" column="20" lean-forward="false" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/enjalbertTestResults.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test_results.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/js/testResults.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#getLastCompletedTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -511,33 +387,53 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1496#2103#0" expanded="false" />
-            <element signature="e#2166#2189#0" expanded="false" />
+            <element signature="e#1551#2158#0" expanded="false" />
+            <element signature="e#2221#2244#0" expanded="false" />
             <element signature="n#!!block;n#getTestById#0" expanded="false" />
             <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
             <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
             <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
+            <element signature="n#!!block;n#getGameById#0" expanded="false" />
             <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="e#8399#9265#0" expanded="false" />
-            <element signature="e#9315#10137#0" expanded="false" />
-            <element signature="e#10185#11044#0" expanded="false" />
-            <element signature="e#11092#11946#0" expanded="false" />
-            <element signature="e#12001#12901#0" expanded="false" />
-            <element signature="e#12955#13320#0" expanded="false" />
-            <element signature="e#13391#14807#0" expanded="false" />
-            <element signature="e#14853#16306#0" expanded="false" />
-            <element signature="e#16355#17768#0" expanded="false" />
-            <element signature="e#17821#18893#0" expanded="false" />
-            <element signature="e#19030#20606#0" expanded="false" />
-            <element signature="e#20656#22105#0" expanded="false" />
-            <element signature="e#22158#23305#0" expanded="false" />
-            <element signature="e#24311#25333#0" expanded="false" />
-            <element signature="e#25408#26919#0" expanded="false" />
-            <element signature="e#26997#27149#0" expanded="false" />
-            <element signature="e#27528#27578#0" expanded="false" />
-            <element signature="e#27626#27676#0" expanded="false" />
-            <element signature="e#27817#27865#0" expanded="false" />
-            <element signature="e#27950#28114#0" expanded="false" />
+            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
+            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
+            <element signature="n#!!block;n#editGame#0" expanded="false" />
+            <element signature="n#!!block;n#addGame#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
+            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
+            <element signature="n#!!block;n#patientById#0" expanded="false" />
+            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
+            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
+            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
+            <element signature="e#19761#20579#0" expanded="false" />
+            <element signature="e#20630#21742#0" expanded="false" />
+            <element signature="e#21790#22410#0" expanded="false" />
+            <element signature="e#25378#26742#0" expanded="false" />
+            <element signature="e#26878#27744#0" expanded="false" />
+            <element signature="e#27794#28616#0" expanded="false" />
+            <element signature="e#28664#29523#0" expanded="false" />
+            <element signature="e#29571#30425#0" expanded="false" />
+            <element signature="e#30480#31380#0" expanded="false" />
+            <element signature="e#31434#31799#0" expanded="false" />
+            <element signature="e#31870#33286#0" expanded="false" />
+            <element signature="e#33332#34785#0" expanded="false" />
+            <element signature="e#34834#36247#0" expanded="false" />
+            <element signature="e#36300#37372#0" expanded="false" />
+            <element signature="e#37509#39085#0" expanded="false" />
+            <element signature="e#39135#40584#0" expanded="false" />
+            <element signature="e#40637#41784#0" expanded="false" />
+            <element signature="e#41832#42742#0" expanded="false" />
+            <element signature="e#42790#44177#0" expanded="false" />
+            <element signature="e#44252#45763#0" expanded="false" />
+            <element signature="e#47952#51193#0" expanded="false" />
+            <element signature="e#51271#51423#0" expanded="false" />
+            <element signature="e#51802#51852#0" expanded="false" />
+            <element signature="e#51900#51950#0" expanded="false" />
+            <element signature="e#52091#52139#0" expanded="false" />
+            <element signature="e#52224#52388#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -546,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,7 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -562,9 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -587,33 +478,53 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1496#2103#0" expanded="false" />
-            <element signature="e#2166#2189#0" expanded="false" />
+            <element signature="e#1551#2158#0" expanded="false" />
+            <element signature="e#2221#2244#0" expanded="false" />
             <element signature="n#!!block;n#getTestById#0" expanded="false" />
             <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
             <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
             <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
+            <element signature="n#!!block;n#getGameById#0" expanded="false" />
             <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="e#8399#9265#0" expanded="false" />
-            <element signature="e#9315#10137#0" expanded="false" />
-            <element signature="e#10185#11044#0" expanded="false" />
-            <element signature="e#11092#11946#0" expanded="false" />
-            <element signature="e#12001#12901#0" expanded="false" />
-            <element signature="e#12955#13320#0" expanded="false" />
-            <element signature="e#13391#14807#0" expanded="false" />
-            <element signature="e#14853#16306#0" expanded="false" />
-            <element signature="e#16355#17768#0" expanded="false" />
-            <element signature="e#17821#18893#0" expanded="false" />
-            <element signature="e#19030#20606#0" expanded="false" />
-            <element signature="e#20656#22105#0" expanded="false" />
-            <element signature="e#22158#23305#0" expanded="false" />
-            <element signature="e#24311#25333#0" expanded="false" />
-            <element signature="e#25408#26919#0" expanded="false" />
-            <element signature="e#26997#27149#0" expanded="false" />
-            <element signature="e#27528#27578#0" expanded="false" />
-            <element signature="e#27626#27676#0" expanded="false" />
-            <element signature="e#27817#27865#0" expanded="false" />
-            <element signature="e#27950#28114#0" expanded="false" />
+            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
+            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
+            <element signature="n#!!block;n#editGame#0" expanded="false" />
+            <element signature="n#!!block;n#addGame#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
+            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
+            <element signature="n#!!block;n#patientById#0" expanded="false" />
+            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
+            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
+            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
+            <element signature="e#19761#20579#0" expanded="false" />
+            <element signature="e#20630#21742#0" expanded="false" />
+            <element signature="e#21790#22410#0" expanded="false" />
+            <element signature="e#25378#26742#0" expanded="false" />
+            <element signature="e#26878#27744#0" expanded="false" />
+            <element signature="e#27794#28616#0" expanded="false" />
+            <element signature="e#28664#29523#0" expanded="false" />
+            <element signature="e#29571#30425#0" expanded="false" />
+            <element signature="e#30480#31380#0" expanded="false" />
+            <element signature="e#31434#31799#0" expanded="false" />
+            <element signature="e#31870#33286#0" expanded="false" />
+            <element signature="e#33332#34785#0" expanded="false" />
+            <element signature="e#34834#36247#0" expanded="false" />
+            <element signature="e#36300#37372#0" expanded="false" />
+            <element signature="e#37509#39085#0" expanded="false" />
+            <element signature="e#39135#40584#0" expanded="false" />
+            <element signature="e#40637#41784#0" expanded="false" />
+            <element signature="e#41832#42742#0" expanded="false" />
+            <element signature="e#42790#44177#0" expanded="false" />
+            <element signature="e#44252#45763#0" expanded="false" />
+            <element signature="e#47952#51193#0" expanded="false" />
+            <element signature="e#51271#51423#0" expanded="false" />
+            <element signature="e#51802#51852#0" expanded="false" />
+            <element signature="e#51900#51950#0" expanded="false" />
+            <element signature="e#52091#52139#0" expanded="false" />
+            <element signature="e#52224#52388#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -622,7 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,9 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,33 +569,53 @@
         <state relative-caret-position="6606">
           <caret line="367" column="25" lean-forward="false" selection-start-line="367" selection-start-column="25" selection-end-line="367" selection-end-column="25" />
           <folding>
-            <element signature="e#1496#2103#0" expanded="false" />
-            <element signature="e#2166#2189#0" expanded="false" />
+            <element signature="e#1551#2158#0" expanded="false" />
+            <element signature="e#2221#2244#0" expanded="false" />
             <element signature="n#!!block;n#getTestById#0" expanded="false" />
             <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
             <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
             <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
+            <element signature="n#!!block;n#getGameById#0" expanded="false" />
             <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="e#8399#9265#0" expanded="false" />
-            <element signature="e#9315#10137#0" expanded="false" />
-            <element signature="e#10185#11044#0" expanded="false" />
-            <element signature="e#11092#11946#0" expanded="false" />
-            <element signature="e#12001#12901#0" expanded="false" />
-            <element signature="e#12955#13320#0" expanded="false" />
-            <element signature="e#13391#14807#0" expanded="false" />
-            <element signature="e#14853#16306#0" expanded="false" />
-            <element signature="e#16355#17768#0" expanded="false" />
-            <element signature="e#17821#18893#0" expanded="false" />
-            <element signature="e#19030#20606#0" expanded="false" />
-            <element signature="e#20656#22105#0" expanded="false" />
-            <element signature="e#22158#23305#0" expanded="false" />
-            <element signature="e#24311#25333#0" expanded="false" />
-            <element signature="e#25408#26919#0" expanded="false" />
-            <element signature="e#26997#27149#0" expanded="false" />
-            <element signature="e#27528#27578#0" expanded="false" />
-            <element signature="e#27626#27676#0" expanded="false" />
-            <element signature="e#27817#27865#0" expanded="false" />
-            <element signature="e#27950#28114#0" expanded="false" />
+            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
+            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
+            <element signature="n#!!block;n#editGame#0" expanded="false" />
+            <element signature="n#!!block;n#addGame#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
+            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
+            <element signature="n#!!block;n#patientById#0" expanded="false" />
+            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
+            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
+            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
+            <element signature="e#19761#20579#0" expanded="false" />
+            <element signature="e#20630#21742#0" expanded="false" />
+            <element signature="e#21790#22410#0" expanded="false" />
+            <element signature="e#25378#26742#0" expanded="false" />
+            <element signature="e#26878#27744#0" expanded="false" />
+            <element signature="e#27794#28616#0" expanded="false" />
+            <element signature="e#28664#29523#0" expanded="false" />
+            <element signature="e#29571#30425#0" expanded="false" />
+            <element signature="e#30480#31380#0" expanded="false" />
+            <element signature="e#31434#31799#0" expanded="false" />
+            <element signature="e#31870#33286#0" expanded="false" />
+            <element signature="e#33332#34785#0" expanded="false" />
+            <element signature="e#34834#36247#0" expanded="false" />
+            <element signature="e#36300#37372#0" expanded="false" />
+            <element signature="e#37509#39085#0" expanded="false" />
+            <element signature="e#39135#40584#0" expanded="false" />
+            <element signature="e#40637#41784#0" expanded="false" />
+            <element signature="e#41832#42742#0" expanded="false" />
+            <element signature="e#42790#44177#0" expanded="false" />
+            <element signature="e#44252#45763#0" expanded="false" />
+            <element signature="e#47952#51193#0" expanded="false" />
+            <element signature="e#51271#51423#0" expanded="false" />
+            <element signature="e#51802#51852#0" expanded="false" />
+            <element signature="e#51900#51950#0" expanded="false" />
+            <element signature="e#52091#52139#0" expanded="false" />
+            <element signature="e#52224#52388#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -698,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,9 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -731,33 +653,53 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1496#2103#0" expanded="false" />
-            <element signature="e#2166#2189#0" expanded="false" />
+            <element signature="e#1551#2158#0" expanded="false" />
+            <element signature="e#2221#2244#0" expanded="false" />
             <element signature="n#!!block;n#getTestById#0" expanded="false" />
             <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
             <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
             <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
+            <element signature="n#!!block;n#getGameById#0" expanded="false" />
             <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="e#8399#9265#0" expanded="false" />
-            <element signature="e#9315#10137#0" expanded="false" />
-            <element signature="e#10185#11044#0" expanded="false" />
-            <element signature="e#11092#11946#0" expanded="false" />
-            <element signature="e#12001#12901#0" expanded="false" />
-            <element signature="e#12955#13320#0" expanded="false" />
-            <element signature="e#13391#14807#0" expanded="false" />
-            <element signature="e#14853#16306#0" expanded="false" />
-            <element signature="e#16355#17768#0" expanded="false" />
-            <element signature="e#17821#18893#0" expanded="false" />
-            <element signature="e#19030#20606#0" expanded="false" />
-            <element signature="e#20656#22105#0" expanded="false" />
-            <element signature="e#22158#23305#0" expanded="false" />
-            <element signature="e#24311#25333#0" expanded="false" />
-            <element signature="e#25408#26919#0" expanded="false" />
-            <element signature="e#26997#27149#0" expanded="false" />
-            <element signature="e#27528#27578#0" expanded="false" />
-            <element signature="e#27626#27676#0" expanded="false" />
-            <element signature="e#27817#27865#0" expanded="false" />
-            <element signature="e#27950#28114#0" expanded="false" />
+            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
+            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
+            <element signature="n#!!block;n#editGame#0" expanded="false" />
+            <element signature="n#!!block;n#addGame#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
+            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
+            <element signature="n#!!block;n#patientById#0" expanded="false" />
+            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
+            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
+            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
+            <element signature="e#19761#20579#0" expanded="false" />
+            <element signature="e#20630#21742#0" expanded="false" />
+            <element signature="e#21790#22410#0" expanded="false" />
+            <element signature="e#25378#26742#0" expanded="false" />
+            <element signature="e#26878#27744#0" expanded="false" />
+            <element signature="e#27794#28616#0" expanded="false" />
+            <element signature="e#28664#29523#0" expanded="false" />
+            <element signature="e#29571#30425#0" expanded="false" />
+            <element signature="e#30480#31380#0" expanded="false" />
+            <element signature="e#31434#31799#0" expanded="false" />
+            <element signature="e#31870#33286#0" expanded="false" />
+            <element signature="e#33332#34785#0" expanded="false" />
+            <element signature="e#34834#36247#0" expanded="false" />
+            <element signature="e#36300#37372#0" expanded="false" />
+            <element signature="e#37509#39085#0" expanded="false" />
+            <element signature="e#39135#40584#0" expanded="false" />
+            <element signature="e#40637#41784#0" expanded="false" />
+            <element signature="e#41832#42742#0" expanded="false" />
+            <element signature="e#42790#44177#0" expanded="false" />
+            <element signature="e#44252#45763#0" expanded="false" />
+            <element signature="e#47952#51193#0" expanded="false" />
+            <element signature="e#51271#51423#0" expanded="false" />
+            <element signature="e#51802#51852#0" expanded="false" />
+            <element signature="e#51900#51950#0" expanded="false" />
+            <element signature="e#52091#52139#0" expanded="false" />
+            <element signature="e#52224#52388#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -811,28 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/variables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/EnjalbertTestToDo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/addEnjalbertTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -840,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="132" column="4" lean-forward="false" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,9 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="95" column="44" lean-forward="false" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc;n#getLastCompletedTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,7 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="7" column="683" lean-forward="false" selection-start-line="7" selection-start-column="677" selection-end-line="7" selection-end-column="683" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,16 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="42" lean-forward="false" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -899,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="125" column="20" lean-forward="true" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,9 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -924,15 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/5_games.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,9 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="189" column="85" lean-forward="true" selection-start-line="189" selection-start-column="24" selection-end-line="189" selection-end-column="85" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,93 +841,155 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="23" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/variables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/5_games.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="127" column="27" lean-forward="true" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/local_variables.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/addEnjalbertTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/allGames.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="463" column="64" lean-forward="false" selection-start-line="463" selection-start-column="57" selection-end-line="463" selection-end-column="64" />
+        <state relative-caret-position="229">
+          <caret line="613" column="0" lean-forward="true" selection-start-line="613" selection-start-column="0" selection-end-line="616" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/patients.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="769" column="63" lean-forward="false" selection-start-line="769" selection-start-column="63" selection-end-line="769" selection-end-column="63" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1551#2158#0" expanded="false" />
+            <element signature="e#2221#2244#0" expanded="false" />
+            <element signature="n#!!block;n#getTestById#0" expanded="false" />
+            <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
+            <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
+            <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
+            <element signature="n#!!block;n#getGameById#0" expanded="false" />
+            <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
+            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
+            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
+            <element signature="n#!!block;n#editGame#0" expanded="false" />
+            <element signature="n#!!block;n#addGame#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
+            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
+            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
+            <element signature="n#!!block;n#patientById#0" expanded="false" />
+            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
+            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
+            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
+            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
+            <element signature="e#19761#20579#0" expanded="false" />
+            <element signature="e#20630#21742#0" expanded="false" />
+            <element signature="e#21790#22410#0" expanded="false" />
+            <element signature="e#25378#26742#0" expanded="false" />
+            <element signature="e#26878#27744#0" expanded="false" />
+            <element signature="e#27794#28616#0" expanded="false" />
+            <element signature="e#28664#29523#0" expanded="false" />
+            <element signature="e#29571#30425#0" expanded="false" />
+            <element signature="e#30480#31380#0" expanded="false" />
+            <element signature="e#31434#31799#0" expanded="false" />
+            <element signature="e#31870#33286#0" expanded="false" />
+            <element signature="e#33332#34785#0" expanded="false" />
+            <element signature="e#34834#36247#0" expanded="false" />
+            <element signature="e#36300#37372#0" expanded="false" />
+            <element signature="e#37509#39085#0" expanded="false" />
+            <element signature="e#39135#40584#0" expanded="false" />
+            <element signature="e#40637#41784#0" expanded="false" />
+            <element signature="e#41832#42742#0" expanded="false" />
+            <element signature="e#42790#44177#0" expanded="false" />
+            <element signature="e#44252#45763#0" expanded="false" />
+            <element signature="e#47952#51193#0" expanded="false" />
+            <element signature="e#51271#51423#0" expanded="false" />
+            <element signature="e#51802#51852#0" expanded="false" />
+            <element signature="e#51900#51950#0" expanded="false" />
+            <element signature="e#52091#52139#0" expanded="false" />
+            <element signature="e#52224#52388#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/patients.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="112" column="22" lean-forward="false" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/allGames.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="362" column="24" lean-forward="false" selection-start-line="362" selection-start-column="24" selection-end-line="362" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!block;n#outputUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#init_isotope#0" expanded="false" />
+            <element signature="e#6719#8033#0" expanded="false" />
+            <element signature="e#8080#9402#0" expanded="false" />
+            <element signature="e#9449#10768#0" expanded="false" />
+            <element signature="e#10815#12037#0" expanded="false" />
+            <element signature="e#12084#13227#0" expanded="false" />
+            <element signature="n#!!block;n#populateIsotope#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/js/rest_client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="155" column="20" lean-forward="false" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/local_variables.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="882">
+          <caret line="276" column="39" lean-forward="false" selection-start-line="276" selection-start-column="39" selection-end-line="276" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/allGames.js">
+    <entry file="file://$PROJECT_DIR$/html/allPatients.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="227" column="45" lean-forward="false" selection-start-line="227" selection-start-column="45" selection-end-line="227" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc;n#outputUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#outputUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#init_isotope#0" expanded="false" />
-            <element signature="n#!!block;n#populateIsotope#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="791" column="37" lean-forward="false" selection-start-line="791" selection-start-column="37" selection-end-line="791" selection-end-column="37" />
-          <folding>
-            <element signature="e#1496#2103#0" expanded="false" />
-            <element signature="e#2166#2189#0" expanded="false" />
-            <element signature="n#!!block;n#getTestById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
-            <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
-            <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="e#8399#9265#0" expanded="false" />
-            <element signature="e#9315#10137#0" expanded="false" />
-            <element signature="e#10185#11044#0" expanded="false" />
-            <element signature="e#11092#11946#0" expanded="false" />
-            <element signature="e#12001#12901#0" expanded="false" />
-            <element signature="e#12955#13320#0" expanded="false" />
-            <element signature="e#13391#14807#0" expanded="false" />
-            <element signature="e#14853#16306#0" expanded="false" />
-            <element signature="e#16355#17768#0" expanded="false" />
-            <element signature="e#17821#18893#0" expanded="false" />
-            <element signature="e#19030#20606#0" expanded="false" />
-            <element signature="e#20656#22105#0" expanded="false" />
-            <element signature="e#22158#23305#0" expanded="false" />
-            <element signature="e#24311#25333#0" expanded="false" />
-            <element signature="e#25408#26919#0" expanded="false" />
-            <element signature="e#26997#27149#0" expanded="false" />
-            <element signature="e#27528#27578#0" expanded="false" />
-            <element signature="e#27626#27676#0" expanded="false" />
-            <element signature="e#27817#27865#0" expanded="false" />
-            <element signature="e#27950#28114#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="196" column="48" lean-forward="true" selection-start-line="196" selection-start-column="48" selection-end-line="196" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

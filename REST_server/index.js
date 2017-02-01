@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var jsonfile = require('jsonfile');
 
 /****Final Variables & Templates****/
+var patients_path = __dirname + '/data/patients.json';
 var enjalbert_tests_path = __dirname + '/data/enjalbert_tests.json';
 var games_path = __dirname + '/data/5_games.json';
 var local_variables_path = __dirname + '/data/local_variables.json';
@@ -259,6 +260,605 @@ function getTypeQueue(games, type) {
 
     return result;
 }
+
+function gameIsOK(gameType, game) {
+
+    var result = true;
+
+    console.log("private function gameIsOK: entered.");
+
+    //global
+    var len = Object.keys(game).length;
+
+    game.left_hand = game.left_hand == "true";
+
+    if ((game.left_hand == null || (game.left_hand != false && game.left_hand != true)) ||
+        (game.total_time == null || game.total_time < 0 || game.total_time > 60) ||
+        (game.language == null || game.language < 0 || game.language > 1)
+    ) {
+        result = false;
+    }
+
+    gameType = parseInt(gameType);
+
+    if (result != false) {
+        switch (gameType) {
+            case 0:
+                console.log("private function gameIsOK: game type 0.");
+                if (len == 6) {
+                    if (
+                        (game.distance == null || game.distance < 0.1 || game.distance > 1.5) ||
+                        (game.time_to_hold == null || game.time_to_hold < 0 || game.time_to_hold > 10) ||
+                        (game.total_interactions == null || game.total_interactions < 1 || game.total_interactions > 10) ||
+                        (game.time_between_interactions == null || game.time_between_interactions < 0 || game.time_between_interactions > 10)
+                    ) {
+                        console.log("private function gameIsOK: bad parameters.");
+                        result = false;
+                    }
+                }
+                else {
+                    console.log("private function gameIsOK: wrong len.");
+                }
+                break;
+            case 1:
+                if (len == 6) {
+                    if (
+                        (game.green_apple_quantity == null || game.green_apple_quantity < 1 || game.green_apple_quantity > 10) ||
+                        (game.red_apple_quantity == null || game.red_apple_quantity < 1 || game.red_apple_quantity > 10) ||
+                        (game.apple_margin == null || game.apple_margin < 0 || game.apple_margin > 1) ||
+                        (game.time_between_interactions == null || game.time_between_interactions < 0 || game.time_between_interactions > 10)
+                    ) {
+                        result = false;
+                    }
+                }
+                break;
+            case 2:
+                if (len == 6) {
+                    if (
+                        (game.grab_margin == null || game.grab_margin < 0 || game.grab_margin > 1.5) ||
+                        (game.time_to_hold == null || game.time_to_hold < 0 || game.time_to_hold > 10) ||
+                        (game.total_interactions == null || game.total_interactions < 1 || game.total_interactions > 10) ||
+                        (game.time_between_interactions == null || game.time_between_interactions < 0 || game.time_between_interactions > 10)
+                    ) {
+                        result = false;
+                    }
+                }
+                break;
+            case 3:
+                if (len == 5) {
+                    if (
+                        (game.item_margin == null || game.item_margin < 0.1 || game.item_margin > 1.5) ||
+                        (game.pinch_margin == null || game.pinch_margin < 0 || game.pinch_margin > 50) ||
+                        (game.iterations_per_finger == null || game.iterations_per_finger < 1 || game.iterations_per_finger > 10)
+                    ) {
+                        result = false;
+                    }
+                }
+                break;
+            case 4:
+                if (len == 4) {
+                    if (
+                        (game.pinch_margin == null || game.pinch_margin < 0 || game.pinch_margin > 50) ||
+                        (game.total_interactions == null || game.total_interactions < 1 || game.total_interactions > 10)
+                    ) {
+                        result = false;
+                    }
+                }
+                break;
+        }
+    }
+
+
+    if (result == true) {
+        console.log("private function gameIsOK: game passed!");
+    }
+
+    return result;
+
+}
+
+function setGameUp(game, gameType) {
+
+    console.log("private function setGameUp: entered." + game.left_hand);
+
+    //game.left_hand = game.left_hand == "true";
+    game.total_time = parseInt(game.total_time);
+    game.language = parseInt(game.language);
+
+    gameType = parseInt(gameType);
+
+    switch (gameType) {
+        case 0:
+            game.distance = parseFloat(game.distance);
+            game.time_to_hold = parseInt(game.time_to_hold);
+            game.total_interactions = parseInt(game.total_interactions);
+            game.time_between_interactions = parseInt(game.time_between_interactions);
+            break;
+        case 1:
+            game.green_apple_quantity = parseInt(game.green_apple_quantity);
+            game.red_apple_quantity = parseInt(game.red_apple_quantity);
+            game.apple_margin = parseFloat(game.apple_margin);
+            game.time_between_interactions = parseInt(game.time_between_interactions);
+            break;
+        case 2:
+            game.grab_margin = parseFloat(game.grab_margin);
+            game.time_to_hold = parseInt(game.time_to_hold);
+            game.total_interactions = parseInt(game.total_interactions);
+            game.time_between_interactions = parseInt(game.time_between_interactions);
+            break;
+        case 3:
+            game.item_margin = parseFloat(game.item_margin);
+            game.pinch_margin = parseFloat(game.pinch_margin);
+            game.iterations_per_finger = parseInt(game.iterations_per_finger);
+            break;
+        case 4:
+            game.pinch_margin = parseFloat(game.pinch_margin);
+            game.total_interactions = parseInt(game.total_interactions);
+            break;
+    }
+
+    return game;
+}
+
+function editGame(games, game, id, type) {
+
+    var newGames = null;
+
+    //if not
+    for (var i = 0; i < games.length; i++) {
+        if (games[i].type == type) {
+            console.log("private editGame: type found");
+            for (var j = 0; j < games[i].instances.length; j++) {
+                console.log("private editGame: comparing " + games[i].instances[j].id + " and " + id);
+                if (games[i].instances[j].id == id) {
+                    console.log("private editGame: game found");
+                    game.id = games[i].instances[j].id;
+                    game.custom_name = games[i].instances[j].custom_name;
+                    games[i].instances[j] = game;
+                    newGames = games;
+                    break;
+                }
+            }
+            break;
+        }
+    }
+
+    return newGames;
+
+}
+
+function addGame(games, game, id, type, custom_name) {
+
+    var newGames = null;
+
+    //if not
+    for (var i = 0; i < games.length; i++) {
+        if (games[i].type == type) {
+            console.log("private addGame: type found");
+
+            game.id = id;
+            game.custom_name = custom_name;
+            games[i].instances[games[i].instances.length] = game;
+            newGames = games;
+
+            break;
+        }
+    }
+
+    return newGames;
+
+}
+
+function patientIsInList(patientList, patient_name) {
+
+    var result = -1;
+
+    //if not
+    for (var i = 0; i < patientList.length; i++) {
+        if (patientList[i].name == patient_name) {
+            console.log("private patientIsInList: name found");
+            result = i;
+            break;
+        }
+    }
+
+    return result;
+
+}
+
+function addPatientToList(patientList, game, gameType, gameName) {
+
+    var patientPos = patientIsInList(patientList, game.custom_name);
+
+    if (patientPos != -1) {
+        console.log("private addPatientToList: patient " + game.custom_name + " already in list");
+        patientList[patientPos].games[patientList[patientPos].games.length] = {
+            type: gameType,
+            id: game.id,
+            name: gameName
+        };
+    }
+    else {
+        console.log("private addPatientToList: patient " + game.custom_name + " not in list");
+        patientList[patientList.length] = {
+            name: game.custom_name,
+            games: [{type: gameType, id: game.id, name: gameName}]
+        };
+    }
+
+    return patientList;
+
+}
+
+function patientIsInDb(patients, bi_num) {
+
+    var result = false;
+
+    for (var i = 0; i < patients.length; i++) {
+        if (patients[i].bi_num == bi_num) {
+            result = true;
+            break;
+        }
+    }
+
+    return result;
+
+}
+
+function patientById(patients, id) {
+
+    var result = null;
+
+    for (var i = 0; i < patients.length; i++) {
+        if (patients[i].id == id) {
+            result = i;
+            break;
+        }
+    }
+
+    return result;
+
+}
+
+function fitGameToPatient (game, gameType, patient) {
+
+    var newGame = game;
+
+
+    console.log("private function fitGameToPatient: entered");
+
+    newGame.left_hand = patient.left_hand;
+    newGame.language = patient.language;
+
+    gameType = parseInt(gameType);
+
+    switch (gameType) {
+        case 0:
+            console.log("private function fitGameToPatient: gameType 0");
+            newGame.distance = patient.lift_max_height;
+            break;
+        case 1:
+
+            break;
+        case 2:
+            newGame.grab_margin = patient.grab_open_margin;
+            break;
+        case 3:
+            newGame.pinch_margin = patient.middle_pinch_margin;
+            break;
+        case 4:
+            newGame.pinch_margin = patient.pinky_pinch_margin;
+            break;
+    }
+
+    return newGame;
+}
+
+function patientIdByGameId(patients, gameID) {
+
+    var result = null;
+    var found = false;
+
+    for (var i=0; i<patients.length && found== false; i++)
+    {
+        for(var j = 0; j<patients[i].games.length; j++)
+        {
+            if(gameID == patients[i].games[j].id)
+            {
+                result = patients[i].id;
+                found = true;
+                break;
+            }
+        }
+    }
+
+    return result;
+
+}
+
+function patientByGameId(patients, gameID) {
+
+    var result = null;
+    var found = false;
+
+    for (var i=0; i<patients.length && found== false; i++)
+    {
+        for(var j = 0; j<patients[i].games.length; j++)
+        {
+            if(gameID == patients[i].games[j].id)
+            {
+                result = patients[i];
+                found = true;
+                break;
+            }
+        }
+    }
+
+    return result;
+
+}
+
+function patientHasGame(patients, patientId, gameType) {
+    var result = false;
+
+    for(var i=0; i<patients.length; i++)
+    {
+        if(patients[i].id == patientId)
+        {
+            for(var j=0; j<patients[i].games.length; j++)
+            {
+                if(patients[i].games[j].type == gameType)
+                {
+                    result = true;
+                    break;
+                }
+            }
+            break;
+        }
+    }
+
+    return result;
+
+}
+
+function updatePatient(oldPatient, newData) {
+
+    oldPatient.lift_max_height = newData.lift_max_height;
+    oldPatient.grab_open_margin = newData.grab_open_margin;
+    oldPatient.grab_close_margin = newData.grab_close_margin;
+    oldPatient.index_pinch_margin = newData.index_pinch_margin;
+    oldPatient.middle_pinch_margin = newData.middle_pinch_margin;
+    oldPatient.ring_pinch_margin = newData.ring_pinch_margin;
+    oldPatient.pinky_pinch_margin = newData.pinky_pinch_margin;
+
+    return oldPatient;
+
+}
+
+/************************** PATIENTS **************************/
+
+/**** GET METHODS ****/
+
+app.get('/getPatientsBrief', function (req, res) {
+
+    console.log('getPatientsBrief: entered');
+    var filesPath = [patients_path];
+
+    async.map(filesPath, function (filePath, cb) { //reading files or dir
+        fs.readFile(filePath, 'utf8', cb);
+    }, function (err, results) {
+        var patients = JSON.parse(results[0]);
+
+        var patientsBrief = [];
+        var thisPatient;
+
+        for (var i = 0; i < patients.length; i++) {
+            thisPatient = {};
+            thisPatient.id = patients[i].id;
+            thisPatient.name = patients[i].name;
+
+            patientsBrief.push(thisPatient);
+        }
+
+        //console.log(token)
+
+        if (patientsBrief != null) {
+            res.status(200).json(patientsBrief);
+        }
+        else {
+            res.status(200).json({
+                result: 'fail'
+            });
+        }
+    });
+});
+
+app.get('/getPatientById', function (req, res) {
+
+    console.log('getPatientById: entered');
+    var patientId = req.query.id;
+    var filesPath = [patients_path];
+
+    if (patientId != undefined && patientId != "") {
+        async.map(filesPath, function (filePath, cb) { //reading files or dir
+            fs.readFile(filePath, 'utf8', cb);
+        }, function (err, results) {
+            var patients = JSON.parse(results[0]);
+
+            var thisPatient = null;
+
+            for (var i = 0; i < patients.length; i++) {
+
+                if (patients[i].id == patientId) {
+                    thisPatient = patients[i];
+                    break;
+                }
+            }
+
+            //console.log(token)
+
+            if (thisPatient != null) {
+                res.status(200).json(thisPatient);
+            }
+            else {
+                res.status(200).json({
+                    result: 'fail',
+                    message: 'patient not found'
+                });
+            }
+        });
+    }
+    else {
+        res.status(400).json({
+            result: 'fail',
+            message: 'patientId parameter missing.'
+        });
+    }
+});
+
+app.get('/getPatients', function (req, res) {
+
+    console.log('getPatients: entered');
+
+    var patientList = [];
+    var filesPath = [patients_path];
+
+    async.map(filesPath, function (filePath, cb) { //reading files or dir
+        fs.readFile(filePath, 'utf8', cb);
+    }, function (err, results) {
+        var patientList = JSON.parse(results[0]);
+
+        /*
+         for (var i = 0; i < games.length; i++) {
+         for (var j = 0; j < games[i].instances.length; j++) {
+         patientList = addPatientToList(patientList, games[i].instances[j], games[i].type, games[i].name);
+         }
+         }*/
+
+        res.status(200).json(patientList);
+
+    });
+
+});
+
+/**** POST methods ****/
+
+app.post('/addPatient', function (req, res) {
+
+    console.log('addPatient: entered');
+    req.body.left_hand = req.body.left_hand == "true";
+    req.body.bi_num = parseInt(req.body.bi_num);
+    req.body.language = parseInt(req.body.language);
+    console.log(req.body);
+    var newPatient = req.body;
+
+    var patientBirthday = req.body.date_of_birth;
+    var filesPath = [patients_path, local_variables_path];
+
+    if (req.body.language != undefined && req.body.language != null && patientBirthday != undefined && patientBirthday != null && newPatient.name != undefined && newPatient.name != null && newPatient.left_hand != undefined && newPatient.left_hand != null && (newPatient.left_hand == false || newPatient.left_hand == true) && newPatient.bi_num != undefined && newPatient.bi_num != null) {
+        async.map(filesPath, function (filePath, cb) { //reading files or dir
+            fs.readFile(filePath, 'utf8', cb);
+        }, function (err, results) {
+            var patients = JSON.parse(results[0]);
+            var local_variables = JSON.parse(results[1]);
+
+            if (patientIsInDb(patients, newPatient.bi_num) == false) {
+                var patientToPush = JSON.parse(JSON.stringify(patients[0]));
+                local_variables.patients.last_patient_id = local_variables.patients.last_patient_id + 1;
+                patientToPush.id = local_variables.patients.last_patient_id;
+                patientToPush.name = newPatient.name;
+                patientToPush.left_hand = newPatient.left_hand;
+                patientToPush.bi_num = newPatient.bi_num;
+                patientToPush.date_of_birth = newPatient.date_of_birth;
+                patientToPush.email = newPatient.email;
+                patientToPush.last_name = newPatient.last_name;
+                patientToPush.language = newPatient.language;
+                patientToPush.register_date = new Date();
+                patientToPush.last_calibration_date = "never";
+
+                patientToPush.games = [];
+
+                patients.push(patientToPush);
+
+                fs.writeFile(patients_path, JSON.stringify(patients), function (err) {
+                    console.error(err)
+                });
+
+                fs.writeFile(local_variables_path, JSON.stringify(local_variables), function (err) {
+                    console.error(err)
+                });
+
+
+                res.status(200).json({
+                    result: 'success'
+                });
+            }
+            else
+            {
+                res.status(400).json({
+                    result: 'fail',
+                    message: 'patient with same bi number found.'
+                });
+            }
+
+
+        });
+    }
+    else {
+        console.log('addPatient: bad parameters');
+        res.status(400).json({
+            result: 'fail',
+            message: 'parameters wrong or missing.'
+        });
+    }
+});
+
+app.post('/updatePatientData', function (req, res) {
+
+    console.log('updatePatientData: entered');
+    var patientData = req.body;
+    var patientID = req.body.id;
+    var filesPath = [patients_path];
+
+    if (patientID != null && patientID != undefined) {
+        async.map(filesPath, function (filePath, cb) { //reading files or dir
+            fs.readFile(filePath, 'utf8', cb);
+        }, function (err, results) {
+            var patients = JSON.parse(results[0]);
+
+            var patientPos = patientById(patients, patientID);
+
+            if(patientPos != null)
+            {
+                //console.log(patients[patientPos]);
+                patients[patientPos] = updatePatient(patients[patientPos], patientData);
+                //console.log(patients[patientPos]);
+
+                fs.writeFile(patients_path, JSON.stringify(patients), function (err) {
+                    console.error(err)
+                });
+
+                res.status(200).json({
+                    result: 'success'
+                });
+            }
+            else
+            {
+                res.status(400).json({
+                    result: 'fail',
+                    message: 'Patient doesn\'t exist.'
+                });
+            }
+
+        });
+    }
+    else {
+            res.status(400).json({
+                result: 'fail',
+                message: 'parameters wrong or missing.'
+            });
+        }
+});
 
 /************************** TESTS **************************/
 
@@ -811,7 +1411,7 @@ app.get('/getGameById', function (req, res) {
 
     var gameType = req.query.type;
     var gameID = req.query.id;
-    var filesPath = [games_path];
+    var filesPath = [games_path, patients_path];
 
     if ((gameType != null && gameType != undefined && gameType != "") && (gameID != null && gameID != undefined && gameID != "")) {
 
@@ -819,11 +1419,23 @@ app.get('/getGameById', function (req, res) {
             fs.readFile(filePath, 'utf8', cb);
         }, function (err, results) {
             var games = JSON.parse(results[0]);
+            var patients = JSON.parse(results[1]);
 
             var gameToGive = getGameById(games, gameID, gameType);
+
+            var patient = patientByGameId(patients, gameID);
+
+            if(patient == null )
+            {
+                console.log("null patient");
+            }
+
+            gameToGive = fitGameToPatient(gameToGive, gameType, patient);
+
             //console.log(token)
 
             if (gameToGive != null) {
+                gameToGive.type = parseInt(gameType);
                 res.status(200).json(gameToGive);
             }
             else {
@@ -889,6 +1501,169 @@ app.post('/setGameToDo', function (req, res) {
         res.status(400).json({
             result: 'fail',
             message: 'game parameters missing.'
+        });
+    }
+
+});
+
+app.post('/editGame', function (req, res) {
+
+    console.log('editGame: entered function');
+    var gameId = req.body.id;
+    var gameType = req.body.type;
+
+    var editedGame = req.body.game;
+
+    var filesPath = [games_path];
+
+    console.log(JSON.stringify(req.body));
+
+
+    console.log("private function setGameUp: entered." + editedGame.left_hand);
+
+    if (gameId != null && gameType != null && editedGame != null && gameIsOK(gameType, editedGame) == true) {
+        async.map(filesPath, function (filePath, cb) { //reading files or dir
+            fs.readFile(filePath, 'utf8', cb);
+        }, function (err, results) {
+            var games = JSON.parse(results[0]);
+
+            console.log("private function setGameUp: entered." + editedGame.left_hand);
+            editedGame = setGameUp(editedGame, gameType);
+
+            var gameToEdit = getGameById(games, gameId, gameType);
+
+            if (gameToEdit != null) {
+
+                var newGames = editGame(games, editedGame, gameId, gameType);
+
+                if (newGames != null) {
+                    fs.writeFile(games_path, JSON.stringify(newGames), function (err) {
+                        console.error(err)
+                    });
+                    console.log('editGame: success');
+                    res.status(200).json({
+                        result: 'success'
+                    });
+                }
+                else {
+                    console.log('editGame: trouble editing game.');
+                    res.status(400).json({
+                        result: 'fail',
+                        message: 'trouble editing game.'
+                    });
+                }
+
+            }
+            else {
+                console.log('editGame: game doesn\'t exist.');
+                res.status(400).json({
+                    result: 'fail',
+                    message: 'game doesn\'t exist.'
+                });
+            }
+
+        });
+    }
+    else {
+        console.log('editGame: parameters wrong or missing.');
+        res.status(400).json({
+            result: 'fail',
+            message: 'parameters wrong or missing.'
+        });
+    }
+
+});
+
+app.post('/addGame', function (req, res) {
+
+    console.log('addGame: entered function');
+
+    var gameType = req.body.type;
+    var customName = req.body.custom_name;
+    var patientId = req.body.patientId;
+
+    var editedGame = req.body.game;
+
+    var filesPath = [games_path, local_variables_path, patients_path];
+
+    console.log(JSON.stringify(req.body));
+
+    if (patientId != undefined && patientId != null && customName != null && gameType != null && editedGame != null && gameIsOK(gameType, editedGame) == true) {
+        async.map(filesPath, function (filePath, cb) { //reading files or dir
+            fs.readFile(filePath, 'utf8', cb);
+        }, function (err, results) {
+            var games = JSON.parse(results[0]);
+            var local_variables = JSON.parse(results[1]);
+            var patients = JSON.parse(results[2]);
+
+            var gameId = local_variables['5_games'].last_games['type_' + gameType] + 1;
+
+            editedGame = setGameUp(editedGame, gameType);
+
+            var gameToAdd = getGameById(games, gameId, gameType);
+
+            var patientHas = patientHasGame(patients, patientId, gameType);
+
+            if (gameToAdd == null && patientHas==false) {
+
+                var newGames = addGame(JSON.parse(JSON.stringify(games)), editedGame, gameId, gameType, customName);
+
+                //console.log(newGames[0]);
+
+                if (newGames != null) {
+
+                    local_variables['5_games'].last_games['type_' + gameType] = local_variables['5_games'].last_games['type_' + gameType] + 1;
+
+                    var patientPos = patientById(patients, patientId);
+                    patients[patientPos].games.push({
+                        type: gameType,
+                        id:gameId,
+                        name: getGameById(games, 0, 0).name
+                    });
+
+                    fs.writeFile(patients_path, JSON.stringify(patients), function (err) {
+                        console.error(err)
+                    });
+
+                    fs.writeFile(games_path, JSON.stringify(newGames), function (err) {
+                        console.error(err)
+                    });
+
+
+                    fs.writeFile(local_variables_path, JSON.stringify(local_variables), function (err) {
+                        console.error(err)
+                    });
+
+
+                    console.log('addGame: success');
+                    res.status(200).json({
+                        result: 'success'
+                    });
+                }
+                else {
+                    console.log('addGame: trouble editing game.');
+                    res.status(400).json({
+                        result: 'fail',
+                        message: 'trouble editing game.'
+                    });
+                }
+
+            }
+            else {
+                console.log('addGame: game already exists o patients has game of same type.');
+                res.status(400).json({
+                    result: 'fail',
+                    message: 'game already exists.'
+                });
+            }
+
+        });
+    }
+    else {
+        console.log('addGame: parameters wrong or missing.');
+        res.status(400).json({
+            result: 'fail',
+            message: 'parameters wrong or missing.'
         });
     }
 

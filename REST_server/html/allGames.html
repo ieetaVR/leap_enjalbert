@@ -41,41 +41,75 @@
         </div>
     </div>
 </nav>
+<div class="container-fluid">
+    <section>
+        <h1>All Games</h1>
+        <h2>Filter</h2>
+        <div id="filters" class="button-group">
+            <button class="button is-checked" data-filter="*">show all</button>
+            <button class="button" data-filter=".game0">Lift</button>
+            <button class="button" data-filter=".game1">Apple Eater</button>
+            <button class="button" data-filter=".game2">Dish Washer</button>
+            <button class="button" data-filter=".game3">Pinch Picker</button>
+            <button class="button" data-filter=".game4">Pinch Choice</button>
+            <!--<button class="button" data-filter=".transition">Apple</button>
+            <button class="button" data-filter=".alkali, .alkaline-earth">Dish Washer</button>
+            <button class="button" data-filter=":not(.transition)">Pinch Picker</button>
+            <button class="button" data-filter=".metal:not(.transition)">Pinch Choice</button>
+            <button class="button" data-filter="numberGreaterThan50">number > 50</button>
+            <button class="button" data-filter="ium">name ends with &ndash;ium</button>-->
+        </div>
 
-<section>
-    <h1>All Games</h1>
-    <h2>Filter</h2>
-    <div id="filters" class="button-group">
-        <button class="button is-checked" data-filter="*">show all</button>
-        <button class="button" data-filter=".game0">Lift</button>
-        <button class="button" data-filter=".game1">Apple Eater</button>
-        <button class="button" data-filter=".game2">Dish Washer</button>
-        <button class="button" data-filter=".game3">Pinch Picker</button>
-        <button class="button" data-filter=".game4">Pinch Choice</button>
-        <!--<button class="button" data-filter=".transition">Apple</button>
-        <button class="button" data-filter=".alkali, .alkaline-earth">Dish Washer</button>
-        <button class="button" data-filter=":not(.transition)">Pinch Picker</button>
-        <button class="button" data-filter=".metal:not(.transition)">Pinch Choice</button>
-        <button class="button" data-filter="numberGreaterThan50">number > 50</button>
-        <button class="button" data-filter="ium">name ends with &ndash;ium</button>-->
-    </div>
+        <h2>Sort</h2>
+        <div id="sorts" class="button-group">
+            <button class="button is-checked" data-sort-by="original-order">original order</button>
+            <button class="button" data-sort-by="name">Patient Name</button>
+            <button class="button" data-sort-by="symbol">Game name</button>
+            <!--<button class="button" data-sort-by="number">number</button>
+            <button class="button" data-sort-by="weight">weight</button>
+            <button class="button" data-sort-by="category">category</button>-->
+        </div>
 
-    <h2>Sort</h2>
-    <div id="sorts" class="button-group">
-        <button class="button is-checked" data-sort-by="original-order">original order</button>
-        <button class="button" data-sort-by="name">Patient Name</button>
-        <button class="button" data-sort-by="symbol">Game name</button>
-        <!--<button class="button" data-sort-by="number">number</button>
-        <button class="button" data-sort-by="weight">weight</button>
-        <button class="button" data-sort-by="category">category</button>-->
-    </div>
+        <div class="grid">
 
-    <div class="grid">
+        </div>
 
-    </div>
+    </section>
 
+    <section>
+        <h2>Add new game</h2>
 
-</section>
+        <form id="newGameForm" >
+            <div class="form-group">
+                <label for="inputGameTypeNew" class="control-label">Type </label>
+                <select class="dropdown" name="inputGameTypeNew" id="inputGameTypeNew">
+                    <option value=0>0 - Lift</option>
+                    <option value=1>1 - Apple Eater</option>
+                    <option value=2>2 - Dish Washer</option>
+                    <option value=3>3 - Pinch Picker</option>
+                    <option value=4>4 - Pinch Choice</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputGamePatientNew" class="control-label">Patient Name   </label>
+                <select class="dropdown" name="inputGameTypeNew" id="inputGamePatientNew">
+                    <!--<option value=0>0 - Lift</option>-->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputGameNameNew" class="control-label">Game Custom Name   </label>
+                <input class="text" name="inputGameNameNew" id="inputGameNameNew">
+                    <!--<option value=0>0 - Lift</option>-->
+                </input>
+            </div>
+            <div class="form-group">
+                <button type="submit" value="create" class="btn btn-primary">Create Game
+                </button>
+            </div>
+        </form>
+    </section>
+
+</div>
 
 <div id="modals">
 
@@ -93,6 +127,27 @@
                     <div class="modal-body">
                         <fieldset>
                             <legend>Game Settings</legend>
+                            <div class="form-group" id="inputLang0">
+                                <label class="col-lg-2 control-label">Language</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangEn0"
+                                                   value="left" checked="">
+                                            En
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangPt0"
+                                                   value="right">
+                                            Pt
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group" id="inputHands0">
                                 <label class="col-lg-2 control-label">Hand</label>
                                 <div class="col-lg-10">
@@ -175,6 +230,27 @@
                     <div class="modal-body">
                         <fieldset>
                             <legend>Game Settings</legend>
+                            <div class="form-group" id="inputLang1">
+                                <label class="col-lg-2 control-label">Language</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangEn1"
+                                                   value="left" checked="">
+                                            En
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangPt1"
+                                                   value="right">
+                                            Pt
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group" id="inputHands1">
                                 <label class="col-lg-2 control-label">Hand</label>
                                 <div class="col-lg-10">
@@ -257,6 +333,27 @@
                     <div class="modal-body">
                         <fieldset>
                             <legend>Game Settings</legend>
+                            <div class="form-group" id="inputLang2">
+                                <label class="col-lg-2 control-label">Language</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangEn2"
+                                                   value="left" checked="">
+                                            En
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangPt2"
+                                                   value="right">
+                                            Pt
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group" id="inputHands2">
                                 <label class="col-lg-2 control-label">Hand</label>
                                 <div class="col-lg-10">
@@ -340,6 +437,27 @@
                     <div class="modal-body">
                         <fieldset>
                             <legend>Game Settings</legend>
+                            <div class="form-group" id="inputLang3">
+                                <label class="col-lg-2 control-label">Language</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangEn3"
+                                                   value="left" checked="">
+                                            En
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangPt3"
+                                                   value="right">
+                                            Pt
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group" id="inputHands3">
                                 <label class="col-lg-2 control-label">Hand</label>
                                 <div class="col-lg-10">
@@ -416,6 +534,27 @@
                     <div class="modal-body">
                         <fieldset>
                             <legend>Game Settings</legend>
+                            <div class="form-group" id="inputLang4">
+                                <label class="col-lg-2 control-label">Language</label>
+                                <div class="col-lg-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangEn4"
+                                                   value="left" checked="">
+                                            En
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class="optionsRadios" type="radio" name="optionsRadiosLang"
+                                                   id="inputLangPt4"
+                                                   value="right">
+                                            Pt
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group" id="inputHands4">
                                 <label class="col-lg-2 control-label">Hand</label>
                                 <div class="col-lg-10">

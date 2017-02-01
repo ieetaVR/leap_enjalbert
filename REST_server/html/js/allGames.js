@@ -102,7 +102,6 @@ function init_isotope() {
                     outputUpdate(currentGame.time_between_interactions, 'TimeBetweenIterations2');
                     break;
                 case "3":
-
                     $('#inputItemMargin3')[0].value = currentGame.item_margin;
                     outputUpdate(currentGame.item_margin, 'ItemMargin3');
                     $('#inputPinchMargin3')[0].value = currentGame.pinch_margin;
@@ -130,6 +129,14 @@ function init_isotope() {
                 hands[1].checked = true;
             }
 
+            var lang = document.getElementById('inputLang' + gameType).getElementsByClassName('optionsRadios');
+            if (currentGame.language == 0) {
+                lang[0].checked = true;
+            }
+            else {
+                lang[1].checked = true;
+            }
+
             $('#inputTotalTime' + gameType)[0].value = currentGame.total_time;
             outputUpdate(currentGame.total_time, 'TotalTime' + gameType);
 
@@ -143,7 +150,7 @@ function init_isotope() {
     });
 }
 
-$("form button[type=submit]").click(function() {
+$("form button[type=submit]").click(function () {
     $("button[type=submit]", $(this).parents("form")).removeAttr("clicked");
     $(this).attr("clicked", "true");
 });
@@ -153,13 +160,35 @@ $("#modalGame0").on('submit', function (e) {
     var val = $("#modalGame0 :button[type=submit][clicked=true]").val();
     console.log("Game 0 - submit type: " + val);
 
-    if(val == "setToDo")
-    {
+    if (val == "setToDo") {
         SetGameToDo(gameID, gameType);
     }
-    else
-    {
+    else {
+        var editedGame = {};
 
+        var hands = document.getElementById('inputHands' + gameType).getElementsByClassName('optionsRadios');
+        if (hands[0].checked == true) {
+            editedGame.left_hand = true;
+        }
+        else {
+            editedGame.left_hand = false;
+        }
+
+        var lang = document.getElementById('inputLang' + gameType).getElementsByClassName('optionsRadios');
+        if (lang[0].checked == true) {
+            editedGame.language = 0;
+        }
+        else {
+            editedGame.language = 1;
+        }
+
+        editedGame.total_time = parseInt($('#inputTotalTime' + gameType)[0].value);
+        editedGame.distance = parseFloat($('#inputDistance0')[0].value);
+        editedGame.time_to_hold = parseInt($('#inputTimeToHold0')[0].value);
+        editedGame.total_interactions = parseInt($('#inputTotalIterations0')[0].value);
+        editedGame.time_between_interactions = parseInt($('#inputTimeBetweenIterations0')[0].value);
+
+        editGame(gameID, gameType, editedGame);
     }
     $('#modalGame' + gameType).modal('hide');
 });
@@ -169,13 +198,35 @@ $("#modalGame1").on('submit', function (e) {
     var val = $("#modalGame1 :button[type=submit][clicked=true]").val();
     console.log("Game 1 - submit type: " + val);
 
-    if(val == "setToDo")
-    {
+    if (val == "setToDo") {
         SetGameToDo(gameID, gameType);
     }
-    else
-    {
+    else {
+        var editedGame = {};
 
+        var hands = document.getElementById('inputHands' + gameType).getElementsByClassName('optionsRadios');
+        if (hands[0].checked == true) {
+            editedGame.left_hand = true;
+        }
+        else {
+            editedGame.left_hand = false;
+        }
+
+        var lang = document.getElementById('inputLang' + gameType).getElementsByClassName('optionsRadios');
+        if (lang[0].checked == true) {
+            editedGame.language = 0;
+        }
+        else {
+            editedGame.language = 1;
+        }
+
+        editedGame.total_time = parseInt($('#inputTotalTime' + gameType)[0].value);
+        editedGame.green_apple_quantity = parseInt($('#inputGreenApple1')[0].value);
+        editedGame.red_apple_quantity = parseInt($('#inputRedApple1')[0].value);
+        editedGame.apple_margin = parseFloat($('#inputAppleMargin1')[0].value);
+        editedGame.time_between_interactions = parseInt($('#inputTimeBetweenIterations1')[0].value);
+
+        editGame(gameID, gameType, editedGame);
     }
     $('#modalGame' + gameType).modal('hide');
 });
@@ -185,13 +236,35 @@ $("#modalGame2").on('submit', function (e) {
     var val = $("#modalGame2 :button[type=submit][clicked=true]").val();
     console.log("Game 2 - submit type: " + val);
 
-    if(val == "setToDo")
-    {
+    if (val == "setToDo") {
         SetGameToDo(gameID, gameType);
     }
-    else
-    {
+    else {
+        var editedGame = {};
 
+        var hands = document.getElementById('inputHands' + gameType).getElementsByClassName('optionsRadios');
+        if (hands[0].checked == true) {
+            editedGame.left_hand = true;
+        }
+        else {
+            editedGame.left_hand = false;
+        }
+
+        var lang = document.getElementById('inputLang' + gameType).getElementsByClassName('optionsRadios');
+        if (lang[0].checked == true) {
+            editedGame.language = 0;
+        }
+        else {
+            editedGame.language = 1;
+        }
+
+        editedGame.total_time = parseInt($('#inputTotalTime' + gameType)[0].value);
+        editedGame.grab_margin = parseFloat($('#inputGrabMargin2')[0].value);
+        editedGame.time_to_hold = parseInt($('#inputTimeToHold2')[0].value);
+        editedGame.total_interactions = parseInt($('#inputTotalIterations2')[0].value);
+        editedGame.time_between_interactions = parseInt($('#inputTimeBetweenIterations2')[0].value);
+
+        editGame(gameID, gameType, editedGame);
     }
     $('#modalGame' + gameType).modal('hide');
 });
@@ -201,13 +274,34 @@ $("#modalGame3").on('submit', function (e) {
     var val = $("#modalGame3 :button[type=submit][clicked=true]").val();
     console.log("Game 3 - submit type: " + val);
 
-    if(val == "setToDo")
-    {
+    if (val == "setToDo") {
         SetGameToDo(gameID, gameType);
     }
-    else
-    {
+    else {
+        var editedGame = {};
 
+        var hands = document.getElementById('inputHands' + gameType).getElementsByClassName('optionsRadios');
+        if (hands[0].checked == true) {
+            editedGame.left_hand = true;
+        }
+        else {
+            editedGame.left_hand = false;
+        }
+
+        var lang = document.getElementById('inputLang' + gameType).getElementsByClassName('optionsRadios');
+        if (lang[0].checked == true) {
+            editedGame.language = 0;
+        }
+        else {
+            editedGame.language = 1;
+        }
+
+        editedGame.total_time = parseInt($('#inputTotalTime' + gameType)[0].value);
+        editedGame.item_margin = parseFloat($('#inputItemMargin3')[0].value);
+        editedGame.pinch_margin = parseInt($('#inputPinchMargin3')[0].value);
+        editedGame.iterations_per_finger = parseInt($('#inputTotalIterations3')[0].value);
+
+        editGame(gameID, gameType, editedGame);
     }
     $('#modalGame' + gameType).modal('hide');
 });
@@ -217,15 +311,114 @@ $("#modalGame4").on('submit', function (e) {
     var val = $("#modalGame4 :button[type=submit][clicked=true]").val();
     console.log("Game 4 - submit type: " + val);
 
-    if(val == "setToDo")
-    {
+    if (val == "setToDo") {
         SetGameToDo(gameID, gameType);
     }
-    else
-    {
+    else {
+        var editedGame = {};
 
+        var hands = document.getElementById('inputHands' + gameType).getElementsByClassName('optionsRadios');
+        if (hands[0].checked == true) {
+            editedGame.left_hand = true;
+        }
+        else {
+            editedGame.left_hand = false;
+        }
+
+        var lang = document.getElementById('inputLang' + gameType).getElementsByClassName('optionsRadios');
+        if (lang[0].checked == true) {
+            editedGame.language = 0;
+        }
+        else {
+            editedGame.language = 1;
+        }
+
+        editedGame.total_time = parseInt($('#inputTotalTime' + gameType)[0].value);
+        editedGame.pinch_margin = parseFloat($('#inputPinchMargin4')[0].value);
+        editedGame.total_interactions = parseInt($('#inputTotalIterations4')[0].value);
+
+        editGame(gameID, gameType, editedGame);
     }
     $('#modalGame' + gameType).modal('hide');
+});
+
+$("#newGameForm").on('submit', function (e) {
+
+    e.preventDefault();
+
+    var type = parseInt($('#inputGameTypeNew')[0].value);
+    var custom_name = $('#inputGameNameNew')[0].value;
+    var patientId = $('#inputGamePatientNew')[0].value;
+
+    var gameToAdd = {
+        type: type,
+        custom_name: custom_name,
+        patientId: patientId
+    };
+
+    switch (type)
+    {
+        case 0:
+            gameToAdd.game = {
+                left_hand: true,
+                total_time: 30,
+                distance: 1,
+                time_to_hold:6,
+                total_interactions: 2,
+                time_between_interactions:3,
+                language: 1
+            };
+            break;
+        case 1:
+            gameToAdd.game = {
+                left_hand: true,
+                total_time: 30,
+                green_apple_quantity: 1,
+                red_apple_quantity:1,
+                apple_margin: 0.25,
+                time_between_interactions:3,
+                language: 1
+            };
+            break;
+        case 2:
+            gameToAdd.game = {
+                left_hand: true,
+                total_time: 30,
+                grab_margin: 0.1,
+                time_to_hold:3,
+                total_interactions: 2,
+                time_between_interactions:3,
+                language: 1
+            };
+            break;
+        case 3:
+            gameToAdd.game = {
+                left_hand: true,
+                total_time: 30,
+                item_margin: 0.5,
+                pinch_margin:20,
+                iterations_per_finger: 2,
+                language: 1
+            };
+            break;
+        case 4:
+            gameToAdd.game = {
+                left_hand: true,
+                total_time: 30,
+                pinch_margin: 20,
+                total_interactions: 5,
+                time_between_interactions:3,
+                language: 1
+            };
+            break;
+        default:
+            break;
+    }
+
+    addGame(type, custom_name, patientId, gameToAdd);
+
+    location.reload();
+
 });
 
 var gameType;
@@ -272,13 +465,22 @@ function populateIsotope(games) {
 
     init_isotope();
 
+    for (i =0; i<patientsBrief.length; i++)
+    {
+        $('#inputGamePatientNew').append(
+            '<option value=' + patientsBrief[i].id + '>' + patientsBrief[i].name + '</option>'
+        );
+    }
+
 }
 
 
 $(document).ready(function () {
 
     $.when(getAllGamesBrief()).done(function () {
-        populateIsotope(gamesBrief);
+        $.when((getPatientsBrief()).done(function () {
+            populateIsotope(gamesBrief);
+        }))
     });
 
 });

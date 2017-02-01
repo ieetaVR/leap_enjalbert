@@ -7,6 +7,7 @@ var testsBrief;
 var testResults;
 var gamesBrief;
 var currentGame;
+var patientsBrief;
 
 function getTestToDo() {
 
@@ -175,4 +176,120 @@ function SetGameToDo(gameID, gameType) {
             }
         });
 
+}
+
+function editGame(gameID, gameType, editedGame) {
+
+    var url_rest = base_url_rest + 'editGame';
+
+    console.log(editedGame);
+
+    var body = {
+        id: gameID,
+        type: gameType,
+        game: editedGame
+    }
+
+    return $.post(url_rest, body,
+        function (data, status) {
+            var json = data;
+            if (json != null && json['result'] == 'success') {
+                //alert('logout successful');
+                //window.location.reload();
+            }
+            else {
+                alert('something is wrong:' + json['message']);
+                //window.location.href = "index.html";
+            }
+        });
+
+}
+
+function addGame(gameType, patient, patientId, gameToAdd) {
+
+    var url_rest = base_url_rest + 'addGame';
+
+    console.log(gameToAdd);
+
+    var body = {
+        custom_name: patient,
+        type: gameType,
+        game: gameToAdd.game,
+        patientId: patientId
+    }
+
+    return $.post(url_rest, body,
+        function (data, status) {
+            var json = data;
+            if (json != null && json['result'] == 'success') {
+                //alert('logout successful');
+                //window.location.reload();
+            }
+            else {
+                alert('something is wrong:' + json['message']);
+                //window.location.href = "index.html";
+            }
+        });
+
+}
+
+
+function getPatientsBrief() {
+
+    var url_rest = base_url_rest + 'getPatientsBrief';
+
+    return $.ajax({
+        type: 'GET',
+        url: url_rest
+    }).then(function (data) {
+
+        patientsBrief = data;
+    });
+
+}
+
+
+function getPatients() {
+
+    var url_rest = base_url_rest + 'getPatients';
+
+    return $.ajax({
+        type: 'GET',
+        url: url_rest
+    }).then(function (data) {
+
+        patientsBrief = data;
+    });
+
+}
+
+
+function addPatient(newPatient) {
+
+    var url_rest = base_url_rest + 'addPatient';
+
+    var body = {
+        name: newPatient.name,
+        left_hand: newPatient.left_hand,
+        bi_num: newPatient.bi_num,
+        date_of_birth: newPatient.date_of_birth,
+        email: newPatient.email,
+        last_name: newPatient.last_name,
+        language: newPatient.language
+    };
+
+    console.log(body);
+
+    return $.post(url_rest, body,
+        function (data, status) {
+            var json = data;
+            if (json != null && json['result'] == 'success') {
+                //alert('logout successful');
+                //window.location.reload();
+            }
+            else {
+                alert('something is wrong:' + json['message']);
+                //window.location.href = "index.html";
+            }
+        });
 }
