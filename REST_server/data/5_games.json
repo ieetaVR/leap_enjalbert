@@ -1,1 +1,84 @@
-[{"type":0,"name":"Lift","instances":[{"left_hand":false,"language":0,"total_time":60,"distance":0.5,"time_to_hold":3,"total_interactions":2,"time_between_interactions":3,"id":0,"custom_name":"Ricardo"},{"left_hand":false,"total_time":30,"distance":1,"time_to_hold":6,"total_interactions":2,"time_between_interactions":3,"language":1,"id":1,"custom_name":"Ana"},{"left_hand":true,"total_time":30,"distance":1,"time_to_hold":6,"total_interactions":2,"time_between_interactions":3,"language":1,"id":7,"custom_name":"toDelete"},{"left_hand":true,"total_time":30,"distance":1,"time_to_hold":6,"total_interactions":2,"time_between_interactions":3,"language":1,"id":8,"custom_name":"games for testing"}]},{"type":1,"name":"Apple Eater","instances":[{"left_hand":false,"language":0,"total_time":60,"green_apple_quantity":2,"red_apple_quantity":2,"apple_margin":0.1,"time_between_interactions":3,"id":0,"custom_name":"Ricardo"},{"left_hand":true,"total_time":30,"green_apple_quantity":1,"red_apple_quantity":1,"apple_margin":0.25,"time_between_interactions":3,"language":1,"id":1,"custom_name":"new"}]},{"type":2,"name":"Dish Washer","instances":[{"left_hand":true,"language":0,"total_time":20,"grab_margin":0.1,"time_to_hold":3,"total_interactions":2,"time_between_interactions":3,"id":0,"custom_name":"Ricardo"}]},{"type":3,"name":"Pinch Picker","instances":[{"left_hand":true,"language":0,"total_time":60,"item_margin":0.5,"pinch_margin":20,"iterations_per_finger":1,"id":0,"custom_name":"Ricardo"},{"left_hand":true,"total_time":30,"item_margin":0.5,"pinch_margin":20,"iterations_per_finger":2,"language":1,"id":1,"custom_name":"toDelete3"}]},{"type":4,"name":"Pinch Choice","instances":[{"left_hand":true,"language":1,"total_time":60,"pinch_margin":20,"total_interactions":5,"id":0,"custom_name":"Ricardo"},{"left_hand":true,"total_time":30,"pinch_margin":20,"total_interactions":5,"time_between_interactions":"3","language":1,"id":1,"custom_name":"new"}]}]
+[
+  {
+    "type": 0,
+    "name": "Lift",
+    "instances": [
+      {
+        "left_hand": true,
+        "language": 0,
+        "total_time": 60,
+        "distance": 0.3,
+        "time_to_hold": 3,
+        "total_interactions": 2,
+        "time_between_interactions": 3,
+        "id": 0,
+        "custom_name": "Ricardo"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "name": "Apple Eater",
+    "instances": [
+      {
+        "left_hand": true,
+        "language": 0,
+        "total_time": 60,
+        "green_apple_quantity": 2,
+        "red_apple_quantity": 2,
+        "apple_margin": 0.1,
+        "time_between_interactions": 3,
+        "id": 0,
+        "custom_name": "Ricardo"
+      }
+    ]
+  },
+  {
+    "type": 2,
+    "name": "Dish Washer",
+    "instances": [
+      {
+        "left_hand": true,
+        "language": 0,
+        "total_time": 20,
+        "grab_margin": 0.1,
+        "time_to_hold": 3,
+        "total_interactions": 2,
+        "time_between_interactions": 3,
+        "id": 0,
+        "custom_name": "Ricardo"
+      }
+    ]
+  },
+  {
+    "type": 3,
+    "name": "Pinch Picker",
+    "instances": [
+      {
+        "left_hand": true,
+        "language": 0,
+        "total_time": 60,
+        "item_margin": 0.5,
+        "pinch_margin": 20,
+        "iterations_per_finger": 1,
+        "id": 0,
+        "custom_name": "Ricardo"
+      }
+    ]
+  },
+  {
+    "type": 4,
+    "name": "Pinch Choice",
+    "instances": [
+      {
+        "left_hand": true,
+        "language": 1,
+        "total_time": 60,
+        "pinch_margin": 20,
+        "total_interactions": 5,
+        "id": 0,
+        "custom_name": "Ricardo"
+      }
+    ]
+  }
+]

@@ -347,7 +347,7 @@ $("#newGameForm").on('submit', function (e) {
     e.preventDefault();
 
     var type = parseInt($('#inputGameTypeNew')[0].value);
-    var custom_name = $('#inputGameNameNew')[0].value;
+    var custom_name = '';//$('#inputGameNameNew')[0].value;
     var patientId = $('#inputGamePatientNew')[0].value;
 
     var gameToAdd = {

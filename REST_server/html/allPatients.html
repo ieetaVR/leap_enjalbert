@@ -35,16 +35,16 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="AllEnjalbertTests.html">All Enjalbert Tests<span class="sr-only">(current)</span></a></li>
+                <li ><a href="AllEnjalbertTests.html">All Enjalbert Tests<span class="sr-only">(current)</span></a></li>
                 <li><a href="allGames.html">See All Games</a></li>
                 <li><a href="allPatients.html">Patients</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="EnjalbertTestToDo.html">Test To Do</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <!--<ul class="nav navbar-nav navbar-right">
                 <li><a href="404.html">Games To Do</a></li>
-            </ul>
+            </ul>-->
         </div>
     </div>
 </nav>
@@ -62,7 +62,7 @@
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email</th>
-                <th>BI Number</th>
+                <th>PU Number</th>
                 <th>Affected Hand</th>
                 <th>Age</th>
                 <th>Start Date</th>
@@ -74,6 +74,8 @@
                 <th>Middle Pinch Proximity</th>
                 <th>Ring Pinch Proximity</th>
                 <th>Pinky Pinch Proximity</th>
+                <th></th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -158,7 +160,7 @@
                                 <input type="date" id="inputBirthday" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputBiNum" class="control-label">BI number *</label>
+                                <label for="inputBiNum" class="control-label">PU number *</label>
                                 <input type="number" id="inputBiNum" required>
                             </div>
                             <div class="form-group">
@@ -221,6 +223,29 @@
         </div>
     </div>
 
+    <div class="modal fade" id="ConfirmModal" role="dialog">
+        <div class="modal-dialog modal-sm text-center">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#2649ff;" id="modalTitle1"> Delete Patient </h4>
+                    <h5 class="modal-patient" style="color:#2649ff;">Are you sure?</h5>
+                </div>
+                <form id="confirm_form1" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <button type="submit" value="yes" class="btn btn-primary">Yes</button>
+                            <button type="submit" value="no" class="btn btn-primary">No</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 

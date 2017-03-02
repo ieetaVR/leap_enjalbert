@@ -3,6 +3,7 @@
  */
 
 var patientTable;
+var chosenPatient;
 
 function calculateAge(birthday) { // birthday is a date
     var ageDifMs = Date.now() - birthday.getTime();
@@ -63,7 +64,9 @@ function populateTable() {
                 patientsBrief[i].index_pinch_margin + " (perfect = 0)",
                 patientsBrief[i].middle_pinch_margin + " (perfect = 0)",
                 patientsBrief[i].ring_pinch_margin + " (perfect = 0)",
-                patientsBrief[i].pinky_pinch_margin + " (perfect = 0)"
+                patientsBrief[i].pinky_pinch_margin + " (perfect = 0)",
+                '<button value="' + patientsBrief[i].id + '" class="btn-danger btn-deletePatient">Delete</button>',
+                '<a href="Patient.html?id=' + patientsBrief[i].id + '"><button class="btn-info">Manage</button></a>'
             ]
         ).draw();
 
@@ -71,6 +74,40 @@ function populateTable() {
 
 
 }
+
+$("form button[type=submit]").click(function () {
+    $("button[type=submit]", $(this).parents("form")).removeAttr("clicked");
+    $(this).attr("clicked", "true");
+});
+
+
+$('#patientTable tbody').on( 'click', 'button', function () {
+    console.log('deleting patient ' + this.value);
+
+    chosenPatient = this.value;
+
+    $('#ConfirmModal').modal();
+
+
+});
+
+$('#confirm_form1').on('submit', function (e) {
+
+    e.preventDefault();
+
+    var val = $("#ConfirmModal :button[type=submit][clicked=true]").val();
+
+    if(val=='yes')
+    {
+        removePatient(parseInt(chosenPatient));
+        location.reload();
+    }
+    else
+    {
+        $('#ConfirmModal').modal('hide');
+    }
+
+});
 
 
 $("#btn_add_patient").click(function () {

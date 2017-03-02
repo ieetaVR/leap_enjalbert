@@ -23,12 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="allPatients.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/allPatients.html">
+      <file leaf-file-name="Patient.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/Patient.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="196" column="48" lean-forward="true" selection-start-line="196" selection-start-column="48" selection-end-line="196" selection-end-column="48" />
+            <state relative-caret-position="439">
+              <caret line="59" column="32" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="patientPage.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/js/patientPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#44#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,6 +72,14 @@
       <find>button</find>
       <find>data-ta</find>
       <find>0</find>
+      <find>parse</find>
+      <find>int.parse</find>
+      <find>addg</find>
+      <find>splice</find>
+      <find>bi</find>
+      <find>left_ha</find>
+      <find>inputGameNameNew</find>
+      <find>loca</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -72,27 +92,30 @@
         <option value="$PROJECT_DIR$/html/js/variables.js" />
         <option value="$PROJECT_DIR$/html/js/edit_test_by_id.js" />
         <option value="$PROJECT_DIR$/html/js/edit_test.js" />
-        <option value="$PROJECT_DIR$/html/EnjalbertTestToDo.html" />
-        <option value="$PROJECT_DIR$/html/editEnjalbertTest.html" />
-        <option value="$PROJECT_DIR$/html/addEnjalbertTest.html" />
-        <option value="$PROJECT_DIR$/html/AllEnjalbertTests.html" />
         <option value="$PROJECT_DIR$/html/js/allEnjTests.js" />
         <option value="$PROJECT_DIR$/html/css/graphs.css" />
         <option value="$PROJECT_DIR$/data/test_results.json" />
         <option value="$PROJECT_DIR$/html/js/add_test.js" />
-        <option value="$PROJECT_DIR$/html/enjalbertTestResults.html" />
         <option value="$PROJECT_DIR$/html/js/testResults.js" />
         <option value="$PROJECT_DIR$/html/css/isotope.css" />
-        <option value="$PROJECT_DIR$/html/allGames.html" />
-        <option value="$PROJECT_DIR$/html/js/allGames.js" />
-        <option value="$PROJECT_DIR$/data/local_variables.json" />
-        <option value="$PROJECT_DIR$/data/5_games.json" />
         <option value="$PROJECT_DIR$/html/index.html" />
+        <option value="$PROJECT_DIR$/html/EnjalbertTestToDo.html" />
+        <option value="$PROJECT_DIR$/html/enjalbertTestResults.html" />
+        <option value="$PROJECT_DIR$/html/editEnjalbertTest.html" />
+        <option value="$PROJECT_DIR$/html/AllEnjalbertTests.html" />
+        <option value="$PROJECT_DIR$/html/addEnjalbertTest.html" />
+        <option value="$PROJECT_DIR$/data/local_variables.json" />
         <option value="$PROJECT_DIR$/html/js/rest_client.js" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/html/js/patients.js" />
+        <option value="$PROJECT_DIR$/html/js/allGames.js" />
+        <option value="$PROJECT_DIR$/html/allGames.html" />
+        <option value="$PROJECT_DIR$/data/5_games.json" />
         <option value="$PROJECT_DIR$/data/patients.json" />
+        <option value="$PROJECT_DIR$/data/game_results.json" />
+        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/html/allPatients.html" />
+        <option value="$PROJECT_DIR$/html/js/patients.js" />
+        <option value="$PROJECT_DIR$/html/Patient.html" />
+        <option value="$PROJECT_DIR$/html/js/patientPage.js" />
       </list>
     </option>
   </component>
@@ -108,9 +131,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="x" value="3" />
+    <option name="width" value="964" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -127,7 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,13 +176,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="REST_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="REST_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GitHub/mdb_for_release_rest/musicDB_backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GitHub/-share-Filter" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
@@ -170,11 +211,11 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ua local\ZZZ_TESE\leap_enjalbert\REST_server\html" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ua local\ZZZ_TESE\leap_enjalbert\REST_server\html\js" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ua local\ZZZ_TESE\leap_enjalbert\REST_server\html" />
       <recent name="D:\ua local\ZZZ_TESE\leap_enjalbert\REST_server\html\js" />
     </key>
   </component>
@@ -209,7 +250,7 @@
     </configuration>
     <configuration default="false" name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run-script" />
+      <command value="run" />
       <scripts>
         <script value="start" />
       </scripts>
@@ -257,7 +298,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
+      <command value="run" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -325,33 +366,55 @@
       <workItem from="1485441084811" duration="7622000" />
       <workItem from="1485464132479" duration="52000" />
       <workItem from="1485988729683" duration="241000" />
+      <workItem from="1486155795632" duration="54000" />
+      <workItem from="1486551465340" duration="3903000" />
+      <workItem from="1486594980336" duration="70000" />
+      <workItem from="1486654782319" duration="2598000" />
+      <workItem from="1486660024650" duration="1056000" />
+      <workItem from="1486664008737" duration="30000" />
+      <workItem from="1487521531577" duration="150000" />
+      <workItem from="1487521692468" duration="6162000" />
+      <workItem from="1487541220880" duration="6000" />
+      <workItem from="1487544125472" duration="14000" />
+      <workItem from="1487975276565" duration="14000" />
+      <workItem from="1488367836420" duration="24124000" />
+      <workItem from="1488460995987" duration="3110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117353000" />
+    <option name="totallyTimeSpent" value="158644000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1087" extended-state="0" />
-    <editor active="false" />
+    <frame x="3" y="0" width="964" height="1084" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2361111" sideWeight="0.548218" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23974082" sideWeight="0.503125" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2361111" sideWeight="0.45178196" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23995657" sideWeight="0.496875" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32386962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39832285" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32521185" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,88 +433,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/js/testResults.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1551#2158#0" expanded="false" />
-            <element signature="e#2221#2244#0" expanded="false" />
-            <element signature="n#!!block;n#getTestById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
-            <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
-            <element signature="n#!!block;n#getGameById#0" expanded="false" />
-            <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
-            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
-            <element signature="n#!!block;n#editGame#0" expanded="false" />
-            <element signature="n#!!block;n#addGame#0" expanded="false" />
-            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
-            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
-            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
-            <element signature="n#!!block;n#patientById#0" expanded="false" />
-            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
-            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
-            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
-            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
-            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
-            <element signature="e#19761#20579#0" expanded="false" />
-            <element signature="e#20630#21742#0" expanded="false" />
-            <element signature="e#21790#22410#0" expanded="false" />
-            <element signature="e#25378#26742#0" expanded="false" />
-            <element signature="e#26878#27744#0" expanded="false" />
-            <element signature="e#27794#28616#0" expanded="false" />
-            <element signature="e#28664#29523#0" expanded="false" />
-            <element signature="e#29571#30425#0" expanded="false" />
-            <element signature="e#30480#31380#0" expanded="false" />
-            <element signature="e#31434#31799#0" expanded="false" />
-            <element signature="e#31870#33286#0" expanded="false" />
-            <element signature="e#33332#34785#0" expanded="false" />
-            <element signature="e#34834#36247#0" expanded="false" />
-            <element signature="e#36300#37372#0" expanded="false" />
-            <element signature="e#37509#39085#0" expanded="false" />
-            <element signature="e#39135#40584#0" expanded="false" />
-            <element signature="e#40637#41784#0" expanded="false" />
-            <element signature="e#41832#42742#0" expanded="false" />
-            <element signature="e#42790#44177#0" expanded="false" />
-            <element signature="e#44252#45763#0" expanded="false" />
-            <element signature="e#47952#51193#0" expanded="false" />
-            <element signature="e#51271#51423#0" expanded="false" />
-            <element signature="e#51802#51852#0" expanded="false" />
-            <element signature="e#51900#51950#0" expanded="false" />
-            <element signature="e#52091#52139#0" expanded="false" />
-            <element signature="e#52224#52388#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test_results.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/edit_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/js/rest_client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -477,55 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1551#2158#0" expanded="false" />
-            <element signature="e#2221#2244#0" expanded="false" />
-            <element signature="n#!!block;n#getTestById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
-            <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
-            <element signature="n#!!block;n#getGameById#0" expanded="false" />
-            <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
-            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
-            <element signature="n#!!block;n#editGame#0" expanded="false" />
-            <element signature="n#!!block;n#addGame#0" expanded="false" />
-            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
-            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
-            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
-            <element signature="n#!!block;n#patientById#0" expanded="false" />
-            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
-            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
-            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
-            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
-            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
-            <element signature="e#19761#20579#0" expanded="false" />
-            <element signature="e#20630#21742#0" expanded="false" />
-            <element signature="e#21790#22410#0" expanded="false" />
-            <element signature="e#25378#26742#0" expanded="false" />
-            <element signature="e#26878#27744#0" expanded="false" />
-            <element signature="e#27794#28616#0" expanded="false" />
-            <element signature="e#28664#29523#0" expanded="false" />
-            <element signature="e#29571#30425#0" expanded="false" />
-            <element signature="e#30480#31380#0" expanded="false" />
-            <element signature="e#31434#31799#0" expanded="false" />
-            <element signature="e#31870#33286#0" expanded="false" />
-            <element signature="e#33332#34785#0" expanded="false" />
-            <element signature="e#34834#36247#0" expanded="false" />
-            <element signature="e#36300#37372#0" expanded="false" />
-            <element signature="e#37509#39085#0" expanded="false" />
-            <element signature="e#39135#40584#0" expanded="false" />
-            <element signature="e#40637#41784#0" expanded="false" />
-            <element signature="e#41832#42742#0" expanded="false" />
-            <element signature="e#42790#44177#0" expanded="false" />
-            <element signature="e#44252#45763#0" expanded="false" />
-            <element signature="e#47952#51193#0" expanded="false" />
-            <element signature="e#51271#51423#0" expanded="false" />
-            <element signature="e#51802#51852#0" expanded="false" />
-            <element signature="e#51900#51950#0" expanded="false" />
-            <element signature="e#52091#52139#0" expanded="false" />
-            <element signature="e#52224#52388#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -568,55 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6606">
           <caret line="367" column="25" lean-forward="false" selection-start-line="367" selection-start-column="25" selection-end-line="367" selection-end-column="25" />
-          <folding>
-            <element signature="e#1551#2158#0" expanded="false" />
-            <element signature="e#2221#2244#0" expanded="false" />
-            <element signature="n#!!block;n#getTestById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
-            <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
-            <element signature="n#!!block;n#getGameById#0" expanded="false" />
-            <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
-            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
-            <element signature="n#!!block;n#editGame#0" expanded="false" />
-            <element signature="n#!!block;n#addGame#0" expanded="false" />
-            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
-            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
-            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
-            <element signature="n#!!block;n#patientById#0" expanded="false" />
-            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
-            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
-            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
-            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
-            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
-            <element signature="e#19761#20579#0" expanded="false" />
-            <element signature="e#20630#21742#0" expanded="false" />
-            <element signature="e#21790#22410#0" expanded="false" />
-            <element signature="e#25378#26742#0" expanded="false" />
-            <element signature="e#26878#27744#0" expanded="false" />
-            <element signature="e#27794#28616#0" expanded="false" />
-            <element signature="e#28664#29523#0" expanded="false" />
-            <element signature="e#29571#30425#0" expanded="false" />
-            <element signature="e#30480#31380#0" expanded="false" />
-            <element signature="e#31434#31799#0" expanded="false" />
-            <element signature="e#31870#33286#0" expanded="false" />
-            <element signature="e#33332#34785#0" expanded="false" />
-            <element signature="e#34834#36247#0" expanded="false" />
-            <element signature="e#36300#37372#0" expanded="false" />
-            <element signature="e#37509#39085#0" expanded="false" />
-            <element signature="e#39135#40584#0" expanded="false" />
-            <element signature="e#40637#41784#0" expanded="false" />
-            <element signature="e#41832#42742#0" expanded="false" />
-            <element signature="e#42790#44177#0" expanded="false" />
-            <element signature="e#44252#45763#0" expanded="false" />
-            <element signature="e#47952#51193#0" expanded="false" />
-            <element signature="e#51271#51423#0" expanded="false" />
-            <element signature="e#51802#51852#0" expanded="false" />
-            <element signature="e#51900#51950#0" expanded="false" />
-            <element signature="e#52091#52139#0" expanded="false" />
-            <element signature="e#52224#52388#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,55 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1551#2158#0" expanded="false" />
-            <element signature="e#2221#2244#0" expanded="false" />
-            <element signature="n#!!block;n#getTestById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
-            <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
-            <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
-            <element signature="n#!!block;n#getGameById#0" expanded="false" />
-            <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
-            <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
-            <element signature="n#!!block;n#setGameUp#0" expanded="false" />
-            <element signature="n#!!block;n#editGame#0" expanded="false" />
-            <element signature="n#!!block;n#addGame#0" expanded="false" />
-            <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
-            <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
-            <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
-            <element signature="n#!!block;n#patientById#0" expanded="false" />
-            <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
-            <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
-            <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
-            <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
-            <element signature="n#!!block;n#updatePatient#0" expanded="false" />
-            <element signature="e#19761#20579#0" expanded="false" />
-            <element signature="e#20630#21742#0" expanded="false" />
-            <element signature="e#21790#22410#0" expanded="false" />
-            <element signature="e#25378#26742#0" expanded="false" />
-            <element signature="e#26878#27744#0" expanded="false" />
-            <element signature="e#27794#28616#0" expanded="false" />
-            <element signature="e#28664#29523#0" expanded="false" />
-            <element signature="e#29571#30425#0" expanded="false" />
-            <element signature="e#30480#31380#0" expanded="false" />
-            <element signature="e#31434#31799#0" expanded="false" />
-            <element signature="e#31870#33286#0" expanded="false" />
-            <element signature="e#33332#34785#0" expanded="false" />
-            <element signature="e#34834#36247#0" expanded="false" />
-            <element signature="e#36300#37372#0" expanded="false" />
-            <element signature="e#37509#39085#0" expanded="false" />
-            <element signature="e#39135#40584#0" expanded="false" />
-            <element signature="e#40637#41784#0" expanded="false" />
-            <element signature="e#41832#42742#0" expanded="false" />
-            <element signature="e#42790#44177#0" expanded="false" />
-            <element signature="e#44252#45763#0" expanded="false" />
-            <element signature="e#47952#51193#0" expanded="false" />
-            <element signature="e#51271#51423#0" expanded="false" />
-            <element signature="e#51802#51852#0" expanded="false" />
-            <element signature="e#51900#51950#0" expanded="false" />
-            <element signature="e#52091#52139#0" expanded="false" />
-            <element signature="e#52224#52388#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/EnjalbertTestToDo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/js/edit_test_by_id.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -778,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="95" column="44" lean-forward="false" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/enjalbertTestResults.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -809,17 +634,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/allEnjTests.js">
+    <entry file="file://$PROJECT_DIR$/html/js/edit_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/AllEnjalbertTests.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="109" selection-end-column="86" />
+        <state relative-caret-position="68">
+          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -830,166 +648,492 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/editEnjalbertTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="189" column="85" lean-forward="true" selection-start-line="189" selection-start-column="24" selection-end-line="189" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/edit_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/variables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/5_games.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="127" column="27" lean-forward="true" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/local_variables.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        <state relative-caret-position="34">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/EnjalbertTestToDo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/enjalbertTestResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/editEnjalbertTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/AllEnjalbertTests.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/addEnjalbertTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        <state relative-caret-position="323">
+          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/local_variables.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/windows_run.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/allEnjTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/rest_client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="207" column="52" lean-forward="false" selection-start-line="207" selection-start-column="52" selection-end-line="207" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/allGames.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="349" column="47" lean-forward="false" selection-start-line="349" selection-start-column="31" selection-end-line="349" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/allGames.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="613" column="0" lean-forward="true" selection-start-line="613" selection-start-column="0" selection-end-line="616" selection-end-column="86" />
+        <state relative-caret-position="238">
+          <caret line="103" column="24" lean-forward="true" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/game_results.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/patients.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="-102">
+          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/patients.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="153" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/variables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="769" column="63" lean-forward="false" selection-start-line="769" selection-start-column="63" selection-end-line="769" selection-end-column="63" />
+        <state relative-caret-position="442">
+          <caret line="1524" column="13" lean-forward="true" selection-start-line="1524" selection-start-column="13" selection-end-line="1524" selection-end-column="13" />
           <folding>
-            <element signature="e#1551#2158#0" expanded="false" />
-            <element signature="e#2221#2244#0" expanded="false" />
+            <element signature="e#0#23#0" expanded="false" />
+            <element signature="e#239#276#0" expanded="false" />
+            <element signature="e#1551#1578#0" expanded="false" />
+            <element signature="e#1614#2221#0" expanded="false" />
+            <element signature="e#1978#2056#0" expanded="false" />
+            <element signature="e#2284#2307#0" expanded="false" />
+            <element signature="n#!!doc;n#getTestById#0" expanded="false" />
             <element signature="n#!!block;n#getTestById#0" expanded="false" />
+            <element signature="e#2475#2510#0" expanded="false" />
+            <element signature="e#2533#2732#0" expanded="false" />
+            <element signature="e#2582#2702#0" expanded="false" />
+            <element signature="e#2619#2692#0" expanded="false" />
             <element signature="n#!!block;n#getTestResultsById#0" expanded="false" />
+            <element signature="e#2876#2977#0" expanded="false" />
+            <element signature="e#2914#2971#0" expanded="false" />
             <element signature="n#!!block;n#getTestPosById#0" expanded="false" />
+            <element signature="e#3156#3184#0" expanded="false" />
+            <element signature="e#3207#3399#0" expanded="false" />
+            <element signature="e#3256#3369#0" expanded="false" />
+            <element signature="e#3293#3359#0" expanded="false" />
             <element signature="n#!!block;n#testIsRight_enjalbert#0" expanded="false" />
+            <element signature="e#3639#3704#0" expanded="false" />
+            <element signature="e#3747#3812#0" expanded="false" />
+            <element signature="e#3852#3919#0" expanded="false" />
+            <element signature="e#4045#4110#0" expanded="false" />
+            <element signature="e#4192#4257#0" expanded="false" />
+            <element signature="e#4432#4497#0" expanded="false" />
+            <element signature="e#4620#4685#0" expanded="false" />
+            <element signature="e#4823#4888#0" expanded="false" />
+            <element signature="e#5063#5128#0" expanded="false" />
+            <element signature="e#5301#5366#0" expanded="false" />
+            <element signature="e#5489#5554#0" expanded="false" />
+            <element signature="e#5692#5757#0" expanded="false" />
+            <element signature="e#5877#5943#0" expanded="false" />
+            <element signature="e#6076#6142#0" expanded="false" />
+            <element signature="e#6270#6336#0" expanded="false" />
+            <element signature="e#6518#6584#0" expanded="false" />
+            <element signature="e#6757#6823#0" expanded="false" />
+            <element signature="e#7002#7068#0" expanded="false" />
+            <element signature="e#7238#7304#0" expanded="false" />
             <element signature="n#!!block;n#getGameById#0" expanded="false" />
+            <element signature="e#7451#8044#0" expanded="false" />
+            <element signature="e#7488#8038#0" expanded="false" />
+            <element signature="e#7614#8009#0" expanded="false" />
+            <element signature="e#7774#7995#0" expanded="false" />
+            <element signature="n#!!block;n#removeGameById#0" expanded="false" />
             <element signature="n#!!block;n#getTypeQueue#0" expanded="false" />
+            <element signature="e#8857#9032#0" expanded="false" />
+            <element signature="e#8894#9026#0" expanded="false" />
             <element signature="n#!!block;n#gameIsOK#0" expanded="false" />
+            <element signature="e#9531#9562#0" expanded="false" />
+            <element signature="e#9625#12975#0" expanded="false" />
+            <element signature="e#9635#12969#0" expanded="false" />
+            <element signature="e#9777#10459#0" expanded="false" />
+            <element signature="e#10295#10441#0" expanded="false" />
+            <element signature="e#10481#10574#0" expanded="false" />
+            <element signature="e#10648#11279#0" expanded="false" />
+            <element signature="e#11198#11261#0" expanded="false" />
+            <element signature="e#11353#11959#0" expanded="false" />
+            <element signature="e#11878#11941#0" expanded="false" />
+            <element signature="e#12033#12505#0" expanded="false" />
+            <element signature="e#12424#12487#0" expanded="false" />
+            <element signature="e#12579#12936#0" expanded="false" />
+            <element signature="e#12855#12918#0" expanded="false" />
+            <element signature="e#13002#13073#0" expanded="false" />
             <element signature="n#!!block;n#setGameUp#0" expanded="false" />
+            <element signature="e#13395#14792#0" expanded="false" />
             <element signature="n#!!block;n#editGame#0" expanded="false" />
+            <element signature="e#14940#15635#0" expanded="false" />
+            <element signature="e#14977#15629#0" expanded="false" />
+            <element signature="e#15100#15600#0" expanded="false" />
+            <element signature="e#15257#15586#0" expanded="false" />
             <element signature="n#!!block;n#addGame#0" expanded="false" />
+            <element signature="e#15800#16097#0" expanded="false" />
+            <element signature="e#15837#16091#0" expanded="false" />
             <element signature="n#!!block;n#patientIsInList#0" expanded="false" />
+            <element signature="e#16263#16438#0" expanded="false" />
+            <element signature="e#16314#16432#0" expanded="false" />
             <element signature="n#!!block;n#addPatientToList#0" expanded="false" />
+            <element signature="e#16627#16904#0" expanded="false" />
+            <element signature="e#16806#16897#0" expanded="false" />
+            <element signature="e#16914#17174#0" expanded="false" />
+            <element signature="e#17053#17167#0" expanded="false" />
             <element signature="n#!!block;n#patientIsInDb#0" expanded="false" />
+            <element signature="e#17319#17426#0" expanded="false" />
+            <element signature="e#17363#17420#0" expanded="false" />
             <element signature="n#!!block;n#patientById#0" expanded="false" />
             <element signature="n#!!block;n#fitGameToPatient#0" expanded="false" />
+            <element signature="e#17949#18467#0" expanded="false" />
             <element signature="n#!!block;n#patientIdByGameId#0" expanded="false" />
+            <element signature="e#18651#18890#0" expanded="false" />
+            <element signature="e#18712#18884#0" expanded="false" />
+            <element signature="e#18765#18874#0" expanded="false" />
             <element signature="n#!!block;n#patientByGameId#0" expanded="false" />
+            <element signature="e#19072#19308#0" expanded="false" />
+            <element signature="e#19133#19302#0" expanded="false" />
+            <element signature="e#19186#19292#0" expanded="false" />
             <element signature="n#!!block;n#patientHasGame#0" expanded="false" />
+            <element signature="e#19461#19760#0" expanded="false" />
+            <element signature="e#19504#19754#0" expanded="false" />
+            <element signature="e#19569#19725#0" expanded="false" />
+            <element signature="e#19630#19711#0" expanded="false" />
             <element signature="n#!!block;n#updatePatient#0" expanded="false" />
-            <element signature="e#19761#20579#0" expanded="false" />
-            <element signature="e#20630#21742#0" expanded="false" />
-            <element signature="e#21790#22410#0" expanded="false" />
-            <element signature="e#25378#26742#0" expanded="false" />
-            <element signature="e#26878#27744#0" expanded="false" />
-            <element signature="e#27794#28616#0" expanded="false" />
-            <element signature="e#28664#29523#0" expanded="false" />
-            <element signature="e#29571#30425#0" expanded="false" />
-            <element signature="e#30480#31380#0" expanded="false" />
-            <element signature="e#31434#31799#0" expanded="false" />
-            <element signature="e#31870#33286#0" expanded="false" />
-            <element signature="e#33332#34785#0" expanded="false" />
-            <element signature="e#34834#36247#0" expanded="false" />
-            <element signature="e#36300#37372#0" expanded="false" />
-            <element signature="e#37509#39085#0" expanded="false" />
-            <element signature="e#39135#40584#0" expanded="false" />
-            <element signature="e#40637#41784#0" expanded="false" />
-            <element signature="e#41832#42742#0" expanded="false" />
-            <element signature="e#42790#44177#0" expanded="false" />
-            <element signature="e#44252#45763#0" expanded="false" />
-            <element signature="e#47952#51193#0" expanded="false" />
-            <element signature="e#51271#51423#0" expanded="false" />
-            <element signature="e#51802#51852#0" expanded="false" />
-            <element signature="e#51900#51950#0" expanded="false" />
-            <element signature="e#52091#52139#0" expanded="false" />
-            <element signature="e#52224#52388#0" expanded="false" />
+            <element signature="n#!!block;n#removeGamesFromPatient#0" expanded="false" />
+            <element signature="n#!!block;n#findSomethingBySomething#0" expanded="false" />
+            <element signature="n#!!block;n#getGameResults#0" expanded="false" />
+            <element signature="e#21684#21748#0" expanded="false" />
+            <element signature="e#21750#21773#0" expanded="false" />
+            <element signature="e#21824#22642#0" expanded="false" />
+            <element signature="e#21960#22033#0" expanded="false" />
+            <element signature="e#22059#22638#0" expanded="false" />
+            <element signature="e#22217#22398#0" expanded="false" />
+            <element signature="e#22465#22525#0" expanded="false" />
+            <element signature="e#22539#22632#0" expanded="false" />
+            <element signature="e#22574#22620#0" expanded="false" />
+            <element signature="e#22693#23805#0" expanded="false" />
+            <element signature="e#22863#23663#0" expanded="false" />
+            <element signature="e#22918#22999#0" expanded="false" />
+            <element signature="e#23025#23655#0" expanded="false" />
+            <element signature="e#23170#23329#0" expanded="false" />
+            <element signature="e#23222#23315#0" expanded="false" />
+            <element signature="e#23402#23468#0" expanded="false" />
+            <element signature="e#23486#23645#0" expanded="false" />
+            <element signature="e#23525#23629#0" expanded="false" />
+            <element signature="e#23673#23803#0" expanded="false" />
+            <element signature="e#23704#23795#0" expanded="false" />
+            <element signature="e#23853#24473#0" expanded="false" />
+            <element signature="e#24011#24084#0" expanded="false" />
+            <element signature="e#24110#24468#0" expanded="false" />
+            <element signature="e#24171#24417#0" expanded="false" />
+            <element signature="e#26037#26141#0" expanded="false" />
+            <element signature="e#26185#26315#0" expanded="false" />
+            <element signature="e#26321#26345#0" expanded="false" />
+            <element signature="e#26391#29218#0" expanded="false" />
+            <element signature="e#28477#28535#0" expanded="false" />
+            <element signature="e#28638#28696#0" expanded="false" />
+            <element signature="e#28738#28795#0" expanded="false" />
+            <element signature="e#28829#29005#0" expanded="false" />
+            <element signature="e#28868#28989#0" expanded="false" />
+            <element signature="e#29035#29216#0" expanded="false" />
+            <element signature="e#29117#29208#0" expanded="false" />
+            <element signature="e#29269#30873#0" expanded="false" />
+            <element signature="e#30143#30201#0" expanded="false" />
+            <element signature="e#30283#30341#0" expanded="false" />
+            <element signature="e#30928#32249#0" expanded="false" />
+            <element signature="e#31189#31270#0" expanded="false" />
+            <element signature="e#31296#32099#0" expanded="false" />
+            <element signature="e#31450#31905#0" expanded="false" />
+            <element signature="e#31733#31791#0" expanded="false" />
+            <element signature="e#31832#31889#0" expanded="false" />
+            <element signature="e#31923#32088#0" expanded="false" />
+            <element signature="e#31962#32072#0" expanded="false" />
+            <element signature="e#32117#32247#0" expanded="false" />
+            <element signature="e#32148#32239#0" expanded="false" />
+            <element signature="e#32272#32333#0" expanded="false" />
+            <element signature="e#32335#32358#0" expanded="false" />
+            <element signature="e#32404#33270#0" expanded="false" />
+            <element signature="e#32564#32637#0" expanded="false" />
+            <element signature="e#32663#33266#0" expanded="false" />
+            <element signature="e#33098#33153#0" expanded="false" />
+            <element signature="e#33167#33260#0" expanded="false" />
+            <element signature="e#33202#33248#0" expanded="false" />
+            <element signature="e#33320#34142#0" expanded="false" />
+            <element signature="e#33460#33533#0" expanded="false" />
+            <element signature="e#33559#34138#0" expanded="false" />
+            <element signature="e#33717#33900#0" expanded="false" />
+            <element signature="e#33968#34025#0" expanded="false" />
+            <element signature="e#34039#34132#0" expanded="false" />
+            <element signature="e#34074#34120#0" expanded="false" />
+            <element signature="e#34190#35049#0" expanded="false" />
+            <element signature="e#34350#34423#0" expanded="false" />
+            <element signature="e#34449#35045#0" expanded="false" />
+            <element signature="e#34877#34932#0" expanded="false" />
+            <element signature="e#34946#35039#0" expanded="false" />
+            <element signature="e#34981#35027#0" expanded="false" />
+            <element signature="e#35097#35951#0" expanded="false" />
+            <element signature="e#35245#35811#0" expanded="false" />
+            <element signature="e#35300#35381#0" expanded="false" />
+            <element signature="e#35407#35803#0" expanded="false" />
+            <element signature="e#35560#35619#0" expanded="false" />
+            <element signature="e#35637#35793#0" expanded="false" />
+            <element signature="e#35676#35777#0" expanded="false" />
+            <element signature="e#35821#35948#0" expanded="false" />
+            <element signature="e#35852#35940#0" expanded="false" />
+            <element signature="e#36006#36906#0" expanded="false" />
+            <element signature="e#36158#36766#0" expanded="false" />
+            <element signature="e#36213#36294#0" expanded="false" />
+            <element signature="e#36320#36758#0" expanded="false" />
+            <element signature="e#36500#36572#0" expanded="false" />
+            <element signature="e#36590#36748#0" expanded="false" />
+            <element signature="e#36629#36732#0" expanded="false" />
+            <element signature="e#36776#36903#0" expanded="false" />
+            <element signature="e#36807#36895#0" expanded="false" />
+            <element signature="e#36960#37325#0" expanded="false" />
+            <element signature="e#37110#37183#0" expanded="false" />
+            <element signature="e#37209#37320#0" expanded="false" />
+            <element signature="e#37329#37353#0" expanded="false" />
+            <element signature="e#37396#38812#0" expanded="false" />
+            <element signature="e#37587#38670#0" expanded="false" />
+            <element signature="e#37642#37723#0" expanded="false" />
+            <element signature="e#37749#38662#0" expanded="false" />
+            <element signature="e#38364#38414#0" expanded="false" />
+            <element signature="e#38513#38563#0" expanded="false" />
+            <element signature="e#38600#38649#0" expanded="false" />
+            <element signature="e#38680#38809#0" expanded="false" />
+            <element signature="e#38711#38801#0" expanded="false" />
+            <element signature="e#38858#40311#0" expanded="false" />
+            <element signature="e#39093#40169#0" expanded="false" />
+            <element signature="e#39148#39229#0" expanded="false" />
+            <element signature="e#39255#40161#0" expanded="false" />
+            <element signature="e#39481#39966#0" expanded="false" />
+            <element signature="e#39794#39852#0" expanded="false" />
+            <element signature="e#39893#39950#0" expanded="false" />
+            <element signature="e#39984#40149#0" expanded="false" />
+            <element signature="e#40023#40133#0" expanded="false" />
+            <element signature="e#40179#40308#0" expanded="false" />
+            <element signature="e#40210#40300#0" expanded="false" />
+            <element signature="e#40360#41773#0" expanded="false" />
+            <element signature="e#40538#41633#0" expanded="false" />
+            <element signature="e#40593#40674#0" expanded="false" />
+            <element signature="e#40700#41625#0" expanded="false" />
+            <element signature="e#40919#41430#0" expanded="false" />
+            <element signature="e#41258#41316#0" expanded="false" />
+            <element signature="e#41357#41414#0" expanded="false" />
+            <element signature="e#41448#41613#0" expanded="false" />
+            <element signature="e#41487#41597#0" expanded="false" />
+            <element signature="e#41643#41770#0" expanded="false" />
+            <element signature="e#41674#41762#0" expanded="false" />
+            <element signature="e#41826#42898#0" expanded="false" />
+            <element signature="e#42599#42649#0" expanded="false" />
+            <element signature="e#42687#42736#0" expanded="false" />
+            <element signature="e#42768#42895#0" expanded="false" />
+            <element signature="e#42799#42887#0" expanded="false" />
+            <element signature="e#42903#42964#0" expanded="false" />
+            <element signature="e#42966#42989#0" expanded="false" />
+            <element signature="e#43035#44611#0" expanded="false" />
+            <element signature="e#43241#44439#0" expanded="false" />
+            <element signature="e#43297#43378#0" expanded="false" />
+            <element signature="e#43404#44431#0" expanded="false" />
+            <element signature="e#43604#44156#0" expanded="false" />
+            <element signature="e#43924#43995#0" expanded="false" />
+            <element signature="e#44017#44142#0" expanded="false" />
+            <element signature="e#44060#44122#0" expanded="false" />
+            <element signature="e#44174#44421#0" expanded="false" />
+            <element signature="e#44305#44405#0" expanded="false" />
+            <element signature="e#44449#44609#0" expanded="false" />
+            <element signature="e#44525#44601#0" expanded="false" />
+            <element signature="e#44661#46110#0" expanded="false" />
+            <element signature="e#44847#45936#0" expanded="false" />
+            <element signature="e#44903#44984#0" expanded="false" />
+            <element signature="e#45010#45928#0" expanded="false" />
+            <element signature="e#45156#45790#0" expanded="false" />
+            <element signature="e#45269#45472#0" expanded="false" />
+            <element signature="e#45556#45629#0" expanded="false" />
+            <element signature="e#45651#45776#0" expanded="false" />
+            <element signature="e#45694#45756#0" expanded="false" />
+            <element signature="e#45808#45917#0" expanded="false" />
+            <element signature="e#45847#45901#0" expanded="false" />
+            <element signature="e#45946#46108#0" expanded="false" />
+            <element signature="e#46024#46100#0" expanded="false" />
+            <element signature="e#47969#49116#0" expanded="false" />
+            <element signature="e#48103#48176#0" expanded="false" />
+            <element signature="e#48202#49111#0" expanded="false" />
+            <element signature="e#48341#48903#0" expanded="false" />
+            <element signature="e#48443#48893#0" expanded="false" />
+            <element signature="e#48505#48879#0" expanded="false" />
+            <element signature="e#48940#48997#0" expanded="false" />
+            <element signature="e#49011#49104#0" expanded="false" />
+            <element signature="e#49046#49092#0" expanded="false" />
+            <element signature="e#49164#50239#0" expanded="false" />
+            <element signature="e#50065#50120#0" expanded="false" />
+            <element signature="e#50134#50227#0" expanded="false" />
+            <element signature="e#50169#50215#0" expanded="false" />
+            <element signature="e#50287#51662#0" expanded="false" />
+            <element signature="e#51006#51066#0" expanded="false" />
+            <element signature="e#51213#51332#0" expanded="false" />
+            <element signature="e#51350#51459#0" expanded="false" />
+            <element signature="e#51389#51443#0" expanded="false" />
+            <element signature="e#51666#51690#0" expanded="false" />
+            <element signature="e#51737#53248#0" expanded="false" />
+            <element signature="e#51955#53109#0" expanded="false" />
+            <element signature="e#52010#52091#0" expanded="false" />
+            <element signature="e#52117#53101#0" expanded="false" />
+            <element signature="e#52323#52911#0" expanded="false" />
+            <element signature="e#52739#52797#0" expanded="false" />
+            <element signature="e#52838#52895#0" expanded="false" />
+            <element signature="e#52929#53091#0" expanded="false" />
+            <element signature="e#52968#53075#0" expanded="false" />
+            <element signature="e#53119#53245#0" expanded="false" />
+            <element signature="e#53150#53237#0" expanded="false" />
+            <element signature="e#53294#55392#0" expanded="false" />
+            <element signature="e#53715#55186#0" expanded="false" />
+            <element signature="e#53770#53851#0" expanded="false" />
+            <element signature="e#53877#55178#0" expanded="false" />
+            <element signature="e#54179#54924#0" expanded="false" />
+            <element signature="e#54299#54636#0" expanded="false" />
+            <element signature="e#54387#54453#0" expanded="false" />
+            <element signature="e#54551#54616#0" expanded="false" />
+            <element signature="e#54658#54909#0" expanded="false" />
+            <element signature="e#54769#54889#0" expanded="false" />
+            <element signature="e#54942#55167#0" expanded="false" />
+            <element signature="e#55044#55151#0" expanded="false" />
+            <element signature="e#55196#55389#0" expanded="false" />
+            <element signature="e#55290#55381#0" expanded="false" />
+            <element signature="e#55437#59282#0" expanded="false" />
+            <element signature="e#57286#57452#0" expanded="false" />
+            <element signature="e#57751#57817#0" expanded="false" />
+            <element signature="e#57907#57973#0" expanded="false" />
+            <element signature="e#58080#58146#0" expanded="false" />
+            <element signature="e#58411#58476#0" expanded="false" />
+            <element signature="e#58518#58768#0" expanded="false" />
+            <element signature="e#58628#58748#0" expanded="false" />
+            <element signature="e#58801#59058#0" expanded="false" />
+            <element signature="e#58935#59042#0" expanded="false" />
+            <element signature="e#59087#59279#0" expanded="false" />
+            <element signature="e#59180#59271#0" expanded="false" />
+            <element signature="e#59335#61816#0" expanded="false" />
+            <element signature="e#61820#61850#0" expanded="false" />
+            <element signature="e#61894#62046#0" expanded="false" />
+            <element signature="e#62051#62144#0" expanded="false" />
+            <element signature="e#62425#62475#0" expanded="false" />
+            <element signature="e#62523#62573#0" expanded="false" />
+            <element signature="e#62714#62762#0" expanded="false" />
+            <element signature="e#62847#63011#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/patients.js">
+    <entry file="file://$PROJECT_DIR$/html/Patient.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="112" column="22" lean-forward="false" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="439">
+          <caret line="59" column="32" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/allGames.js">
+    <entry file="file://$PROJECT_DIR$/data/5_games.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="362" column="24" lean-forward="false" selection-start-line="362" selection-start-column="24" selection-end-line="362" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!block;n#outputUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#init_isotope#0" expanded="false" />
-            <element signature="e#6719#8033#0" expanded="false" />
-            <element signature="e#8080#9402#0" expanded="false" />
-            <element signature="e#9449#10768#0" expanded="false" />
-            <element signature="e#10815#12037#0" expanded="false" />
-            <element signature="e#12084#13227#0" expanded="false" />
-            <element signature="n#!!block;n#populateIsotope#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/js/rest_client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="276" column="39" lean-forward="false" selection-start-line="276" selection-start-column="39" selection-end-line="276" selection-end-column="39" />
+        <state relative-caret-position="149">
+          <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/allPatients.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="196" column="48" lean-forward="true" selection-start-line="196" selection-start-column="48" selection-end-line="196" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="320">
+          <caret line="77" column="25" lean-forward="false" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/js/patientPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

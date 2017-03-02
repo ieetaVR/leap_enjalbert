@@ -293,3 +293,28 @@ function addPatient(newPatient) {
             }
         });
 }
+
+
+function removePatient(patientId) {
+
+    var url_rest = base_url_rest + 'removePatient';
+
+    var body = {
+        id: patientId
+    };
+
+    console.log(body);
+
+    return $.post(url_rest, body,
+        function (data, status) {
+            var json = data;
+            if (json != null && json['result'] == 'success') {
+                //alert('logout successful');
+                //window.location.reload();
+            }
+            else {
+                alert('something is wrong:' + json['message']);
+                //window.location.href = "index.html";
+            }
+        });
+}
