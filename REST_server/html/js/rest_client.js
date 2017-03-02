@@ -7,7 +7,9 @@ var testsBrief;
 var testResults;
 var gamesBrief;
 var currentGame;
+var currentPatient;
 var patientsBrief;
+var gameResults;
 
 function getTestToDo() {
 
@@ -264,6 +266,21 @@ function getPatients() {
 }
 
 
+function getPatientById(id) {
+
+    var url_rest = base_url_rest + 'getPatientById?id=' + id;
+
+    return $.ajax({
+        type: 'GET',
+        url: url_rest
+    }).then(function (data) {
+
+        currentPatient = data;
+    });
+
+}
+
+
 function addPatient(newPatient) {
 
     var url_rest = base_url_rest + 'addPatient';
@@ -317,4 +334,34 @@ function removePatient(patientId) {
                 //window.location.href = "index.html";
             }
         });
+}
+
+
+function getGameResultsByPatient(id) {
+
+    var url_rest = base_url_rest + 'getGameResultsByPatient?id=' + id;
+
+    return $.ajax({
+        type: 'GET',
+        url: url_rest
+    }).then(function (data) {
+
+        gameResults = data;
+    });
+
+}
+
+
+function getGamesBriefByPatient(id) {
+
+    var url_rest = base_url_rest + 'getGamesBriefByPatient?id=' + id;
+
+    return $.ajax({
+        type: 'GET',
+        url: url_rest
+    }).then(function (data) {
+
+        gamesBrief = data;
+    });
+
 }
