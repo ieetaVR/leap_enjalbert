@@ -337,6 +337,29 @@ function removePatient(patientId) {
 }
 
 
+function updatePatientData(patientData) {
+
+    var url_rest = base_url_rest + 'updatePatientData';
+
+    var body = patientData;
+
+    console.log(body);
+
+    return $.post(url_rest, body,
+        function (data, status) {
+            var json = data;
+            if (json != null && json['result'] == 'success') {
+                //alert('logout successful');
+                //window.location.reload();
+            }
+            else {
+                alert('something is wrong:' + json['message']);
+                //window.location.href = "index.html";
+            }
+        });
+}
+
+
 function getGameResultsByPatient(id) {
 
     var url_rest = base_url_rest + 'getGameResultsByPatient?id=' + id;

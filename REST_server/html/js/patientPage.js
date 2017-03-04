@@ -14,6 +14,14 @@ function initPage() {
 
     $('#patientName').html(currentPatient.name + ' ' + currentPatient.last_name);
 
+
+    $('#inputPatientInfo_distance')[0].value = currentPatient.lift_max_height;
+    outputUpdate(currentPatient.lift_max_height, 'inputPatientInfo_distance_display');
+    $('#inputPatientInfo_GrabMargin_open')[0].value = currentPatient.grab_open_margin;
+    outputUpdate(currentPatient.grab_open_margin, 'inputPatientInfo_GrabMargin_open_display');
+    $('#inputPatientInfo_GrabMargin_close')[0].value = currentPatient.grab_close_margin;
+    outputUpdate(currentPatient.grab_close_margin, 'inputPatientInfo_GrabMargin_close_display');
+
     gameTable = $('#gameTable').DataTable();
     gameTable.clear();
 
@@ -39,6 +47,8 @@ $('#gameTable tbody').on('click', 'tr button', function () {
 
     resultsType = parseInt(gameTable.row(this.parentNode).data()[0]);
     console.log(resultsType);
+
+    $('#results_header').html('Game Results: ' + gameTable.row(this.parentNode).data()[2]);
 
     doTheChart(resultsType);
 
@@ -340,6 +350,20 @@ $("#modalGame4").on('submit', function (e) {
     $('#modalGame' + gameType).modal('hide');
 });
 
+$("#patientInfo_form").on('submit', function (e) {
+    e.preventDefault();
+
+    currentPatient.lift_max_height = $('#inputPatientInfo_distance')[0].value;
+    currentPatient.grab_open_margin = $('#inputPatientInfo_GrabMargin_open')[0].value;
+    currentPatient.grab_close_margin = $('#inputPatientInfo_GrabMargin_close')[0].value;
+
+
+    updatePatientData(currentPatient);
+    location.reload();
+
+
+});
+
 var groupedData_desktop;
 
 function doTheChart(typePos) {
@@ -347,6 +371,7 @@ function doTheChart(typePos) {
     var labels_desktop = [], labels_vr = [];
     var values_success = [];
     var values_fail = [];
+    var values_total = [];
 
     for (var i = 0; i < gameResults.results[typePos].results.results_desktop.length; i++) {
         gameResults.results[typePos].results.results_desktop[i].data_added = new Date(gameResults.results[typePos].results.results_desktop[i].data_added).toISOString().slice(0, 10);
@@ -389,12 +414,18 @@ function doTheChart(typePos) {
         });
         values_success.push(success_calc.s != undefined ? success_calc.s : 0);
         values_fail.push(success_calc.f != undefined ? success_calc.f : 0);
+        values_total.push(values_success[values_success.length - 1] + values_fail[values_fail.length - 1])
     }
 
     //console.log(values_success);
     //console.log(values_fail);
 
     var datasets = [
+        {
+            label: 'total',
+            data: values_total,
+            backgroundColor: "#1249b2"
+        },
         {
             label: 'success',
             data: values_success,
@@ -411,6 +442,7 @@ function doTheChart(typePos) {
 
     values_success = [];
     values_fail = [];
+    values_total = [];
 
     for (i = 0; i < labels_vr.length; i++) {
 
@@ -419,12 +451,18 @@ function doTheChart(typePos) {
         });
         values_success.push(success_calc.s != undefined ? success_calc.s : 0);
         values_fail.push(success_calc.f != undefined ? success_calc.f : 0);
+        values_total.push(values_success[values_success.length - 1] + values_fail[values_fail.length - 1])
     }
 
     console.log(values_success);
     console.log(values_fail);
 
     var datasets = [
+        {
+            label: 'total',
+            data: values_total,
+            backgroundColor: "#1249b2"
+        },
         {
             label: 'success',
             data: values_success,
@@ -443,9 +481,10 @@ function doTheChart(typePos) {
 
 function printChart(chartName, labels, datasets) {
 
+    $('#' + chartName).replaceWith('<canvas id="' + chartName + '"></canvas>');
     var ctx = document.getElementById(chartName).getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: labels,
             datasets: datasets

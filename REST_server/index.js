@@ -657,13 +657,13 @@ function patientHasGame(patients, patientId, gameType) {
 
 function updatePatient(oldPatient, newData) {
 
-    oldPatient.lift_max_height = newData.lift_max_height;
-    oldPatient.grab_open_margin = newData.grab_open_margin;
-    oldPatient.grab_close_margin = newData.grab_close_margin;
-    oldPatient.index_pinch_margin = newData.index_pinch_margin;
-    oldPatient.middle_pinch_margin = newData.middle_pinch_margin;
-    oldPatient.ring_pinch_margin = newData.ring_pinch_margin;
-    oldPatient.pinky_pinch_margin = newData.pinky_pinch_margin;
+    oldPatient.lift_max_height = parseFloat(newData.lift_max_height);
+    oldPatient.grab_open_margin = parseFloat(newData.grab_open_margin);
+    oldPatient.grab_close_margin = parseFloat(newData.grab_close_margin);
+    oldPatient.index_pinch_margin = parseFloat(newData.index_pinch_margin);
+    oldPatient.middle_pinch_margin = parseFloat(newData.middle_pinch_margin);
+    oldPatient.ring_pinch_margin = parseFloat(newData.ring_pinch_margin);
+    oldPatient.pinky_pinch_margin = parseFloat(newData.pinky_pinch_margin);
 
     return oldPatient;
 

@@ -44,8 +44,41 @@
 
 <section>
 
-    <div class="container-fluid">
+    <div id="patientInfo" class="container-fluid">
         <h1 id="patientName"></h1>
+
+
+        <h2>Patient Calibration</h2>
+        <div class="row container-fluid">
+            <div class="col-sm-4">
+                <form id="patientInfo_form" class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="inputPatientInfo_distance" class="control-label">Lift Distance (m)</label>
+                            <input type="range" min="0.1" max="1.5" value="0.6" id="inputPatientInfo_distance"
+                                   step="0.1" oninput="outputUpdate(value, 'inputPatientInfo_distance_display')">
+                            <output for="inputTimePerTest" id="inputPatientInfo_distance_display">0.5</output>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPatientInfo_GrabMargin_open" class="control-label">Grab Margin - Open (rad ; perfect = 0)</label>
+                            <input type="range" min="0" max="1.5" value="0.6" id="inputPatientInfo_GrabMargin_open"
+                                   step="0.01" oninput="outputUpdate(value, 'inputPatientInfo_GrabMargin_open_display')">
+                            <output for="inputTimePerTest" id="inputPatientInfo_GrabMargin_open_display">0.5</output>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPatientInfo_GrabMargin_close" class="control-label">Grab Margin - Close (rad ; perfect = 0)</label>
+                            <input type="range" min="0" max="1.5" value="0.6" id="inputPatientInfo_GrabMargin_close"
+                                   step="0.01" oninput="outputUpdate(value, 'inputPatientInfo_GrabMargin_close_display')">
+                            <output for="inputTimePerTest" id="inputPatientInfo_GrabMargin_close_display">0.5</output>
+                        </div>
+                    </fieldset>
+                    <button type="submit" value="patientInfoChangeCalibration" class="btn btn-primary">Update Calibration
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <hr>
 
         <!-- Games table -->
         <h2>Game List</h2>
@@ -69,12 +102,18 @@
 
 
     <!-- results section-->
-    <div class="container-fluid">
-        <h2>Desktop Results</h2>
-        <canvas id="successChart_desktop"></canvas>
-        <h2>VR Results</h2>
-        <canvas id="successChart_vr"></canvas>
-
+    <div class="container-fluid" id="results_container">
+        <h1 id="results_header">Game Results</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Desktop Results</h2>
+                <canvas id="successChart_desktop"></canvas>
+            </div>
+            <div class="col-lg-6">
+                <h2>VR Results</h2>
+                <canvas id="successChart_vr"></canvas>
+            </div>
+        </div>
     </div>
 
 
