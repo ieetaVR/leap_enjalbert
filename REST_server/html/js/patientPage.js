@@ -21,8 +21,8 @@ function initPage() {
 
         console.log('adding ' + gamesBrief.results[i].game.id);
         gameTable.row.add([
-                gamesBrief.results[i].game.id,
                 gamesBrief.results[i].type,
+                gamesBrief.results[i].game.id,
                 gamesBrief.results[i].game.custom_name,
                 '<button class="btn-info">See Results</button>'
             ]
@@ -37,7 +37,7 @@ $('#gameTable tbody').on('click', 'tr button', function () {
 
     gameTable = $('#gameTable').DataTable();
 
-    resultsType = parseInt(gameTable.row(this.parentNode).data()[1]);
+    resultsType = parseInt(gameTable.row(this.parentNode).data()[0]);
     console.log(resultsType);
 
     doTheChart(resultsType);
@@ -62,8 +62,8 @@ $('#gameTable tbody').on('click', 'tr td', function (e) {
 
     //console.log(this);
 
-    gameType = parseInt(gameTable.row(this).data()[1]);
-    gameID = parseInt(gameTable.row(this).data()[0]);
+    gameType = parseInt(gameTable.row(this).data()[0]);
+    gameID = parseInt(gameTable.row(this).data()[1]);
 
     $.when(getGameByID(gameID, gameType)).done(function () {
         gameType = gameType.toString();
@@ -372,12 +372,12 @@ function doTheChart(typePos) {
     groupedData_vr = _.sortBy(gameResults.results[typePos].results.results_vr, function (d) {
         return d.data_added
     });
-    var groupedData_vr = _.groupBy(gameResults.results[typePos].results.results_vr, function (d) {
+    var groupedData_vr = _.groupBy(groupedData_vr, function (d) {
         return d.data_added
     });
 
     //console.log(groupedData_desktop);
-    //console.log(labels_desktop);
+    //console.log(labels_vr);
     //console.log(groupedData_vr);
 
     var success_calc;
@@ -414,15 +414,15 @@ function doTheChart(typePos) {
 
     for (i = 0; i < labels_vr.length; i++) {
 
-        success_calc = _.countBy(groupedData_desktop[labels_desktop[i]], function (d) {
+        success_calc = _.countBy(groupedData_vr[labels_vr[i]], function (d) {
             return d.success == true ? 's' : 'f';
         });
         values_success.push(success_calc.s != undefined ? success_calc.s : 0);
         values_fail.push(success_calc.f != undefined ? success_calc.f : 0);
     }
 
-    //console.log(values_success);
-    //console.log(values_fail);
+    console.log(values_success);
+    console.log(values_fail);
 
     var datasets = [
         {
@@ -464,22 +464,23 @@ $(document).ready(function () {
 
                 initPage();
 
-                var ctx = document.getElementById('successChart_desktop').getContext('2d');
-                var myChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-                        datasets: [{
-                            label: 'success',
-                            data: [12, 19, 3, 17, 6, 3, 7],
-                            backgroundColor: "rgba(153,255,51,0.6)"
-                        }, {
-                            label: 'fail',
-                            data: [2, 29, 5, 5, 2, 3, 10],
-                            backgroundColor: "rgba(255,0,0,0.6)"
-                        }]
-                    }
-                });
+                /*
+                 var ctx = document.getElementById('successChart_desktop').getContext('2d');
+                 var myChart = new Chart(ctx, {
+                 type: 'line',
+                 data: {
+                 labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+                 datasets: [{
+                 label: 'success',
+                 data: [12, 19, 3, 17, 6, 3, 7],
+                 backgroundColor: "rgba(153,255,51,0.6)"
+                 }, {
+                 label: 'fail',
+                 data: [2, 29, 5, 5, 2, 3, 10],
+                 backgroundColor: "rgba(255,0,0,0.6)"
+                 }]
+                 }
+                 });*/
 
 
                 doTheChart(0);

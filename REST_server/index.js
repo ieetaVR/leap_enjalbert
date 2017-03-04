@@ -471,6 +471,28 @@ function addGame(games, game, id, type, custom_name) {
 
 }
 
+function addDefaultGame(games, game, id, type, custom_name) {
+
+    var newGames = null;
+
+    //if not
+    for (var i = 0; i < games.length; i++) {
+        if (games[i].type == type) {
+            console.log("private addDefaultGame: type found");
+
+            game.id = id;
+            game.custom_name = custom_name;
+            games[i].instances[games[i].instances.length] = game;
+            newGames = games;
+
+            break;
+        }
+    }
+
+    return newGames;
+
+}
+
 function patientIsInList(patientList, patient_name) {
 
     var result = -1;
@@ -869,7 +891,7 @@ app.post('/addPatient', function (req, res) {
     var newPatient = req.body;
 
     var patientBirthday = req.body.date_of_birth;
-    var filesPath = [patients_path, local_variables_path];
+    var filesPath = [patients_path, local_variables_path, games_path, game_results_path];
 
     if (req.body.language != undefined && req.body.language != null && patientBirthday != undefined && patientBirthday != null && newPatient.name != undefined && newPatient.name != null && newPatient.left_hand != undefined && newPatient.left_hand != null && (newPatient.left_hand == false || newPatient.left_hand == true) && newPatient.bi_num != undefined && newPatient.bi_num != null) {
         async.map(filesPath, function (filePath, cb) { //reading files or dir
@@ -877,6 +899,8 @@ app.post('/addPatient', function (req, res) {
         }, function (err, results) {
             var patients = JSON.parse(results[0]);
             var local_variables = JSON.parse(results[1]);
+            var games = JSON.parse(results[2]);
+            var game_results = JSON.parse(results[3]);
 
             if (patientIsInDb(patients, newPatient.bi_num) == false) {
                 var patientToPush = JSON.parse(JSON.stringify(patients[0]));
@@ -891,8 +915,55 @@ app.post('/addPatient', function (req, res) {
                 patientToPush.language = newPatient.language;
                 patientToPush.register_date = new Date();
                 patientToPush.last_calibration_date = "never";
+                patientToPush.lift_max_height = 0.1;
+                patientToPush.grab_open_margin = 0.9;
 
                 patientToPush.games = [];
+
+
+                for (var i=0; i<games.length; i++)
+                {
+                    var gameId = local_variables['5_games'].last_games['type_' + games[i].type] + 1;
+
+                    var editedGame = games[i].instances[0];
+
+                    var gameToAdd = getGameById(games, gameId, games[i].type);
+
+                    if (gameToAdd == null)
+                    {
+                        var customName = patientToPush.name + ' ' + patientToPush.last_name + ' - ' + games[i].name;
+                        games = addGame(JSON.parse(JSON.stringify(games)), editedGame, gameId, games[i].type, customName);
+
+                        local_variables['5_games'].last_games['type_' + games[i].type] = local_variables['5_games'].last_games['type_' + games[i].type] + 1;
+
+                        patientToPush.games.push({
+                            type: games[i].type,
+                            id: gameId,
+                            name: getGameById(games, 0, games[i].type).name
+                        });
+
+                        game_results[games[i].type].instances.push({
+                            id: gameId,
+                            results_desktop: [],
+                            results_vr: []
+                        });
+
+
+                    }
+                    else {
+                        console.log('addPatient: trouble editing game.');
+                        res.status(400).json({
+                            result: 'fail',
+                            message: 'trouble adding default game.'
+                        });
+                        return;
+                    }
+
+
+                }
+
+
+
 
                 patients.push(patientToPush);
 
@@ -900,10 +971,17 @@ app.post('/addPatient', function (req, res) {
                     console.error(err)
                 });
 
+                fs.writeFile(games_path, JSON.stringify(games), function (err) {
+                    console.error(err)
+                });
+
                 fs.writeFile(local_variables_path, JSON.stringify(local_variables), function (err) {
                     console.error(err)
                 });
 
+                fs.writeFile(game_results_path, JSON.stringify(game_results), function (err) {
+                    console.error(err)
+                });
 
                 res.status(200).json({
                     result: 'success'
@@ -936,7 +1014,7 @@ app.post('/removePatient', function (req, res) {
 
     var filesPath = [patients_path, games_path];
 
-    if (patientId != undefined && patientId != null) {
+    if (patientId != undefined && patientId != null && patientId != 0) {
         async.map(filesPath, function (filePath, cb) { //reading files or dir
             fs.readFile(filePath, 'utf8', cb);
         }, function (err, results) {

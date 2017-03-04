@@ -65,7 +65,7 @@ function populateTable() {
                 patientsBrief[i].middle_pinch_margin + " (perfect = 0)",
                 patientsBrief[i].ring_pinch_margin + " (perfect = 0)",
                 patientsBrief[i].pinky_pinch_margin + " (perfect = 0)",
-                '<button value="' + patientsBrief[i].id + '" class="btn-danger btn-deletePatient">Delete</button>',
+                patientsBrief[i].id != 0 ? '<button value="' + patientsBrief[i].id + '" class="btn-danger btn-deletePatient">Delete</button>' : '',
                 '<a href="Patient.html?id=' + patientsBrief[i].id + '"><button class="btn-info">Manage</button></a>'
             ]
         ).draw();
@@ -81,7 +81,7 @@ $("form button[type=submit]").click(function () {
 });
 
 
-$('#patientTable tbody').on( 'click', 'button', function () {
+$('#patientTable tbody').on('click', 'button', function () {
     console.log('deleting patient ' + this.value);
 
     chosenPatient = this.value;
@@ -97,13 +97,11 @@ $('#confirm_form1').on('submit', function (e) {
 
     var val = $("#ConfirmModal :button[type=submit][clicked=true]").val();
 
-    if(val=='yes')
-    {
+    if (val == 'yes') {
         removePatient(parseInt(chosenPatient));
         location.reload();
     }
-    else
-    {
+    else {
         $('#ConfirmModal').modal('hide');
     }
 
