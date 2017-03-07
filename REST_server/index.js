@@ -921,16 +921,14 @@ app.post('/addPatient', function (req, res) {
                 patientToPush.games = [];
 
 
-                for (var i=0; i<games.length; i++)
-                {
+                for (var i = 0; i < games.length; i++) {
                     var gameId = local_variables['5_games'].last_games['type_' + games[i].type] + 1;
 
                     var editedGame = games[i].instances[0];
 
                     var gameToAdd = getGameById(games, gameId, games[i].type);
 
-                    if (gameToAdd == null)
-                    {
+                    if (gameToAdd == null) {
                         var customName = patientToPush.name + ' ' + patientToPush.last_name + ' - ' + games[i].name;
                         games = addGame(JSON.parse(JSON.stringify(games)), editedGame, gameId, games[i].type, customName);
 
@@ -961,8 +959,6 @@ app.post('/addPatient', function (req, res) {
 
 
                 }
-
-
 
 
                 patients.push(patientToPush);
@@ -2021,7 +2017,7 @@ app.post('/sendGameResults', function (req, res) {
                 if (gamePos != -1) {
 
                     resultsInstance.data_added = new Date();
-                    usedVR = usedVR== true || usedVR == "true";
+                    usedVR = usedVR == true || usedVR == "true";
                     if (usedVR == true) {
                         game_results[typePos].instances[gamePos].results_vr.push(resultsInstance);
                     }
@@ -2088,6 +2084,26 @@ var wepPage_express = require("express");
 var wepPage_app2 = wepPage_express();
 var wepPage_router = wepPage_express.Router();
 var wepPage_path = __dirname + '/html/';
+
+var db_url = "http://localhost:8090/";
+var proxy = require('http-proxy').createProxyServer({
+    host: db_url,
+    // port: 80
+});
+wepPage_router.use(
+    [
+        '/rest_server'
+    ],
+    function (req, res, next) {
+
+        console.log(req.url);
+
+        proxy.web(req, res, {
+            target: db_url
+        }, next);
+    });
+
+
 wepPage_app2.use(wepPage_express.static(__dirname + '/html/'));
 
 wepPage_router.use(function (req, res, next) {

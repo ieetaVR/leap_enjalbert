@@ -1,14 +1,14 @@
 /**
  * Created by rofler on 8/28/16.
  */
- var going_local = true;
+ var going_local = false;
 
  if (going_local) {
 	var base_url_rest = "http://localhost:8090/";
  }
  else
  {
-	var base_url_rest = "https://localhost:8080/";
+	var base_url_rest = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '') + "/rest_server/";
  }
 
 
